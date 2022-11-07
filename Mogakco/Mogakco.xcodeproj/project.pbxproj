@@ -18,6 +18,10 @@
 		BD925812291946F3008A3158 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD925811291946F3008A3158 /* Colors.xcassets */; };
 		BD925814291946FE008A3158 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD925813291946FE008A3158 /* Colors.swift */; };
 		BD92581629194706008A3158 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92581529194706008A3158 /* Images.swift */; };
+		BD925827291948DF008A3158 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD925826291948DF008A3158 /* SnapKit */; };
+		BD92582A29194901008A3158 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582929194901008A3158 /* RxCocoa */; };
+		BD92582C29194901008A3158 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582B29194901008A3158 /* RxSwift */; };
+		BD92582F2919491C008A3158 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582E2919491C008A3158 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD92582C29194901008A3158 /* RxSwift in Frameworks */,
+				BD92582A29194901008A3158 /* RxCocoa in Frameworks */,
+				BD925827291948DF008A3158 /* SnapKit in Frameworks */,
+				BD92582F2919491C008A3158 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +268,12 @@
 			dependencies = (
 			);
 			name = Mogakco;
+			packageProductDependencies = (
+				BD925826291948DF008A3158 /* SnapKit */,
+				BD92582929194901008A3158 /* RxCocoa */,
+				BD92582B29194901008A3158 /* RxSwift */,
+				BD92582E2919491C008A3158 /* Then */,
+			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
 			productType = "com.apple.product-type.application";
@@ -288,6 +302,11 @@
 				Base,
 			);
 			mainGroup = BD9257D5291943F7008A3158;
+			packageReferences = (
+				BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -530,6 +549,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD925826291948DF008A3158 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BD92582929194901008A3158 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BD92582B29194901008A3158 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BD92582E2919491C008A3158 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD9257D6291943F7008A3158 /* Project object */;
 }
