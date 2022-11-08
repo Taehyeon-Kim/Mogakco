@@ -11,5 +11,13 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setAttributes()
+        setHierarchy()
+        setLayout()
     }
+    
+    func setAttributes() {}
+    func setHierarchy() {}
+    func setLayout() {}
 }
