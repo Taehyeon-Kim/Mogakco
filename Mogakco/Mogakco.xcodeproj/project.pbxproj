@@ -42,7 +42,6 @@
 		BD92581B2919476E008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92581D2919477C008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92581F29194788008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		BD92582129194797008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD925823291947A2008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,7 +199,6 @@
 		BD92580729194628008A3158 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				BD92582129194797008A3158 /* .gitkeep */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
