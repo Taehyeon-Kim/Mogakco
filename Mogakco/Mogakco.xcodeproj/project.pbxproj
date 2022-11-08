@@ -10,6 +10,8 @@
 		BD15957F291A3FAE00C552CB /* Adjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15957E291A3FAE00C552CB /* Adjusted.swift */; };
 		BD23475E291A5F1F009BC722 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */; };
 		BD23475F291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */; };
+		BD234761291A6052009BC722 /* TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234760291A6052009BC722 /* TypoStyle.swift */; };
+		BD234763291A771A009BC722 /* UILabel+TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		BD15957E291A3FAE00C552CB /* Adjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjusted.swift; sourceTree = "<group>"; };
 		BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		BD234760291A6052009BC722 /* TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoStyle.swift; sourceTree = "<group>"; };
+		BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+TypoStyle.swift"; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			children = (
 				BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */,
 				BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */,
+				BD234760291A6052009BC722 /* TypoStyle.swift */,
+				BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -375,11 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD234763291A771A009BC722 /* UILabel+TypoStyle.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
 				BD92580E29194691008A3158 /* BaseViewController.swift in Sources */,
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
+				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
