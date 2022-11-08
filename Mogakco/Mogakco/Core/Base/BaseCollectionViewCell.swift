@@ -12,14 +12,17 @@ class BaseCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configureAttributes()
-        configureLayout()
+        setAttributes()
+        setHierarchy()
+        setLayout()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    func configureAttributes() {}
-    func configureLayout() {}
+
+    func setAttributes() {}
+    func setHierarchy() {}
+    func setLayout() {}
 }
