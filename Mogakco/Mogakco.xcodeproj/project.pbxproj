@@ -12,6 +12,7 @@
 		BD23475F291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */; };
 		BD234761291A6052009BC722 /* TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234760291A6052009BC722 /* TypoStyle.swift */; };
 		BD234763291A771A009BC722 /* UILabel+TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */; };
+		BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476A291A9AEB009BC722 /* BaseView.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		BD234760291A6052009BC722 /* TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoStyle.swift; sourceTree = "<group>"; };
 		BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+TypoStyle.swift"; sourceTree = "<group>"; };
+		BD23476A291A9AEB009BC722 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,13 @@
 			path = "UIKit+";
 			sourceTree = "<group>";
 		};
+		BD234764291A86FC009BC722 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 		BD9257D5291943F7008A3158 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +109,7 @@
 				BD9257F5291943FE008A3158 /* Application */,
 				BD9257FE2919452E008A3158 /* Core */,
 				BD92581929194747008A3158 /* Data */,
+				BD234764291A86FC009BC722 /* DesignSystem */,
 				BD92581A29194749008A3158 /* Domain */,
 				BD9257FC291944FC008A3158 /* Network */,
 				BD9257F8291944A3008A3158 /* Presentation */,
@@ -236,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				BD92580D29194691008A3158 /* BaseViewController.swift */,
+				BD23476A291A9AEB009BC722 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -390,6 +401,7 @@
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
+				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
