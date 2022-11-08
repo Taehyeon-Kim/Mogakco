@@ -29,10 +29,12 @@ final class SplashViewController: BaseViewController {
         
         splashLogoImageView.do {
             $0.image = .imgSplashLogo
+            $0.contentMode = .scaleAspectFit
         }
         
         splashTextImageView.do {
             $0.image = .imgSplashText
+            $0.contentMode = .scaleAspectFit
         }
     }
     
@@ -43,16 +45,16 @@ final class SplashViewController: BaseViewController {
     
     override func setLayout() {
         splashLogoImageView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(Metric.logoTopMargin)
-            $0.width.equalTo(Metric.logoWidth)
-            $0.height.equalTo(Metric.logoHeight)
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(Metric.logoTopMargin.adjustedHeight)
+            $0.width.equalTo(Metric.logoWidth.adjustedWidth)
+            $0.height.equalTo(Metric.logoHeight.adjustedHeight)
             $0.centerX.equalToSuperview()
         }
         
         splashTextImageView.snp.makeConstraints {
-            $0.top.equalTo(splashLogoImageView.snp.bottom).offset(Metric.textTopMargin)
-            $0.width.equalTo(Metric.textWidth)
-            $0.height.equalTo(Metric.textHeight)
+            $0.top.equalTo(splashLogoImageView.snp.bottom).offset(Metric.textTopMargin.adjustedHeight)
+            $0.width.equalTo(Metric.textWidth.adjustedWidth)
+            $0.height.equalTo(Metric.textHeight.adjustedHeight)
             $0.centerX.equalTo(splashLogoImageView.snp.centerX)
         }
     }
