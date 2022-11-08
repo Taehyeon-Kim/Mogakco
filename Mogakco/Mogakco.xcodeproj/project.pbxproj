@@ -16,7 +16,6 @@
 		BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92580A29194670008A3158 /* OnboardingViewController.swift */; };
 		BD92580E29194691008A3158 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92580D29194691008A3158 /* BaseViewController.swift */; };
 		BD925810291946E8008A3158 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92580F291946E8008A3158 /* Images.xcassets */; };
-		BD925812291946F3008A3158 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD925811291946F3008A3158 /* Colors.xcassets */; };
 		BD925814291946FE008A3158 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD925813291946FE008A3158 /* Colors.swift */; };
 		BD92581629194706008A3158 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92581529194706008A3158 /* Images.swift */; };
 		BD925827291948DF008A3158 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD925826291948DF008A3158 /* SnapKit */; };
@@ -38,7 +37,6 @@
 		BD92580A29194670008A3158 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BD92580D29194691008A3158 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BD92580F291946E8008A3158 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BD925811291946F3008A3158 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		BD925813291946FE008A3158 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BD92581529194706008A3158 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		BD92581B2919476E008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				BD925813291946FE008A3158 /* Colors.swift */,
-				BD925811291946F3008A3158 /* Colors.xcassets */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -338,7 +335,6 @@
 			files = (
 				BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */,
 				BD925810291946E8008A3158 /* Images.xcassets in Resources */,
-				BD925812291946F3008A3158 /* Colors.xcassets in Resources */,
 				BD9257EE291943F9008A3158 /* LaunchScreen.storyboard in Resources */,
 				BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */,
 			);
