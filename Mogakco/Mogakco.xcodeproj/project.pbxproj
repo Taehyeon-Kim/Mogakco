@@ -37,6 +37,10 @@
 		BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD92583129194BC8008A3158 /* .swiftlint.yml */; };
 		BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C4291C17AB009CB1C0 /* Onboarding.swift */; };
 		BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C6291C1911009CB1C0 /* OnboardingView.swift */; };
+		BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */; };
+		BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095CF291C1E92009CB1C0 /* PhoneVerificationViewController.swift */; };
+		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
+		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,10 @@
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BDE095C4291C17AB009CB1C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BDE095C6291C1911009CB1C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewController.swift; sourceTree = "<group>"; };
+		BDE095CF291C1E92009CB1C0 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewModel.swift; sourceTree = "<group>"; };
+		BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,7 @@
 		BD9257F8291944A3008A3158 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BDE095C8291C1D8F009CB1C0 /* PhoneVerification */,
 				BD9258022919456B008A3158 /* Onboarding */,
 				BD92580129194567008A3158 /* Splash */,
 			);
@@ -325,6 +334,33 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		BDE095C8291C1D8F009CB1C0 /* PhoneVerification */ = {
+			isa = PBXGroup;
+			children = (
+				BDE095C9291C1D9F009CB1C0 /* View */,
+				BDE095CA291C1DA1009CB1C0 /* ViewModel */,
+			);
+			path = PhoneVerification;
+			sourceTree = "<group>";
+		};
+		BDE095C9291C1D9F009CB1C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */,
+				BDE095CF291C1E92009CB1C0 /* PhoneVerificationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDE095CA291C1DA1009CB1C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */,
+				BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,12 +476,16 @@
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
+				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
+				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
+				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
+				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
