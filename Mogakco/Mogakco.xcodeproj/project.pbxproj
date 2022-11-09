@@ -231,7 +231,7 @@
 		BD92580129194567008A3158 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				BD9258032919459B008A3158 /* ViewController */,
+				BD9258032919459B008A3158 /* View */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -240,17 +240,17 @@
 			isa = PBXGroup;
 			children = (
 				BD234771291AA350009BC722 /* ViewModel */,
-				BD9258092919465C008A3158 /* ViewController */,
+				BD9258092919465C008A3158 /* View */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		BD9258032919459B008A3158 /* ViewController */ = {
+		BD9258032919459B008A3158 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BD925804291945A8008A3158 /* SplashViewController.swift */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		BD92580629194624008A3158 /* Colors */ = {
@@ -280,13 +280,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		BD9258092919465C008A3158 /* ViewController */ = {
+		BD9258092919465C008A3158 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BD92580A29194670008A3158 /* OnboardingViewController.swift */,
 				BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		BD92580C29194682008A3158 /* Base */ = {
