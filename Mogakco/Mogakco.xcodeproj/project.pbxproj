@@ -15,7 +15,6 @@
 		BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476A291A9AEB009BC722 /* BaseView.swift */; };
 		BD23476E291A9B41009BC722 /* SSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476D291A9B41009BC722 /* SSButton.swift */; };
 		BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */; };
-		BD234773291AA35B009BC722 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234772291AA35B009BC722 /* OnboardingViewModel.swift */; };
 		BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */; };
 		BD234778291AA418009BC722 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234777291AA418009BC722 /* Reusable.swift */; };
 		BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234779291AA451009BC722 /* UICollectionView+Extension.swift */; };
@@ -49,7 +48,6 @@
 		BD23476A291A9AEB009BC722 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BD23476D291A9B41009BC722 /* SSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSButton.swift; sourceTree = "<group>"; };
 		BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSButtonStyle.swift; sourceTree = "<group>"; };
-		BD234772291AA35B009BC722 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD234777291AA418009BC722 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		BD234779291AA451009BC722 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
@@ -116,14 +114,6 @@
 				BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */,
 			);
 			path = SSButton;
-			sourceTree = "<group>";
-		};
-		BD234771291AA350009BC722 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BD234772291AA35B009BC722 /* OnboardingViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BD234776291AA410009BC722 /* Protocol */ = {
@@ -243,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				BD9258092919465C008A3158 /* View */,
-				BD234771291AA350009BC722 /* ViewModel */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -452,7 +441,6 @@
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
-				BD234773291AA35B009BC722 /* OnboardingViewModel.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
