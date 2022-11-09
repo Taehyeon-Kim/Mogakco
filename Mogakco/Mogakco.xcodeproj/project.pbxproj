@@ -36,6 +36,7 @@
 		BD92582C29194901008A3158 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582B29194901008A3158 /* RxSwift */; };
 		BD92582F2919491C008A3158 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582E2919491C008A3158 /* Then */; };
 		BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD92583129194BC8008A3158 /* .swiftlint.yml */; };
+		BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C4291C17AB009CB1C0 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,10 +67,10 @@
 		BD925813291946FE008A3158 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BD92581529194706008A3158 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		BD92581B2919476E008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		BD92581D2919477C008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92581F29194788008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD925823291947A2008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		BDE095C4291C17AB009CB1C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +328,7 @@
 		BD92581A29194749008A3158 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				BD92581D2919477C008A3158 /* .gitkeep */,
+				BDE095C4291C17AB009CB1C0 /* Onboarding.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -442,6 +443,7 @@
 			files = (
 				BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
+				BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */,
 				BD92580E29194691008A3158 /* BaseViewController.swift in Sources */,
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
