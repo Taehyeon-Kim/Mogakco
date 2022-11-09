@@ -1,5 +1,5 @@
 //
-//  UIFont+TypoStyle.swift
+//  UIFont+Extension.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/09.

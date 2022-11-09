@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD15957F291A3FAE00C552CB /* Adjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15957E291A3FAE00C552CB /* Adjusted.swift */; };
+		BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15957E291A3FAE00C552CB /* Adjusted+Extension.swift */; };
 		BD23475E291A5F1F009BC722 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */; };
 		BD23475F291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */; };
 		BD234761291A6052009BC722 /* TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234760291A6052009BC722 /* TypoStyle.swift */; };
-		BD234763291A771A009BC722 /* UILabel+TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */; };
+		BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234762291A771A009BC722 /* UILabel+Extension.swift */; };
 		BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476A291A9AEB009BC722 /* BaseView.swift */; };
 		BD23476E291A9B41009BC722 /* SSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476D291A9B41009BC722 /* SSButton.swift */; };
 		BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */; };
 		BD234773291AA35B009BC722 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234772291AA35B009BC722 /* OnboardingViewModel.swift */; };
 		BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */; };
 		BD234778291AA418009BC722 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234777291AA418009BC722 /* Reusable.swift */; };
-		BD23477A291AA451009BC722 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234779291AA451009BC722 /* UICollectionView+.swift */; };
+		BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234779291AA451009BC722 /* UICollectionView+Extension.swift */; };
 		BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */; };
-		BD23477F291BB48A009BC722 /* UIFont+TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477E291BB48A009BC722 /* UIFont+TypoStyle.swift */; };
+		BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477E291BB48A009BC722 /* UIFont+Extension.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -39,20 +39,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD15957E291A3FAE00C552CB /* Adjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjusted.swift; sourceTree = "<group>"; };
+		BD15957E291A3FAE00C552CB /* Adjusted+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+Extension.swift"; sourceTree = "<group>"; };
 		BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		BD234760291A6052009BC722 /* TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoStyle.swift; sourceTree = "<group>"; };
-		BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+TypoStyle.swift"; sourceTree = "<group>"; };
+		BD234762291A771A009BC722 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		BD23476A291A9AEB009BC722 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BD23476D291A9B41009BC722 /* SSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSButton.swift; sourceTree = "<group>"; };
 		BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSButtonStyle.swift; sourceTree = "<group>"; };
 		BD234772291AA35B009BC722 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD234777291AA418009BC722 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		BD234779291AA451009BC722 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		BD234779291AA451009BC722 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
-		BD23477E291BB48A009BC722 /* UIFont+TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+TypoStyle.swift"; sourceTree = "<group>"; };
+		BD23477E291BB48A009BC722 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,8 +90,10 @@
 		BD15957B291A3F8C00C552CB /* UIKit+ */ = {
 			isa = PBXGroup;
 			children = (
-				BD15957E291A3FAE00C552CB /* Adjusted.swift */,
-				BD234779291AA451009BC722 /* UICollectionView+.swift */,
+				BD15957E291A3FAE00C552CB /* Adjusted+Extension.swift */,
+				BD234779291AA451009BC722 /* UICollectionView+Extension.swift */,
+				BD23477E291BB48A009BC722 /* UIFont+Extension.swift */,
+				BD234762291A771A009BC722 /* UILabel+Extension.swift */,
 			);
 			path = "UIKit+";
 			sourceTree = "<group>";
@@ -265,8 +267,6 @@
 				BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */,
 				BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */,
 				BD234760291A6052009BC722 /* TypoStyle.swift */,
-				BD234762291A771A009BC722 /* UILabel+TypoStyle.swift */,
-				BD23477E291BB48A009BC722 /* UIFont+TypoStyle.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -440,7 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD234763291A771A009BC722 /* UILabel+TypoStyle.swift in Sources */,
+				BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
 				BD92580E29194691008A3158 /* BaseViewController.swift in Sources */,
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
@@ -449,14 +449,14 @@
 				BD234773291AA35B009BC722 /* OnboardingViewModel.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
-				BD23477A291AA451009BC722 /* UICollectionView+.swift in Sources */,
+				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
-				BD15957F291A3FAE00C552CB /* Adjusted.swift in Sources */,
+				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
-				BD23477F291BB48A009BC722 /* UIFont+TypoStyle.swift in Sources */,
+				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BD23476E291A9B41009BC722 /* SSButton.swift in Sources */,
 				BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */,
 			);

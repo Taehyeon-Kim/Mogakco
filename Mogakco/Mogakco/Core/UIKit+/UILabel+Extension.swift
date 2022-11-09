@@ -1,5 +1,5 @@
 //
-//  UILabel+TypoStyle.swift
+//  UILabel+Extension.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/08.
