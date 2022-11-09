@@ -38,3 +38,15 @@ extension UILabel {
         return self
     }
 }
+
+extension UILabel {
+    
+    func highlight(_ text: String, color: UIColor) {
+        guard let labelText = self.text else { return }
+        let range = (labelText as NSString).range(of: text)
+
+        let mutableAttributedString = NSMutableAttributedString.init(string: labelText)
+        mutableAttributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+        self.attributedText = mutableAttributedString
+    }
+}
