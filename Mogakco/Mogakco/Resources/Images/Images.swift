@@ -66,4 +66,9 @@ extension UIImage {
     static var icnMan: UIImage? { return UIImage(named: "man") }
     static var icnWoman: UIImage? { return UIImage(named: "woman") }
     static var icnSesac: UIImage? { return UIImage(named: "sesac") }
+    
+    // Onboarding
+    static var imgOnboarding1: UIImage? { return UIImage(named: "onboarding_img1") }
+    static var imgOnboarding2: UIImage? { return UIImage(named: "onboarding_img2") }
+    static var imgOnboarding3: UIImage? { return UIImage(named: "onboarding_img3") }
 }

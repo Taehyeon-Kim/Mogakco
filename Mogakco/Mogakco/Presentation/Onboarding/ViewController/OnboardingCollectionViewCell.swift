@@ -11,26 +11,37 @@ import SnapKit
 import Then
 
 struct Onboarding {
-    let message: String
-    let imagePath: String
+    let text: String
+    let image: UIImage?
+    
+    static let data: [Onboarding] = [
+        Onboarding(text: "위치 기반으로 빠르게\n주위 친구를 확인", image: .imgOnboarding1),
+        Onboarding(text: "스터디를 원하는 친구를\n찾을 수 있어요", image: .imgOnboarding2),
+        Onboarding(text: "SeSAC Study", image: .imgOnboarding3)
+    ]
 }
 
 final class OnboardingCollectionViewCell: BaseCollectionViewCell {
     
     private enum Metric {
-        static let messageTopMargin = 72.0.adjustedHeight
-        static let messageWidth = 227.0.adjustedWidth
-        static let messageHeight = 76.0.adjustedHeight
-        static let imageTopMargin = 56.0.adjustedHeight
-        static let imageSize = 360.0.adjustedWidth
+        static let textTopMargin = 72.adjustedHeight
+        static let textHeight = 76
+        static let imageTopMargin = 56.adjustedHeight
+        static let imageSize = 360.adjustedHeight
     }
     
-    private let messageLabel = UILabel()
+    private let textLabel = UILabel()
     private let imageView = UIImageView()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     override func setAttributes() {
-        messageLabel.do {
+        textLabel.do {
             $0.numberOfLines = 0
+            $0.textAlignment = .center
+            $0.font = .init(.regular, 24)
         }
         
         imageView.do {
@@ -39,20 +50,19 @@ final class OnboardingCollectionViewCell: BaseCollectionViewCell {
     }
     
     override func setHierarchy() {
-        contentView.addSubview(messageLabel)
+        contentView.addSubview(textLabel)
         contentView.addSubview(imageView)
     }
     
     override func setLayout() {
-        messageLabel.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide).offset(Metric.messageTopMargin)
-            $0.width.equalTo(Metric.messageWidth)
-            $0.height.equalTo(Metric.messageHeight)
+        textLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(Metric.textTopMargin)
+            $0.height.equalTo(Metric.textHeight)
             $0.centerX.equalToSuperview()
         }
         
         imageView.snp.makeConstraints {
-            $0.top.equalTo(messageLabel.snp.bottom).offset(Metric.imageTopMargin)
+            $0.top.equalTo(textLabel.snp.bottom).offset(Metric.imageTopMargin)
             $0.size.equalTo(Metric.imageSize)
             $0.centerX.equalToSuperview()
         }
@@ -62,7 +72,17 @@ final class OnboardingCollectionViewCell: BaseCollectionViewCell {
 extension OnboardingCollectionViewCell {
 
     func configure(with data: Onboarding) {
-        messageLabel.text = data.message
-        imageView.image = UIImage(named: data.imagePath)
+        textLabel.text = data.text
+        imageView.image = data.image
+        
+        highlightOnboardingText()
+    }
+    
+    private func highlightOnboardingText() {
+        for target in ["위치 기반", "스터디를 원하는 친구"] {
+            if let text = textLabel.text, text.contains(target) {
+                textLabel.highlight(target, color: .Brand.green)
+            }
+        }
     }
 }
