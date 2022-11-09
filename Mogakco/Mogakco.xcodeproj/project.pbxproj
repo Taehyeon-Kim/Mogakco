@@ -37,6 +37,7 @@
 		BD92582F2919491C008A3158 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582E2919491C008A3158 /* Then */; };
 		BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD92583129194BC8008A3158 /* .swiftlint.yml */; };
 		BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C4291C17AB009CB1C0 /* Onboarding.swift */; };
+		BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C6291C1911009CB1C0 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		BD925823291947A2008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BDE095C4291C17AB009CB1C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		BDE095C6291C1911009CB1C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,8 +242,8 @@
 		BD9258022919456B008A3158 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				BD234771291AA350009BC722 /* ViewModel */,
 				BD9258092919465C008A3158 /* View */,
+				BD234771291AA350009BC722 /* ViewModel */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -284,8 +286,9 @@
 		BD9258092919465C008A3158 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD92580A29194670008A3158 /* OnboardingViewController.swift */,
 				BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */,
+				BDE095C6291C1911009CB1C0 /* OnboardingView.swift */,
+				BD92580A29194670008A3158 /* OnboardingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				BD92580E29194691008A3158 /* BaseViewController.swift in Sources */,
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
+				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD234773291AA35B009BC722 /* OnboardingViewModel.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,

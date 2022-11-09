@@ -13,14 +13,16 @@ class BaseView: UIView {
         super.init(frame: frame)
 
         setAttributes()
+        setHierarchy()
         setLayout()
     }
     
     @available(*, unavailable)
-    public required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open func setAttributes() {}
-    open func setLayout() {}
+    func setAttributes() {}
+    func setHierarchy() {}
+    func setLayout() {}
 }
