@@ -57,6 +57,7 @@ final class PhoneEntryViewController: BaseViewController {
         phoneEntryField.snp.makeConstraints {
             $0.top.equalTo(textLabel.snp.bottom).offset(77)
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
+            $0.height.equalTo(47)
         }
         
         verificationCodeButton.snp.makeConstraints {
