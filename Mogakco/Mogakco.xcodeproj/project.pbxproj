@@ -21,6 +21,10 @@
 		BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */; };
 		BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477E291BB48A009BC722 /* UIFont+Extension.swift */; };
 		BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */; };
+		BD392CB2291D3990008D3EAB /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CB1291D3990008D3EAB /* NicknameViewController.swift */; };
+		BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CB5291D39A5008D3EAB /* BirthViewController.swift */; };
+		BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CB9291D39DD008D3EAB /* EmailViewController.swift */; };
+		BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CBB291D39EC008D3EAB /* GenderViewController.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -59,6 +63,10 @@
 		BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD23477E291BB48A009BC722 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		BD392CB1291D3990008D3EAB /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		BD392CB5291D39A5008D3EAB /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
+		BD392CB9291D39DD008D3EAB /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		BD392CBB291D39EC008D3EAB /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +143,25 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		BD392CB7291D39AE008D3EAB /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BD392CB8291D39B3008D3EAB /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BD392CB8291D39B3008D3EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD392CB5291D39A5008D3EAB /* BirthViewController.swift */,
+				BD392CB9291D39DD008D3EAB /* EmailViewController.swift */,
+				BD392CBB291D39EC008D3EAB /* GenderViewController.swift */,
+				BD392CB1291D3990008D3EAB /* NicknameViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BD9257D5291943F7008A3158 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +227,7 @@
 		BD9257F8291944A3008A3158 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BD392CB7291D39AE008D3EAB /* SignUp */,
 				BDE095C8291C1D8F009CB1C0 /* PhoneVerification */,
 				BD9258022919456B008A3158 /* Onboarding */,
 				BD92580129194567008A3158 /* Splash */,
@@ -480,7 +508,9 @@
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
+				BD392CB2291D3990008D3EAB /* NicknameViewController.swift in Sources */,
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
+				BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
 				BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */,
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
@@ -490,7 +520,9 @@
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
+				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
+				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
