@@ -20,6 +20,7 @@
 		BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234779291AA451009BC722 /* UICollectionView+Extension.swift */; };
 		BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */; };
 		BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477E291BB48A009BC722 /* UIFont+Extension.swift */; };
+		BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		BD234779291AA451009BC722 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD23477E291BB48A009BC722 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				BD234779291AA451009BC722 /* UICollectionView+Extension.swift */,
 				BD23477E291BB48A009BC722 /* UIFont+Extension.swift */,
 				BD234762291A771A009BC722 /* UILabel+Extension.swift */,
+				BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */,
 			);
 			path = "UIKit+";
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
+				BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */,
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,

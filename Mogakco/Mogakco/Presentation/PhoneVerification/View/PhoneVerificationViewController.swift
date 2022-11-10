@@ -31,6 +31,7 @@ final class PhoneVerificationViewController: BaseViewController {
         
         hStackView.do {
             $0.axis = .horizontal
+            $0.spacing = 12
         }
         
         resendButton.do {
@@ -41,6 +42,8 @@ final class PhoneVerificationViewController: BaseViewController {
             $0.placeholder = "인증번호 입력"
             $0.font = .init(.regular, 14)
             $0.keyboardType = .numberPad
+            $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.becomeFirstResponder()
         }
         
         verificationCodeButton.do {

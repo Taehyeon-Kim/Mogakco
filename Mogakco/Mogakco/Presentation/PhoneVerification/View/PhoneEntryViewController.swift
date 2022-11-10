@@ -33,6 +33,8 @@ final class PhoneEntryViewController: BaseViewController {
             $0.placeholder = "휴대폰 번호(-없이 숫자만 입력)"
             $0.font = .init(.regular, 14)
             $0.keyboardType = .numberPad
+            $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.becomeFirstResponder()
         }
         
         verificationCodeButton.do {
