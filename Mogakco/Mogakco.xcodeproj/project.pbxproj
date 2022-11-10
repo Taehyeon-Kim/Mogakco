@@ -50,6 +50,7 @@
 		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 		BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */; };
+		BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C186291D6394009B4B1B /* BirthInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewModel.swift; sourceTree = "<group>"; };
 		BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewModel.swift; sourceTree = "<group>"; };
 		BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		BDF9C186291D6394009B4B1B /* BirthInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		BD392CB8291D39B3008D3EAB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDF9C186291D6394009B4B1B /* BirthInputView.swift */,
 				BD392CB5291D39A5008D3EAB /* BirthViewController.swift */,
 				BD392CB9291D39DD008D3EAB /* EmailViewController.swift */,
 				BD392CBE291D49DA008D3EAB /* GenderInputView.swift */,
@@ -535,6 +538,7 @@
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
+				BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
