@@ -38,6 +38,7 @@ final class EmailViewController: BaseViewController {
             $0.placeholder = "SeSAC@email.com"
             $0.font = .init(.regular, 14)
             $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.setLeftPadding(to: 12)
             $0.becomeFirstResponder()
         }
         
