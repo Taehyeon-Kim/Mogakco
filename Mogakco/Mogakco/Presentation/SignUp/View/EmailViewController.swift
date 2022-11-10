@@ -11,7 +11,7 @@ final class EmailViewController: BaseViewController {
     
     private let textLabel = UILabel()
     private let subtextLabel = UILabel()
-    private let phoneEntryField = UITextField()
+    private let textField = UITextField()
     private let verificationCodeButton = SSButton(.disable)
     
     override func viewDidLoad() {
@@ -34,10 +34,9 @@ final class EmailViewController: BaseViewController {
             $0.textColor = .Gray.gray7
         }
         
-        phoneEntryField.do {
+        textField.do {
             $0.placeholder = "SeSAC@email.com"
             $0.font = .init(.regular, 14)
-            $0.keyboardType = .numberPad
             $0.setBottomBorder(with: .Gray.gray3, width: 1)
             $0.becomeFirstResponder()
         }
@@ -50,7 +49,7 @@ final class EmailViewController: BaseViewController {
     override func setHierarchy() {
         view.addSubview(textLabel)
         view.addSubview(subtextLabel)
-        view.addSubview(phoneEntryField)
+        view.addSubview(textField)
         view.addSubview(verificationCodeButton)
     }
     
@@ -65,14 +64,14 @@ final class EmailViewController: BaseViewController {
             $0.centerX.equalToSuperview()
         }
         
-        phoneEntryField.snp.makeConstraints {
+        textField.snp.makeConstraints {
             $0.top.equalTo(textLabel.snp.bottom).offset(77)
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(47)
         }
         
         verificationCodeButton.snp.makeConstraints {
-            $0.top.equalTo(phoneEntryField.snp.bottom).offset(72)
+            $0.top.equalTo(textField.snp.bottom).offset(72)
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(48)
         }
