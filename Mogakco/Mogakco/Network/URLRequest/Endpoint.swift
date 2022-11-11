@@ -17,7 +17,7 @@ struct Endpoint<R>: RequestResponsable {
     var method: HTTPMethod
     var queryParameters: Encodable?
     var bodyParameters: Encodable?
-    var headers: [String : String]?
+    var headers: [String: String]?
     var sampleData: Data?
     
     init(
@@ -26,10 +26,9 @@ struct Endpoint<R>: RequestResponsable {
         method: HTTPMethod,
         queryParameters: Encodable? = nil,
         bodyParameters: Encodable? = nil,
-        headers: [String : String]? = [:],
+        headers: [String: String]? = [:],
         sampleData: Data? = nil
-    )
-    {
+    ) {
         self.baseURL = baseURL
         self.path = path
         self.method = method
