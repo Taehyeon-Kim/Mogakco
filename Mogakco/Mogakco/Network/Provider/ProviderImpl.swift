@@ -8,24 +8,24 @@
 import Foundation
 
 final class ProviderImpl: Provider {
-
+    
     let session: URLSession
-
+    
     init(session: URLSession = .shared) {
         self.session = session
     }
-
+    
     func request<R: Decodable, E: RequestResponsable>(
         with endpoint: E,
         completion: @escaping (Result<R, Error>) -> Void
     ) where E.Response == R {
         do {
             let urlRequest = try endpoint.makeURLRequest()
-
+            
             session.dataTask(with: urlRequest) { [weak self] data, response, error in
                 self?.handleError(with: data, response, error) { result in
                     guard let self = self else { return }
-
+                    
                     switch result {
                     case .success(let data):
                         completion(self.decode(data: data))
@@ -34,12 +34,12 @@ final class ProviderImpl: Provider {
                     }
                 }
             }.resume()
-
+            
         } catch {
             completion(.failure(NetworkError.urlRequest(error)))
         }
     }
-
+    
     func request(
         _ url: URL,
         completion: @escaping (Result<Data, Error>) -> Void
@@ -53,7 +53,7 @@ final class ProviderImpl: Provider {
 }
 
 extension ProviderImpl {
-
+    
     private func handleError(
         with data: Data?,
         _ response: URLResponse?,
@@ -64,25 +64,25 @@ extension ProviderImpl {
             completion(.failure(error))
             return
         }
-
+        
         guard let response = response as? HTTPURLResponse else {
             completion(.failure(NetworkError.unknown))
             return
         }
-
+        
         guard (200...299).contains(response.statusCode) else {
             completion(.failure(NetworkError.server(InternalError(rawValue: response.statusCode) ?? .unknown)))
             return
         }
-
+        
         guard let data = data else {
             completion(.failure(NetworkError.emptyData))
             return
         }
-
+        
         completion(.success(data))
     }
-
+    
     private func decode<T: Decodable>(data: Data) -> Result<T, Error> {
         do {
             let decoded = try JSONDecoder().decode(T.self, from: data)
