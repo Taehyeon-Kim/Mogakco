@@ -8,13 +8,13 @@
 import Foundation
 
 enum NetworkError: Error {
-    case unknownError
-    case componentsError
-    case urlRequestError(Error)
-    case serverError(InternalError)
+    case unknown
+    case components
+    case urlRequest(Error)
+    case server(InternalError)
     case emptyData
-    case parsingError
-    case decodingError(Error)
+    case parsing
+    case decoding(Error)
 }
 
 enum InternalError: Int {

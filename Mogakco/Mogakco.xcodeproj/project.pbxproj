@@ -32,6 +32,12 @@
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
 		BD523777291E537B004EE2B6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523776291E537B004EE2B6 /* Environment.swift */; };
+		BD52377B291E587A004EE2B6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52377A291E587A004EE2B6 /* Requestable.swift */; };
+		BD52377D291E5903004EE2B6 /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52377C291E5903004EE2B6 /* Responsable.swift */; };
+		BD52377F291E591A004EE2B6 /* Encodable+toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52377E291E591A004EE2B6 /* Encodable+toDictionary.swift */; };
+		BD523781291E593F004EE2B6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523780291E593F004EE2B6 /* Endpoint.swift */; };
+		BD523785291E5A6F004EE2B6 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523784291E5A6F004EE2B6 /* Provider.swift */; };
+		BD523787291E5A88004EE2B6 /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523786291E5A88004EE2B6 /* ProviderImpl.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -83,6 +89,12 @@
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		BD523776291E537B004EE2B6 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		BD52377A291E587A004EE2B6 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		BD52377C291E5903004EE2B6 /* Responsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
+		BD52377E291E591A004EE2B6 /* Encodable+toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+toDictionary.swift"; sourceTree = "<group>"; };
+		BD523780291E593F004EE2B6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		BD523784291E5A6F004EE2B6 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		BD523786291E5A88004EE2B6 /* ProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +195,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BD523782291E595D004EE2B6 /* URLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				BD523780291E593F004EE2B6 /* Endpoint.swift */,
+				BD52377A291E587A004EE2B6 /* Requestable.swift */,
+				BD52377C291E5903004EE2B6 /* Responsable.swift */,
+			);
+			path = URLRequest;
+			sourceTree = "<group>";
+		};
+		BD523783291E5A66004EE2B6 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				BD523784291E5A6F004EE2B6 /* Provider.swift */,
+				BD523786291E5A88004EE2B6 /* ProviderImpl.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		BD9257D5291943F7008A3158 = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +290,8 @@
 		BD9257FC291944FC008A3158 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BD523783291E5A66004EE2B6 /* Provider */,
+				BD523782291E595D004EE2B6 /* URLRequest */,
 				BD92581829194731008A3158 /* Foundation */,
 			);
 			path = Network;
@@ -365,9 +398,10 @@
 		BD92581829194731008A3158 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				BD52377E291E591A004EE2B6 /* Encodable+toDictionary.swift */,
+				BD523776291E537B004EE2B6 /* Environment.swift */,
 				BD523772291E5277004EE2B6 /* HTTPMethod.swift */,
 				BD52376C291E5024004EE2B6 /* NetworkError.swift */,
-				BD523776291E537B004EE2B6 /* Environment.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -541,6 +575,7 @@
 				BD523777291E537B004EE2B6 /* Environment.swift in Sources */,
 				BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */,
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
+				BD52377D291E5903004EE2B6 /* Responsable.swift in Sources */,
 				BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */,
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
@@ -550,16 +585,21 @@
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
 				BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */,
+				BD523781291E593F004EE2B6 /* Endpoint.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
+				BD52377F291E591A004EE2B6 /* Encodable+toDictionary.swift in Sources */,
+				BD523785291E5A6F004EE2B6 /* Provider.swift in Sources */,
 				BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
 				BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
+				BD52377B291E587A004EE2B6 /* Requestable.swift in Sources */,
 				BD23476E291A9B41009BC722 /* SSButton.swift in Sources */,
+				BD523787291E5A88004EE2B6 /* ProviderImpl.swift in Sources */,
 				BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
