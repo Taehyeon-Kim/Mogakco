@@ -40,6 +40,7 @@
 		BD523787291E5A88004EE2B6 /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523786291E5A88004EE2B6 /* ProviderImpl.swift */; };
 		BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523789291E5C97004EE2B6 /* EmptyResponse.swift */; };
 		BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */; };
+		BD523790291E602F004EE2B6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD52378F291E602F004EE2B6 /* FirebaseAuth */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		BD523786291E5A88004EE2B6 /* ProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		BD523789291E5C97004EE2B6 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mogakco.entitlements; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD92582C29194901008A3158 /* RxSwift in Frameworks */,
+				BD523790291E602F004EE2B6 /* FirebaseAuth in Frameworks */,
 				BD92582A29194901008A3158 /* RxCocoa in Frameworks */,
 				BD925827291948DF008A3158 /* SnapKit in Frameworks */,
 				BD92582F2919491C008A3158 /* Then in Frameworks */,
@@ -246,6 +249,7 @@
 		BD9257E0291943F8008A3158 /* Mogakco */ = {
 			isa = PBXGroup;
 			children = (
+				BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */,
 				BD9257F5291943FE008A3158 /* Application */,
 				BD9257FE2919452E008A3158 /* Core */,
 				BD92581929194747008A3158 /* Data */,
@@ -485,6 +489,7 @@
 				BD92582929194901008A3158 /* RxCocoa */,
 				BD92582B29194901008A3158 /* RxSwift */,
 				BD92582E2919491C008A3158 /* Then */,
+				BD52378F291E602F004EE2B6 /* FirebaseAuth */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -518,6 +523,7 @@
 				BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */,
+				BD52378E291E602F004EE2B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -700,21 +706,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekki.Mogakco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memolease.sesacslp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -842,21 +850,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekki.Mogakco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memolease.sesacslp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -869,21 +879,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.taekki.Mogakco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memolease.sesacslp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -917,6 +929,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BD52378E291E602F004EE2B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -944,6 +964,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BD52378F291E602F004EE2B6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD52378E291E602F004EE2B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		BD925826291948DF008A3158 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */;
