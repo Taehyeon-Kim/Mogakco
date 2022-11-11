@@ -17,7 +17,7 @@ class BaseViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required convenience init?(coder aDecoder: NSCoder) {
+    convenience required init?(coder aDecoder: NSCoder) {
         self.init()
     }
     

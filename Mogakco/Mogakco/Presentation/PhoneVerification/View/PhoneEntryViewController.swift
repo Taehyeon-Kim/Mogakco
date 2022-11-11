@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 final class PhoneEntryViewController: BaseViewController {
     
     // MARK: Constants
@@ -39,6 +42,25 @@ final class PhoneEntryViewController: BaseViewController {
     private let titleLabel = UILabel()
     private let phoneEntryField = UITextField()
     private let verificationCodeButton = SSButton(.disable)
+    
+    // MARK: Properties
+    
+    var viewModel: PhoneEntryViewModel
+    
+    // MARK: Initializing
+    
+    init(viewModel: PhoneEntryViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bind()
+    }
     
     // MARK: Override Methods
    
@@ -86,5 +108,31 @@ final class PhoneEntryViewController: BaseViewController {
             $0.directionalHorizontalEdges.equalToSuperview().inset(Metric.padding)
             $0.height.equalTo(Metric.verificationCodeButtonHeight)
         }
+    }
+}
+
+extension PhoneEntryViewController: Bindable {
+    
+    func bind() {
+        let input = PhoneEntryViewModel.Input(
+            phoneEntryText: phoneEntryField.rx.text.orEmpty,
+            buttonTrigger: verificationCodeButton.button.rx.tap
+        )
+        let output = viewModel.transform(input: input)
+        
+        output.phoneEntryText
+            .drive(phoneEntryField.rx.text)
+            .disposed(by: disposeBag)
+        
+        output.isEnabled
+            .emit(to: verificationCodeButton.button.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        output.isEnabled
+            .withUnretained(self)
+            .emit { view, isEnabled in
+                view.verificationCodeButton.buttonStyle = isEnabled ? .fill : .disable
+            }
+            .disposed(by: disposeBag)
     }
 }
