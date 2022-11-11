@@ -29,6 +29,7 @@
 		BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CC0291D4A61008D3EAB /* UIView+Extension.swift */; };
 		BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CC2291D4AAC008D3EAB /* UIStackView+Extension.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
+		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		BD392CC0291D4A61008D3EAB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BD392CC2291D4AAC008D3EAB /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 		BD92581829194731008A3158 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				BD52376C291E5024004EE2B6 /* NetworkError.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */,
 				BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */,
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
+				BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */,
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
