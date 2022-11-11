@@ -57,6 +57,7 @@
 		BD92582F2919491C008A3158 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582E2919491C008A3158 /* Then */; };
 		BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD92583129194BC8008A3158 /* .swiftlint.yml */; };
 		BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B10291E70C7000C4A6A /* ViewModelType.swift */; };
+		BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B12291E763F000C4A6A /* Bindable.swift */; };
 		BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C4291C17AB009CB1C0 /* Onboarding.swift */; };
 		BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C6291C1911009CB1C0 /* OnboardingView.swift */; };
 		BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */; };
@@ -117,6 +118,7 @@
 		BD92581B2919476E008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BDC06B10291E70C7000C4A6A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		BDC06B12291E763F000C4A6A /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		BDE095C4291C17AB009CB1C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BDE095C6291C1911009CB1C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BD234777291AA418009BC722 /* Reusable.swift */,
+				BDC06B12291E763F000C4A6A /* Bindable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
+				BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */,
 				BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */,
 				BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */,
 				BD523777291E537B004EE2B6 /* Environment.swift in Sources */,
