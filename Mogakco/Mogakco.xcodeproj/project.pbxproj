@@ -90,7 +90,6 @@
 		BD925813291946FE008A3158 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BD92581529194706008A3158 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		BD92581B2919476E008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		BD92581F29194788008A3158 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BDE095C4291C17AB009CB1C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BDE095C6291C1911009CB1C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -360,7 +359,6 @@
 		BD92581829194731008A3158 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				BD92581F29194788008A3158 /* .gitkeep */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
