@@ -39,6 +39,7 @@
 		BD523785291E5A6F004EE2B6 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523784291E5A6F004EE2B6 /* Provider.swift */; };
 		BD523787291E5A88004EE2B6 /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523786291E5A88004EE2B6 /* ProviderImpl.swift */; };
 		BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523789291E5C97004EE2B6 /* EmptyResponse.swift */; };
+		BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		BD523784291E5A6F004EE2B6 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		BD523786291E5A88004EE2B6 /* ProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderImpl.swift; sourceTree = "<group>"; };
 		BD523789291E5C97004EE2B6 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 		BD9257F729194433008A3158 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */,
 				BD9257EF291943F9008A3158 /* Info.plist */,
 			);
 			path = Supports;
@@ -536,6 +539,7 @@
 				BD9257EE291943F9008A3158 /* LaunchScreen.storyboard in Resources */,
 				BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */,
 				BD23475E291A5F1F009BC722 /* NotoSansCJKkr-Medium.otf in Resources */,
+				BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
