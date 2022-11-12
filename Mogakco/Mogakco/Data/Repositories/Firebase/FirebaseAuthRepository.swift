@@ -13,4 +13,5 @@ import RxSwift
 protocol FirebaseAuthRepository {
     func fetchVerificationID(of phoneNumber: String) -> Single<String>
     func verify(for code: String) -> Single<String>
+    func requestIDToken() -> Single<String>
 }

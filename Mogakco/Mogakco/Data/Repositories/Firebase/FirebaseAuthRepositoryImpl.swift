@@ -77,4 +77,25 @@ final class FirebaseAuthRepositoryImpl: FirebaseAuthRepository {
             return Disposables.create()
         }
     }
+    
+    func requestIDToken() -> Single<String> {
+        let currentUser = Auth.auth().currentUser
+        
+        return Single.create { single in
+            currentUser?.getIDTokenForcingRefresh(true) { token, error in
+                
+                if let error = error {
+                    single(.failure(error))
+                }
+                
+                if let token = token {
+                    single(.success(token))
+                } else {
+                    single(.failure(Error.noToken))
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
 }
