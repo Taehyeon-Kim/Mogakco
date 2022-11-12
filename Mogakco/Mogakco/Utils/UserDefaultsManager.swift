@@ -30,6 +30,8 @@ struct UserDefaultsWrapper<T> {
 
 enum UserDefaultsKey: String, CaseIterable {
     case isAppFirstLaunch
+    case verificationID
+    case idToken
 }
 
 struct UserDefaultsManager {
@@ -37,4 +39,12 @@ struct UserDefaultsManager {
     /// 앱 첫 실행시
     @UserDefaultsWrapper(key: UserDefaultsKey.isAppFirstLaunch.rawValue, defaultValue: true)
     static var isAppFirstLaunch: Bool
+    
+    /// 파이어베이스 인증 ID
+    @UserDefaultsWrapper(key: UserDefaultsKey.verificationID.rawValue, defaultValue: "")
+    static var verificationID: String
+    
+    /// idToken
+    @UserDefaultsWrapper(key: UserDefaultsKey.idToken.rawValue, defaultValue: "")
+    static var idToken: String
 }

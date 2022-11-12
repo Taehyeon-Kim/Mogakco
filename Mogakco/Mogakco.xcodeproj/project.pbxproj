@@ -59,6 +59,8 @@
 		BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B10291E70C7000C4A6A /* ViewModelType.swift */; };
 		BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B12291E763F000C4A6A /* Bindable.swift */; };
 		BDC06B16291EA718000C4A6A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B15291EA718000C4A6A /* String+.swift */; };
+		BDC06B1A291EC66E000C4A6A /* FirebaseAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */; };
+		BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */; };
 		BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C4291C17AB009CB1C0 /* Onboarding.swift */; };
 		BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C6291C1911009CB1C0 /* OnboardingView.swift */; };
 		BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */; };
@@ -121,6 +123,8 @@
 		BDC06B10291E70C7000C4A6A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		BDC06B12291E763F000C4A6A /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		BDC06B15291EA718000C4A6A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepository.swift; sourceTree = "<group>"; };
+		BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepositoryImpl.swift; sourceTree = "<group>"; };
 		BDE095C4291C17AB009CB1C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BDE095C6291C1911009CB1C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewController.swift; sourceTree = "<group>"; };
@@ -436,6 +440,7 @@
 		BD92581929194747008A3158 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BDC06B17291EC626000C4A6A /* Repositories */,
 				BD92581B2919476E008A3158 /* .gitkeep */,
 			);
 			path = Data;
@@ -455,6 +460,23 @@
 				BDC06B15291EA718000C4A6A /* String+.swift */,
 			);
 			path = "Foundation+";
+			sourceTree = "<group>";
+		};
+		BDC06B17291EC626000C4A6A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BDC06B18291EC638000C4A6A /* Firebase */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BDC06B18291EC638000C4A6A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */,
+				BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		BDE095C8291C1D8F009CB1C0 /* PhoneVerification */ = {
@@ -623,9 +645,11 @@
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
+				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
 				BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */,
+				BDC06B1A291EC66E000C4A6A /* FirebaseAuthRepository.swift in Sources */,
 				BD523781291E593F004EE2B6 /* Endpoint.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,

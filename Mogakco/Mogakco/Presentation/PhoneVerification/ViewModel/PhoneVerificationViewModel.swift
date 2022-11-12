@@ -12,7 +12,11 @@ import RxSwift
 
 final class PhoneVerificationViewModel: ViewModelType {
     
+    var repository: FirebaseAuthRepository!
+    
     var disposeBag = DisposeBag()
+    
+    private var verificationCode = ""
 
     struct Input {
         let verificationCode: ControlProperty<String>
@@ -30,12 +34,21 @@ final class PhoneVerificationViewModel: ViewModelType {
         
         let verificationCode = input.verificationCode
             .scan("") { prev, next in
-                return next.count > maxNumber ? prev : next
+                self.verificationCode = next.count > maxNumber ? prev : next
+                return self.verificationCode
             }
         
         let isEnabled = verificationCode
             .map { $0.count == maxNumber }
             .asDriver(onErrorJustReturn: false)
+        
+        input.verifyButtonTrigger
+            .withUnretained(self)
+            .flatMap { `self`, _ in
+                self.repository.verify(for: self.verificationCode)  // Single로 처리해야할듯
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
             
         return Output(
             verificationCode: verificationCode.asDriver(onErrorJustReturn: ""),
