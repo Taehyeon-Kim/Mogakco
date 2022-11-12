@@ -22,9 +22,7 @@ final class NetworkMonitor {
 
     /// 모니터링 시작
     func start(statusHandler: @escaping StatusHandler) {
-        monitor.pathUpdateHandler = { [weak self] path in
-            self?.status = path.status
-            
+        monitor.pathUpdateHandler = { path in
             DispatchQueue.main.async {
                 statusHandler(path.status)
             }
@@ -40,4 +38,3 @@ final class NetworkMonitor {
         monitor.cancel()
     }
 }
-
