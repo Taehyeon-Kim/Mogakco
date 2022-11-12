@@ -17,5 +17,5 @@ struct Env {
         #endif
     }
     
-    static let apiVersion = "v1"
+    static let apiVersion = "/v1"
 }

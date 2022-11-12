@@ -143,5 +143,18 @@ extension PhoneVerificationViewController: Bindable {
                 self?.verificationCodeButton.buttonStyle = isEnabled ? .fill : .disable
             }
             .disposed(by: disposeBag)
+        
+        output.isSucceedVerification
+            .drive { [weak self] idToken in
+                // 토스트 성공 메시지 넣기
+                print("성공: \(UserDefaultsManager.idToken)")
+            }
+            .disposed(by: disposeBag)
+        
+        output.isErrorVerification
+            .drive { _ in
+                print("실패: \(UserDefaultsManager.idToken)")
+            }
+            .disposed(by: disposeBag)
     }
 }

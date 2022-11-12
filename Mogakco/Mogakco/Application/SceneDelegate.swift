@@ -14,8 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        
-        print("인증ID: \(UserDefaultsManager.verificationID)")
 
         let firebaseRepository = FirebaseAuthRepositoryImpl()
         let viewModel = PhoneEntryViewModel(firebaseRepository: firebaseRepository)

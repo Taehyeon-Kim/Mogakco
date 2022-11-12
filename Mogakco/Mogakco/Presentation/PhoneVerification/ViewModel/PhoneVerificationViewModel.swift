@@ -12,11 +12,18 @@ import RxSwift
 
 final class PhoneVerificationViewModel: ViewModelType {
     
-    var repository: FirebaseAuthRepository!
+    private var firebaseRepository: FirebaseAuthRepository
     
     var disposeBag = DisposeBag()
-    
     private var verificationCode = ""
+    private let isSucceed = PublishSubject<String>()
+    private let isError = PublishSubject<String>()
+    
+    init(
+        firebaseRepository: FirebaseAuthRepository
+    ) {
+        self.firebaseRepository = firebaseRepository
+    }
 
     struct Input {
         let verificationCode: ControlProperty<String>
@@ -27,6 +34,8 @@ final class PhoneVerificationViewModel: ViewModelType {
     struct Output {
         let verificationCode: Driver<String>
         let isEnabled: Driver<Bool>
+        let isSucceedVerification: Driver<String>
+        let isErrorVerification: Driver<String>
     }
     
     func transform(input: Input) -> Output {
@@ -44,15 +53,29 @@ final class PhoneVerificationViewModel: ViewModelType {
         
         input.verifyButtonTrigger
             .withUnretained(self)
-            .flatMap { `self`, _ in
-                self.repository.verify(for: self.verificationCode)  // Single로 처리해야할듯
-            }
+            .map { `self`, _ in self.verifyUser() }
             .subscribe()
             .disposed(by: disposeBag)
             
         return Output(
             verificationCode: verificationCode.asDriver(onErrorJustReturn: ""),
-            isEnabled: isEnabled
+            isEnabled: isEnabled,
+            isSucceedVerification: isSucceed.asDriver(onErrorJustReturn: ""),
+            isErrorVerification: isError.asDriver(onErrorJustReturn: "")
         )
+    }
+}
+
+extension PhoneVerificationViewModel {
+    
+    func verifyUser() {
+        firebaseRepository.verify(for: verificationCode)
+            .subscribe { [weak self] idToken in
+                print("🐙 :: 성공 \(idToken)")
+                self?.isSucceed.onNext(idToken)
+            } onFailure: { [weak self] error in
+                self?.isError.onNext(error.localizedDescription)
+            }
+            .disposed(by: disposeBag)
     }
 }

@@ -134,7 +134,8 @@ extension PhoneEntryViewController: Bindable {
         output.isSucceedVerification
             .drive { [weak self] _ in
                 // 토스트 성공 메시지 넣기
-                let viewModel = PhoneVerificationViewModel()
+                let firebaseRepository = FirebaseAuthRepositoryImpl()
+                let viewModel = PhoneVerificationViewModel(firebaseRepository: firebaseRepository)
                 let viewController = PhoneVerificationViewController(viewModel: viewModel)
                 self?.transition(to: viewController)
             }

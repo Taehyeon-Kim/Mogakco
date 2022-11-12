@@ -31,6 +31,8 @@
 		BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */; };
 		BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */; };
 		BD3C6485291FF0C3005E7142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6484291FF0C3005E7142 /* User.swift */; };
+		BD3C648A291FF568005E7142 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6489291FF568005E7142 /* UserEndpoint.swift */; };
+		BD3C648C291FF5F4005E7142 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -99,6 +101,8 @@
 		BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
 		BD3C6484291FF0C3005E7142 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BD3C6489291FF568005E7142 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
+		BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -249,6 +253,14 @@
 				BD3C6484291FF0C3005E7142 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BD3C6486291FF4EB005E7142 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD3C6489291FF568005E7142 /* UserEndpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		BD523782291E595D004EE2B6 /* URLRequest */ = {
@@ -473,6 +485,7 @@
 				BD523776291E537B004EE2B6 /* Environment.swift */,
 				BD523772291E5277004EE2B6 /* HTTPMethod.swift */,
 				BD52376C291E5024004EE2B6 /* NetworkError.swift */,
+				BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -480,6 +493,7 @@
 		BD92581929194747008A3158 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BD3C6486291FF4EB005E7142 /* Network */,
 				BDC06B17291EC626000C4A6A /* Repositories */,
 				BD92581B2919476E008A3158 /* .gitkeep */,
 			);
@@ -661,6 +675,7 @@
 				BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */,
 				BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */,
 				BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */,
+				BD3C648A291FF568005E7142 /* UserEndpoint.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
 				BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */,
 				BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */,
@@ -689,6 +704,7 @@
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
+				BD3C648C291FF5F4005E7142 /* HTTPHeaders.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,

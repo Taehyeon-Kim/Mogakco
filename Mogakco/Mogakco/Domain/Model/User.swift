@@ -15,9 +15,9 @@ struct User: Equatable {
     let study: String
     let comment: [String]
     let reputation: [Int]
-    let sesac: SesacImageCase
+    let sesac: Int
     let sesacCollection: [Int]
-    let background: SesacBackgroundCase
+    let background: Int
     let backgroundCollection: [Int]
     let purchaseToken, transactionID, reviewedBefore: [String]
     let reportedNum: Int
