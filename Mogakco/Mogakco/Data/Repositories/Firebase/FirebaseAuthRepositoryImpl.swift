@@ -67,6 +67,7 @@ final class FirebaseAuthRepositoryImpl: FirebaseAuthRepository {
                     }
                     
                     if let token = token {
+                        UserDefaultsManager.idToken = token // idToken 저장
                         single(.success(token))
                     } else {
                         single(.failure(Error.noToken))
@@ -89,6 +90,7 @@ final class FirebaseAuthRepositoryImpl: FirebaseAuthRepository {
                 }
                 
                 if let token = token {
+                    UserDefaultsManager.idToken = token // 갱신 idToken 저장
                     single(.success(token))
                 } else {
                     single(.failure(Error.noToken))
