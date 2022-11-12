@@ -72,6 +72,7 @@
 		BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095CF291C1E92009CB1C0 /* PhoneVerificationViewController.swift */; };
 		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
+		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
 		BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */; };
 		BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C186291D6394009B4B1B /* BirthInputView.swift */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		BDE095CF291C1E92009CB1C0 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewModel.swift; sourceTree = "<group>"; };
 		BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewModel.swift; sourceTree = "<group>"; };
+		BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
 		BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BDF9C186291D6394009B4B1B /* BirthInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 		BD392CB7291D39AE008D3EAB /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				BDE4B6CA292009130084D60F /* ViewModel */,
 				BD392CB8291D39B3008D3EAB /* View */,
 			);
 			path = SignUp;
@@ -559,6 +562,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BDE4B6CA292009130084D60F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -722,6 +733,7 @@
 				BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BD52377B291E587A004EE2B6 /* Requestable.swift in Sources */,
+				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
 				BD23476E291A9B41009BC722 /* SSButton.swift in Sources */,
 				BD523787291E5A88004EE2B6 /* ProviderImpl.swift in Sources */,
 				BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */,
