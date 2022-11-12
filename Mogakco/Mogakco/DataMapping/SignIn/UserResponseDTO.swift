@@ -9,7 +9,6 @@ import Foundation
 
 struct UserResponseDTO: Codable {
     let id: String
-    let v: Int
     let uid, phoneNumber, email, fcmToken: String
     let nick, birth: String
     let gender: Int
@@ -29,7 +28,6 @@ struct UserResponseDTO: Codable {
 
     private enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case v = "__v"
         case uid, phoneNumber, email
         case fcmToken = "FCMtoken"
         case nick, birth, gender, study, comment, reputation, sesac, sesacCollection, background, backgroundCollection, purchaseToken

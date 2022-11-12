@@ -22,9 +22,10 @@ final class ProviderImpl: Provider {
         do {
             let urlRequest = try endpoint.makeURLRequest()
             
-            session.dataTask(with: urlRequest) { [weak self] data, response, error in
-                self?.handleError(with: data, response, error) { result in
-                    guard let self = self else { return }
+            session.dataTask(with: urlRequest) { data, response, error in
+                self.handleError(with: data, response, error) { result in
+                    
+                    dump(result)
                     
                     switch result {
                     case .success(let data):
