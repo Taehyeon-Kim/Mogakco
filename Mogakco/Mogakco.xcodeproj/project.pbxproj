@@ -337,9 +337,9 @@
 		BD9257FE2919452E008A3158 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BD92580C29194682008A3158 /* Base */,
 				BDC06B14291EA70D000C4A6A /* Foundation+ */,
 				BD234776291AA410009BC722 /* Protocol */,
-				BD92580C29194682008A3158 /* Base */,
 				BD15957B291A3F8C00C552CB /* UIKit+ */,
 			);
 			path = Core;
@@ -753,7 +753,7 @@
 				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -897,7 +897,7 @@
 				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -926,7 +926,7 @@
 				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
