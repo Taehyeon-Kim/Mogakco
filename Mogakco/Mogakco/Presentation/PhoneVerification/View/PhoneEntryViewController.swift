@@ -134,5 +134,17 @@ extension PhoneEntryViewController: Bindable {
                 view.verificationCodeButton.buttonStyle = isEnabled ? .fill : .disable
             }
             .disposed(by: disposeBag)
+        
+        output.isSucceedVerification
+            .drive { _ in
+                print("성공 토스트 메시지 후, 화면 전환")
+            }
+            .disposed(by: disposeBag)
+        
+        output.isErrorVerification
+            .drive { _ in
+                print("에러 토스트 메시지")
+            }
+            .disposed(by: disposeBag)
     }
 }
