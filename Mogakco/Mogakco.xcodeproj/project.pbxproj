@@ -29,6 +29,8 @@
 		BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CC0291D4A61008D3EAB /* UIView+Extension.swift */; };
 		BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CC2291D4AAC008D3EAB /* UIStackView+Extension.swift */; };
 		BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */; };
+		BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */; };
+		BD3C6485291FF0C3005E7142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6484291FF0C3005E7142 /* User.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -95,6 +97,8 @@
 		BD392CC0291D4A61008D3EAB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BD392CC2291D4AAC008D3EAB /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
+		BD3C6484291FF0C3005E7142 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -223,6 +227,30 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		BD3C647F291FEFCB005E7142 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				BD3C6480291FEFD7005E7142 /* SignIn */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		BD3C6480291FEFD7005E7142 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		BD3C6483291FF0B6005E7142 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD3C6484291FF0C3005E7142 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BD523782291E595D004EE2B6 /* URLRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +301,7 @@
 				BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */,
 				BD9257F5291943FE008A3158 /* Application */,
 				BD9257FE2919452E008A3158 /* Core */,
+				BD3C647F291FEFCB005E7142 /* DataMapping */,
 				BD92581929194747008A3158 /* Data */,
 				BD234764291A86FC009BC722 /* DesignSystem */,
 				BD92581A29194749008A3158 /* Domain */,
@@ -460,6 +489,7 @@
 		BD92581A29194749008A3158 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BD3C6483291FF0B6005E7142 /* Model */,
 				BDE095C4291C17AB009CB1C0 /* Onboarding.swift */,
 			);
 			path = Domain;
@@ -628,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */,
 				BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */,
 				BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
@@ -657,6 +688,7 @@
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
+				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
