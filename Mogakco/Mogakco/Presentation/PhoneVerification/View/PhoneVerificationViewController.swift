@@ -17,14 +17,10 @@ final class PhoneVerificationViewController: BaseViewController {
     enum Metric {
         static let padding = 16.adjustedWidth
         static let textFieldLeftPadding = 12.0
-        
         static let titleLabelTop = 125.adjustedHeight
-        
         static let containerHStackViewTop = 77
         static let containerHStackViewHeight = 47
-        
         static let resendButtonWidth = 72
-        
         static let verificationCodeButtonTop = 72.adjustedHeight
         static let verificationCodeButtonHeight = 48.adjustedHeight
     }
@@ -89,6 +85,7 @@ final class PhoneVerificationViewController: BaseViewController {
             $0.placeholder = Text.verificationCodeField
             $0.font = .init(.regular, 14)
             $0.keyboardType = .numberPad
+            $0.textContentType = .oneTimeCode
             $0.setBottomBorder(with: .Gray.gray3, width: 1)
             $0.setLeftPadding(to: Metric.textFieldLeftPadding)
             $0.becomeFirstResponder()
