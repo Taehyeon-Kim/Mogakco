@@ -73,6 +73,7 @@
 		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
+		BDE4B6CF2920DB390084D60F /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BDE4B6CE2920DB390084D60F /* Toast */; };
 		BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */; };
 		BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C186291D6394009B4B1B /* BirthInputView.swift */; };
 /* End PBXBuildFile section */
@@ -151,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE4B6CF2920DB390084D60F /* Toast in Frameworks */,
 				BD92582C29194901008A3158 /* RxSwift in Frameworks */,
 				BD523790291E602F004EE2B6 /* FirebaseAuth in Frameworks */,
 				BD92582A29194901008A3158 /* RxCocoa in Frameworks */,
@@ -593,6 +595,7 @@
 				BD92582B29194901008A3158 /* RxSwift */,
 				BD92582E2919491C008A3158 /* Then */,
 				BD52378F291E602F004EE2B6 /* FirebaseAuth */,
+				BDE4B6CE2920DB390084D60F /* Toast */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -627,6 +630,7 @@
 				BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */,
 				BD52378E291E602F004EE2B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BDE4B6CD2920DB390084D60F /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -1075,6 +1079,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		BDE4B6CD2920DB390084D60F /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1102,6 +1114,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		BDE4B6CE2920DB390084D60F /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE4B6CD2920DB390084D60F /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
