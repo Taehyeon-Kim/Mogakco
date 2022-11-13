@@ -32,6 +32,7 @@ enum UserDefaultsKey: String, CaseIterable {
     case isAppFirstLaunch
     case verificationID
     case idToken
+    case nickname
 }
 
 struct UserDefaultsManager {
@@ -47,4 +48,8 @@ struct UserDefaultsManager {
     /// idToken
     @UserDefaultsWrapper(key: UserDefaultsKey.idToken.rawValue, defaultValue: "")
     static var idToken: String
+    
+    /// nickname
+    @UserDefaultsWrapper(key: UserDefaultsKey.nickname.rawValue, defaultValue: "")
+    static var nickname: String
 }

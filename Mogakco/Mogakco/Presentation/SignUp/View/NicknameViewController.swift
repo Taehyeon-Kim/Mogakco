@@ -111,6 +111,7 @@ extension NicknameViewController: Bindable {
             .drive { [weak self] _ in
                 let viewController = BirthViewController()
                 self?.transition(to: viewController)
+                self?.viewModel.saveNickname()
             }
             .disposed(by: disposeBag)
     }
