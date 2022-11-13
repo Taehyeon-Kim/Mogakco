@@ -27,6 +27,10 @@ final class SSButton: BaseView {
         }
     }
     
+    var isEnabled: Bool {
+        return buttonStyle != .disable
+    }
+    
     init(_ buttonStyle: SSButtonStyle) {
         self.buttonStyle = buttonStyle
         super.init(frame: .zero)
@@ -54,6 +58,7 @@ final class SSButton: BaseView {
     private func updateUI(_ buttonStyle: SSButtonStyle) {
         button.backgroundColor = buttonStyle.backgroundColor
         button.setTitleColor(buttonStyle.titleColor, for: .normal)
+        button.isEnabled = buttonStyle != .disable
     }
     
     @objc func buttonTapped(_ sender: UIButton) {
