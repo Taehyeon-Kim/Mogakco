@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 final class BirthViewController: BaseViewController {
     
     private let textLabel = UILabel()
@@ -16,8 +19,17 @@ final class BirthViewController: BaseViewController {
     private let dayInputView = BirthInputView()
     private let verificationCodeButton = SSButton(.disable)
     
+    private let datePickerButton = MyButton()
+    private let datePicker = UIDatePicker()
+    private let doneButton = UIBarButtonItem(systemItem: .done)
+    
+    let dateValue = BehaviorRelay(value: Date(timeIntervalSince1970: 0))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bind()
+        createDatePicker()
     }
     
     override func setAttributes() {
@@ -58,9 +70,12 @@ final class BirthViewController: BaseViewController {
     }
     
     override func setHierarchy() {
-        view.addSubview(textLabel)
-        view.addSubview(containerHStackView)
-        view.addSubview(verificationCodeButton)
+        view.addSubviews(
+            textLabel,
+            containerHStackView,
+            datePickerButton,
+            verificationCodeButton
+        )
     }
     
     override func setLayout() {
@@ -75,10 +90,55 @@ final class BirthViewController: BaseViewController {
             $0.height.equalTo(48)
         }
         
+        datePickerButton.snp.makeConstraints {
+            $0.edges.equalTo(containerHStackView)
+        }
+        
         verificationCodeButton.snp.makeConstraints {
             $0.top.equalTo(containerHStackView.snp.bottom).offset(72)
             $0.directionalHorizontalEdges.equalToSuperview().inset(16)
             $0.height.equalTo(48)
         }
+    }
+}
+
+extension BirthViewController: Bindable {
+    
+    func bind() {
+        datePickerButton.rx.tap
+            .bind { [weak self] _ in
+                self?.datePickerButton.becomeFirstResponder()
+            }
+            .disposed(by: disposeBag)
+    
+        doneButton.rx.tap
+            .bind { [weak self] _ in
+                self?.datePickerButton.resignFirstResponder()
+            }
+            .disposed(by: disposeBag)
+        
+        datePicker.rx.value
+            .withUnretained(self)
+            .bind { `self`, date in
+                let components = Calendar.current.dateComponents([.year, .month, .day], from: date)
+                self.yearInputView.value = String(components.year!)
+                self.monthInputView.value = String(components.month!)
+                self.dayInputView.value = String(components.day!)
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    func createDatePicker() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        toolbar.setItems([doneButton], animated: true)
+        
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko-KR")
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        
+        datePickerButton.inputAccessoryView = toolbar
+        datePickerButton.inputView = datePicker
     }
 }
