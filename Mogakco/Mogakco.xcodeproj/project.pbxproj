@@ -217,12 +217,10 @@
 		BD392CB8291D39B3008D3EAB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BDF9C186291D6394009B4B1B /* BirthInputView.swift */,
-				BD392CB5291D39A5008D3EAB /* BirthViewController.swift */,
-				BD392CB9291D39DD008D3EAB /* EmailViewController.swift */,
-				BD392CBE291D49DA008D3EAB /* GenderInputView.swift */,
-				BD392CBB291D39EC008D3EAB /* GenderViewController.swift */,
-				BD392CB1291D3990008D3EAB /* NicknameViewController.swift */,
+				BD8E98A9292275A800133840 /* Birth */,
+				BD8E98AA292275B000133840 /* Email */,
+				BD8E98AB292275B200133840 /* Gender */,
+				BD8E98AC292275B500133840 /* Nickname */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +290,40 @@
 				BD523789291E5C97004EE2B6 /* EmptyResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BD8E98A9292275A800133840 /* Birth */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9C186291D6394009B4B1B /* BirthInputView.swift */,
+				BD392CB5291D39A5008D3EAB /* BirthViewController.swift */,
+			);
+			path = Birth;
+			sourceTree = "<group>";
+		};
+		BD8E98AA292275B000133840 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				BD392CB9291D39DD008D3EAB /* EmailViewController.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		BD8E98AB292275B200133840 /* Gender */ = {
+			isa = PBXGroup;
+			children = (
+				BD392CBE291D49DA008D3EAB /* GenderInputView.swift */,
+				BD392CBB291D39EC008D3EAB /* GenderViewController.swift */,
+			);
+			path = Gender;
+			sourceTree = "<group>";
+		};
+		BD8E98AC292275B500133840 /* Nickname */ = {
+			isa = PBXGroup;
+			children = (
+				BD392CB1291D3990008D3EAB /* NicknameViewController.swift */,
+			);
+			path = Nickname;
 			sourceTree = "<group>";
 		};
 		BD9257D5291943F7008A3158 = {
