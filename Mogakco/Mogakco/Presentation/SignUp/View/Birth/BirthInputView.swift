@@ -74,20 +74,6 @@ final class BirthInputView: BaseView {
     }
 }
 
-extension BirthInputView {
-    
-    // func createDatePicker() {
-    //     let toolbar = UIToolbar()
-    //     toolbar.sizeToFit()
-    //
-    //     let doneButton = UIBarButtonItem(systemItem: .done)
-    //     toolbar.setItems([doneButton], animated: true)
-    //
-    //     textField.inputAccessoryView = toolbar
-    //     textField.inputView = datePicker
-    // }
-}
-
 class MyButton: UIButton {
     
     var customInputView: UIView? = UIView()
