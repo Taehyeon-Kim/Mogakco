@@ -13,6 +13,7 @@ final class BirthInputView: BaseView {
     
     private let textField = UITextField()
     private let titleLabel = UILabel()
+    private let datePicker = UIDatePicker()
     
     var placeholder: String? {
         get { textField.placeholder }
@@ -27,14 +28,29 @@ final class BirthInputView: BaseView {
         set { titleLabel.text = newValue }
     }
     
+    var value: String? {
+        get { textField.text }
+        set { textField.text = newValue }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        // createDatePicker()
+    }
+    
     override func setAttributes() {
         textField.do {
             $0.setBottomBorder(with: .Gray.gray3, width: 1)
             $0.setLeftPadding(to: 12)
+            // $0.becomeFirstResponder()
         }
         
         titleLabel.do {
             $0.setTypoStyle(.title2)
+        }
+        
+        datePicker.do {
+            $0.preferredDatePickerStyle = .wheels
         }
     }
     
@@ -55,5 +71,48 @@ final class BirthInputView: BaseView {
             $0.trailing.equalTo(titleLabel.snp.leading).offset(-4)
             $0.directionalVerticalEdges.equalToSuperview()
         }
+    }
+}
+
+extension BirthInputView {
+    
+    // func createDatePicker() {
+    //     let toolbar = UIToolbar()
+    //     toolbar.sizeToFit()
+    //
+    //     let doneButton = UIBarButtonItem(systemItem: .done)
+    //     toolbar.setItems([doneButton], animated: true)
+    //
+    //     textField.inputAccessoryView = toolbar
+    //     textField.inputView = datePicker
+    // }
+}
+
+class MyButton: UIButton {
+    
+    var customInputView: UIView? = UIView()
+    var customToolbarView: UIView? = UIView()
+    
+    override var inputView: UIView? {
+        get {
+            customInputView
+        }
+        set {
+            customInputView = newValue
+            becomeFirstResponder()
+        }
+    }
+    
+    override var inputAccessoryView: UIView? {
+        get {
+            customToolbarView
+        }
+        set {
+            customToolbarView = newValue
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+       true
     }
 }
