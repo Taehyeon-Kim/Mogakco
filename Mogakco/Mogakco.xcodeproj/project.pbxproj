@@ -46,6 +46,8 @@
 		BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523789291E5C97004EE2B6 /* EmptyResponse.swift */; };
 		BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */; };
 		BD523790291E602F004EE2B6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD52378F291E602F004EE2B6 /* FirebaseAuth */; };
+		BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98AF2922774600133840 /* PreviewProvider.swift */; };
+		BD8E98B22922776E00133840 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98B12922776E00133840 /* Device.swift */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -118,6 +120,8 @@
 		BD523789291E5C97004EE2B6 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mogakco.entitlements; sourceTree = "<group>"; };
+		BD8E98AF2922774600133840 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		BD8E98B12922776E00133840 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -326,6 +330,15 @@
 			path = Nickname;
 			sourceTree = "<group>";
 		};
+		BD8E98AE2922770300133840 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				BD8E98B12922776E00133840 /* Device.swift */,
+				BD8E98AF2922774600133840 /* PreviewProvider.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
 		BD9257D5291943F7008A3158 = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +430,7 @@
 		BD9257FD29194523008A3158 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BD8E98AE2922770300133840 /* Preview */,
 				BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */,
 			);
 			path = Utils;
@@ -730,6 +744,7 @@
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
 				BDC06B16291EA718000C4A6A /* String+.swift in Sources */,
+				BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */,
 				BD392CB2291D3990008D3EAB /* NicknameViewController.swift in Sources */,
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */,
@@ -755,6 +770,7 @@
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
 				BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */,
 				BDC06B1A291EC66E000C4A6A /* FirebaseAuthRepository.swift in Sources */,
+				BD8E98B22922776E00133840 /* Device.swift in Sources */,
 				BD523781291E593F004EE2B6 /* Endpoint.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
