@@ -17,7 +17,7 @@ final class BirthViewController: BaseViewController {
     private let yearInputView = BirthInputView()
     private let monthInputView = BirthInputView()
     private let dayInputView = BirthInputView()
-    private let verificationCodeButton = SSButton(.disable)
+    private let verificationCodeButton = SSButton(.fill)
     
     private let datePickerButton = MyButton()
     private let datePicker = UIDatePicker()
@@ -120,10 +120,26 @@ extension BirthViewController: Bindable {
         datePicker.rx.value
             .withUnretained(self)
             .bind { `self`, date in
+                self.dateValue.accept(date)
+            }
+            .disposed(by: disposeBag)
+        
+        dateValue
+            .withUnretained(self)
+            .bind { `self`, date in
+                print(date)
                 let components = Calendar.current.dateComponents([.year, .month, .day], from: date)
                 self.yearInputView.value = String(components.year!)
                 self.monthInputView.value = String(components.month!)
                 self.dayInputView.value = String(components.day!)
+            }
+            .disposed(by: disposeBag)
+        
+        verificationCodeButton.button.rx.tap
+            .bind { [weak self] _ in
+                let viewController = EmailViewController()
+                self?.transition(to: viewController)
+                self?.saveBirth()
             }
             .disposed(by: disposeBag)
     }
@@ -140,5 +156,20 @@ extension BirthViewController: Bindable {
         
         datePickerButton.inputAccessoryView = toolbar
         datePickerButton.inputView = datePicker
+    }
+}
+
+extension BirthViewController {
+    
+    private func saveBirth() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS'Z"
+        
+        let birth = formatter.string(from: dateValue.value)
+        UserDefaultsManager.birth = birth
+    }
+    
+    private func transition(to viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
