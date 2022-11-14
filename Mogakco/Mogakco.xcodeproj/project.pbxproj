@@ -45,9 +45,15 @@
 		BD523787291E5A88004EE2B6 /* ProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523786291E5A88004EE2B6 /* ProviderImpl.swift */; };
 		BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523789291E5C97004EE2B6 /* EmptyResponse.swift */; };
 		BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */; };
-		BD523790291E602F004EE2B6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD52378F291E602F004EE2B6 /* FirebaseAuth */; };
 		BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98AF2922774600133840 /* PreviewProvider.swift */; };
 		BD8E98B22922776E00133840 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98B12922776E00133840 /* Device.swift */; };
+		BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98BA2922BCCA00133840 /* SnapKit */; };
+		BD8E98BE2922BCD500133840 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98BD2922BCD500133840 /* Then */; };
+		BD8E98C12922BD7C00133840 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C02922BD7C00133840 /* FirebaseAuth */; };
+		BD8E98C32922BD7C00133840 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C22922BD7C00133840 /* FirebaseMessaging */; };
+		BD8E98C62922BDBA00133840 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C52922BDBA00133840 /* RxCocoa */; };
+		BD8E98C82922BDBA00133840 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C72922BDBA00133840 /* RxSwift */; };
+		BD8E98CB2922BE0700133840 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98CA2922BE0700133840 /* Toast */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -58,10 +64,6 @@
 		BD925810291946E8008A3158 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD92580F291946E8008A3158 /* Images.xcassets */; };
 		BD925814291946FE008A3158 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD925813291946FE008A3158 /* Colors.swift */; };
 		BD92581629194706008A3158 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92581529194706008A3158 /* Images.swift */; };
-		BD925827291948DF008A3158 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD925826291948DF008A3158 /* SnapKit */; };
-		BD92582A29194901008A3158 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582929194901008A3158 /* RxCocoa */; };
-		BD92582C29194901008A3158 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582B29194901008A3158 /* RxSwift */; };
-		BD92582F2919491C008A3158 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD92582E2919491C008A3158 /* Then */; };
 		BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD92583129194BC8008A3158 /* .swiftlint.yml */; };
 		BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B10291E70C7000C4A6A /* ViewModelType.swift */; };
 		BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B12291E763F000C4A6A /* Bindable.swift */; };
@@ -75,7 +77,6 @@
 		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
-		BDE4B6CF2920DB390084D60F /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BDE4B6CE2920DB390084D60F /* Toast */; };
 		BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */; };
 		BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C186291D6394009B4B1B /* BirthInputView.swift */; };
 /* End PBXBuildFile section */
@@ -156,12 +157,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE4B6CF2920DB390084D60F /* Toast in Frameworks */,
-				BD92582C29194901008A3158 /* RxSwift in Frameworks */,
-				BD523790291E602F004EE2B6 /* FirebaseAuth in Frameworks */,
-				BD92582A29194901008A3158 /* RxCocoa in Frameworks */,
-				BD925827291948DF008A3158 /* SnapKit in Frameworks */,
-				BD92582F2919491C008A3158 /* Then in Frameworks */,
+				BD8E98C82922BDBA00133840 /* RxSwift in Frameworks */,
+				BD8E98C32922BD7C00133840 /* FirebaseMessaging in Frameworks */,
+				BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */,
+				BD8E98C62922BDBA00133840 /* RxCocoa in Frameworks */,
+				BD8E98C12922BD7C00133840 /* FirebaseAuth in Frameworks */,
+				BD8E98CB2922BE0700133840 /* Toast in Frameworks */,
+				BD8E98BE2922BCD500133840 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,12 +638,13 @@
 			);
 			name = Mogakco;
 			packageProductDependencies = (
-				BD925826291948DF008A3158 /* SnapKit */,
-				BD92582929194901008A3158 /* RxCocoa */,
-				BD92582B29194901008A3158 /* RxSwift */,
-				BD92582E2919491C008A3158 /* Then */,
-				BD52378F291E602F004EE2B6 /* FirebaseAuth */,
-				BDE4B6CE2920DB390084D60F /* Toast */,
+				BD8E98BA2922BCCA00133840 /* SnapKit */,
+				BD8E98BD2922BCD500133840 /* Then */,
+				BD8E98C02922BD7C00133840 /* FirebaseAuth */,
+				BD8E98C22922BD7C00133840 /* FirebaseMessaging */,
+				BD8E98C52922BDBA00133840 /* RxCocoa */,
+				BD8E98C72922BDBA00133840 /* RxSwift */,
+				BD8E98CA2922BE0700133840 /* Toast */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -672,11 +675,11 @@
 			);
 			mainGroup = BD9257D5291943F7008A3158;
 			packageReferences = (
-				BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */,
-				BD52378E291E602F004EE2B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				BDE4B6CD2920DB390084D60F /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				BD8E98B92922BCCA00133840 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BD8E98BC2922BCD500133840 /* XCRemoteSwiftPackageReference "Then" */,
+				BD8E98BF2922BD7C00133840 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -1095,15 +1098,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BD52378E291E602F004EE2B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-		BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		BD8E98B92922BCCA00133840 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -1111,15 +1106,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */ = {
+		BD8E98BC2922BCD500133840 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
 			requirement = {
@@ -1127,7 +1114,23 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		BDE4B6CD2920DB390084D60F /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+		BD8E98BF2922BD7C00133840 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
 			requirement = {
@@ -1138,34 +1141,39 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BD52378F291E602F004EE2B6 /* FirebaseAuth */ = {
+		BD8E98BA2922BCCA00133840 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BD52378E291E602F004EE2B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		BD925826291948DF008A3158 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD925825291948DF008A3158 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = BD8E98B92922BCCA00133840 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		BD92582929194901008A3158 /* RxCocoa */ = {
+		BD8E98BD2922BCD500133840 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		BD92582B29194901008A3158 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD92582829194901008A3158 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		BD92582E2919491C008A3158 /* Then */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD92582D2919491C008A3158 /* XCRemoteSwiftPackageReference "Then" */;
+			package = BD8E98BC2922BCD500133840 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
 		};
-		BDE4B6CE2920DB390084D60F /* Toast */ = {
+		BD8E98C02922BD7C00133840 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BDE4B6CD2920DB390084D60F /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			package = BD8E98BF2922BD7C00133840 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BD8E98C22922BD7C00133840 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8E98BF2922BD7C00133840 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		BD8E98C52922BDBA00133840 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BD8E98C72922BDBA00133840 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BD8E98CA2922BE0700133840 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
