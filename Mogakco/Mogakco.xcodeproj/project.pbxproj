@@ -215,6 +215,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		BD38827B292370FA000F971D /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
 		BD392CB7291D39AE008D3EAB /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,10 +385,11 @@
 				BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */,
 				BD9257F5291943FE008A3158 /* Application */,
 				BD9257FE2919452E008A3158 /* Core */,
-				BD3C647F291FEFCB005E7142 /* DataMapping */,
 				BD92581929194747008A3158 /* Data */,
+				BD3C647F291FEFCB005E7142 /* DataMapping */,
 				BD234764291A86FC009BC722 /* DesignSystem */,
 				BD92581A29194749008A3158 /* Domain */,
+				BD38827B292370FA000F971D /* LocalStorage */,
 				BD9257FC291944FC008A3158 /* Network */,
 				BD9257F8291944A3008A3158 /* Presentation */,
 				BD9257F62919442A008A3158 /* Resources */,
@@ -446,7 +455,6 @@
 			isa = PBXGroup;
 			children = (
 				BD8E98AE2922770300133840 /* Preview */,
-				BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
