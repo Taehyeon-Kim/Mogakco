@@ -45,9 +45,8 @@ extension Requestable {
         urlRequest.httpMethod = method.rawValue
 
         // body
-        if let bodyParameters = try bodyParameters?.toDictionary(),
-           !bodyParameters.isEmpty {
-            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyParameters)
+        if let bodyParameters {
+            urlRequest.httpBody = try? JSONEncoder().encode(bodyParameters)
         }
 
         // header

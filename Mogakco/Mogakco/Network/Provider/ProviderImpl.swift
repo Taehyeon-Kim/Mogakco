@@ -61,6 +61,8 @@ extension ProviderImpl {
         _ error: Error?,
         completion: @escaping (Result<Data, Error>) -> Void
     ) {
+        dump(response)
+        
         if let error = error {
             completion(.failure(error))
             return
@@ -72,6 +74,7 @@ extension ProviderImpl {
         }
         
         guard (200...299).contains(response.statusCode) else {
+            print("상태코드:", response.statusCode)
             completion(.failure(NetworkError.server(InternalError(rawValue: response.statusCode) ?? .unknown)))
             return
         }
