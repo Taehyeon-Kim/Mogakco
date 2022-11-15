@@ -20,6 +20,10 @@
 		BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234779291AA451009BC722 /* UICollectionView+Extension.swift */; };
 		BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */; };
 		BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477E291BB48A009BC722 /* UIFont+Extension.swift */; };
+		BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38827D292372B5000F971D /* FirbaseTokenError.swift */; };
+		BD38828029237316000F971D /* MGCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38827F29237316000F971D /* MGCError.swift */; };
+		BD388282292374A9000F971D /* MGCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD388281292374A9000F971D /* MGCNetworkError.swift */; };
+		BD38828429237562000F971D /* MGCHTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38828329237562000F971D /* MGCHTTPError.swift */; };
 		BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */; };
 		BD392CB2291D3990008D3EAB /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CB1291D3990008D3EAB /* NicknameViewController.swift */; };
 		BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CB5291D39A5008D3EAB /* BirthViewController.swift */; };
@@ -97,6 +101,10 @@
 		BD234779291AA451009BC722 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD23477E291BB48A009BC722 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BD38827D292372B5000F971D /* FirbaseTokenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirbaseTokenError.swift; sourceTree = "<group>"; };
+		BD38827F29237316000F971D /* MGCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCError.swift; sourceTree = "<group>"; };
+		BD388281292374A9000F971D /* MGCNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCNetworkError.swift; sourceTree = "<group>"; };
+		BD38828329237562000F971D /* MGCHTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCHTTPError.swift; sourceTree = "<group>"; };
 		BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BD392CB1291D3990008D3EAB /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		BD392CB5291D39A5008D3EAB /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +229,17 @@
 				BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */,
 			);
 			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		BD38827C29237299000F971D /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				BD38827D292372B5000F971D /* FirbaseTokenError.swift */,
+				BD38827F29237316000F971D /* MGCError.swift */,
+				BD388281292374A9000F971D /* MGCNetworkError.swift */,
+				BD38828329237562000F971D /* MGCHTTPError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		BD392CB7291D39AE008D3EAB /* SignUp */ = {
@@ -389,6 +408,7 @@
 				BD3C647F291FEFCB005E7142 /* DataMapping */,
 				BD234764291A86FC009BC722 /* DesignSystem */,
 				BD92581A29194749008A3158 /* Domain */,
+				BD38827C29237299000F971D /* Error */,
 				BD38827B292370FA000F971D /* LocalStorage */,
 				BD9257FC291944FC008A3158 /* Network */,
 				BD9257F8291944A3008A3158 /* Presentation */,
@@ -786,7 +806,9 @@
 				BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */,
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
+				BD38828429237562000F971D /* MGCHTTPError.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
+				BD38828029237316000F971D /* MGCError.swift in Sources */,
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
@@ -799,6 +821,7 @@
 				BDC06B1A291EC66E000C4A6A /* FirebaseAuthRepository.swift in Sources */,
 				BD8E98B22922776E00133840 /* Device.swift in Sources */,
 				BD523781291E593F004EE2B6 /* Endpoint.swift in Sources */,
+				BD388282292374A9000F971D /* MGCNetworkError.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
@@ -810,6 +833,7 @@
 				BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
 				BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */,
+				BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BD52377B291E587A004EE2B6 /* Requestable.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
