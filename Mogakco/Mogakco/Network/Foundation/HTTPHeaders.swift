@@ -7,9 +7,10 @@
 
 import Foundation
 
-enum HTTPHeaders {
+enum HTTPHeader {
     
     static let headerWithIDToken: [String: String] = [
+        "Content-Type": "Application/json",
         "idtoken": UserDefaultsManager.idToken
     ]
 }

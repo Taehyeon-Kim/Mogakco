@@ -18,14 +18,14 @@ import Foundation
 
 struct SignUpRequestDTO: Encodable {
     var phoneNumber: String
-    var fcmToken: String
+    var FCMtoken: String
     var nick: String
     var birth: String
     var email: String
     var gender: Int
     
-    enum CodingKeys: String, CodingKey {
-        case phoneNumber, nick, birth, email, gender
-        case fcmToken = "FCMtoken"
-    }
+    // enum CodingKeys: String, CodingKey {
+    //     case phoneNumber, nick, birth, email, gender
+    //     case fcmToken = "FCMtoken"
+    // }
 }

@@ -54,6 +54,8 @@
 		BD8E98C62922BDBA00133840 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C52922BDBA00133840 /* RxCocoa */; };
 		BD8E98C82922BDBA00133840 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C72922BDBA00133840 /* RxSwift */; };
 		BD8E98CB2922BE0700133840 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98CA2922BE0700133840 /* Toast */; };
+		BD8E98CF2922C27F00133840 /* SignUpRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98CE2922C27F00133840 /* SignUpRequestDTO.swift */; };
+		BD8E98D22922D2FC00133840 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98D12922D2FC00133840 /* Alamofire */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -123,6 +125,7 @@
 		BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mogakco.entitlements; sourceTree = "<group>"; };
 		BD8E98AF2922774600133840 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		BD8E98B12922776E00133840 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		BD8E98CE2922C27F00133840 /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
 		BD9257DE291943F8008A3158 /* Mogakco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mogakco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9257E1291943F8008A3158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9257E3291943F8008A3158 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8E98C82922BDBA00133840 /* RxSwift in Frameworks */,
+				BD8E98D22922D2FC00133840 /* Alamofire in Frameworks */,
 				BD8E98C32922BD7C00133840 /* FirebaseMessaging in Frameworks */,
 				BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */,
 				BD8E98C62922BDBA00133840 /* RxCocoa in Frameworks */,
@@ -242,6 +246,7 @@
 		BD3C647F291FEFCB005E7142 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				BD8E98CD2922C27F00133840 /* SignUp */,
 				BD3C6480291FEFD7005E7142 /* SignIn */,
 			);
 			path = DataMapping;
@@ -339,6 +344,14 @@
 				BD8E98AF2922774600133840 /* PreviewProvider.swift */,
 			);
 			path = Preview;
+			sourceTree = "<group>";
+		};
+		BD8E98CD2922C27F00133840 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BD8E98CE2922C27F00133840 /* SignUpRequestDTO.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		BD9257D5291943F7008A3158 = {
@@ -645,6 +658,7 @@
 				BD8E98C52922BDBA00133840 /* RxCocoa */,
 				BD8E98C72922BDBA00133840 /* RxSwift */,
 				BD8E98CA2922BE0700133840 /* Toast */,
+				BD8E98D12922D2FC00133840 /* Alamofire */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -680,6 +694,7 @@
 				BD8E98BF2922BD7C00133840 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				BD8E98D02922D2FC00133840 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -737,6 +752,7 @@
 				BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */,
 				BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */,
 				BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */,
+				BD8E98CF2922C27F00133840 /* SignUpRequestDTO.swift in Sources */,
 				BD3C648A291FF568005E7142 /* UserEndpoint.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
 				BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */,
@@ -876,9 +892,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -893,6 +910,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.memolease.sesacslp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1020,9 +1038,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1037,6 +1056,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.memolease.sesacslp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1049,9 +1069,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mogakco/Mogakco.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mogakco/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1066,6 +1087,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.memolease.sesacslp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1138,6 +1160,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		BD8E98D02922D2FC00133840 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1175,6 +1205,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		BD8E98D12922D2FC00133840 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD8E98D02922D2FC00133840 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

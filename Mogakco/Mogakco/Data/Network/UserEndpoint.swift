@@ -15,7 +15,18 @@ enum UserEndpoint {
             baseURL: Env.baseURL,
             path: Env.apiVersion + "/user",
             method: .get,
-            headers: HTTPHeaders.headerWithIDToken
+            headers: HTTPHeader.headerWithIDToken
+        )
+    }
+    
+    static func signUp(request: SignUpRequestDTO) -> Endpoint<EmptyResponse> {
+        
+        return Endpoint(
+            baseURL: Env.baseURL,
+            path: Env.apiVersion + "/user",
+            method: .post,
+            bodyParameters: request,
+            headers: HTTPHeader.headerWithIDToken
         )
     }
 }

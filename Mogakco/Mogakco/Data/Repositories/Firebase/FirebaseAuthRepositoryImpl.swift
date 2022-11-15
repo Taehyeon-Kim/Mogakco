@@ -90,6 +90,7 @@ final class FirebaseAuthRepositoryImpl: FirebaseAuthRepository {
                 }
                 
                 if let token = token {
+                    print("갱신 토큰: \(token)")
                     UserDefaultsManager.idToken = token // 갱신 idToken 저장
                     single(.success(token))
                 } else {
