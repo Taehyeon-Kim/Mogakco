@@ -84,6 +84,7 @@
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
 		BDEA50F829278BD300110982 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50F729278BD300110982 /* HTTPClient.swift */; };
+		BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50FB29278D5D00110982 /* AuthManager.swift */; };
 		BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */; };
 		BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C186291D6394009B4B1B /* BirthInputView.swift */; };
 /* End PBXBuildFile section */
@@ -161,6 +162,7 @@
 		BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewModel.swift; sourceTree = "<group>"; };
 		BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
 		BDEA50F729278BD300110982 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		BDEA50FB29278D5D00110982 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BDF9C186291D6394009B4B1B /* BirthInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -415,6 +417,7 @@
 				BD9257FC291944FC008A3158 /* Network */,
 				BD9257F8291944A3008A3158 /* Presentation */,
 				BD9257F62919442A008A3158 /* Resources */,
+				BDEA50F929278D4B00110982 /* Services */,
 				BD9257F729194433008A3158 /* Supports */,
 				BD9257FD29194523008A3158 /* Utils */,
 			);
@@ -672,6 +675,22 @@
 			path = HTTPClient;
 			sourceTree = "<group>";
 		};
+		BDEA50F929278D4B00110982 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BDEA50FA29278D5400110982 /* Auth */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BDEA50FA29278D5400110982 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BDEA50FB29278D5D00110982 /* AuthManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -817,6 +836,7 @@
 				BD52377D291E5903004EE2B6 /* Responsable.swift in Sources */,
 				BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */,
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
+				BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD38828429237562000F971D /* MGCHTTPError.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
