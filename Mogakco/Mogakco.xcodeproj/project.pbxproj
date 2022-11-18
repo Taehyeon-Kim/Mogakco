@@ -83,6 +83,7 @@
 		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
+		BDEA50F829278BD300110982 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50F729278BD300110982 /* HTTPClient.swift */; };
 		BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */; };
 		BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C186291D6394009B4B1B /* BirthInputView.swift */; };
 /* End PBXBuildFile section */
@@ -159,6 +160,7 @@
 		BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewModel.swift; sourceTree = "<group>"; };
 		BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewModel.swift; sourceTree = "<group>"; };
 		BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
+		BDEA50F729278BD300110982 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BDF9C186291D6394009B4B1B /* BirthInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -462,6 +464,7 @@
 		BD9257FC291944FC008A3158 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BDEA50F629278BBD00110982 /* HTTPClient */,
 				BD92581829194731008A3158 /* Foundation */,
 				BD523788291E5C8E004EE2B6 /* Model */,
 				BD523783291E5A66004EE2B6 /* Provider */,
@@ -661,6 +664,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BDEA50F629278BBD00110982 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				BDEA50F729278BD300110982 /* HTTPClient.swift */,
+			);
+			path = HTTPClient;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -787,6 +798,7 @@
 				BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */,
 				BD92580E29194691008A3158 /* BaseViewController.swift in Sources */,
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
+				BDEA50F829278BD300110982 /* HTTPClient.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
