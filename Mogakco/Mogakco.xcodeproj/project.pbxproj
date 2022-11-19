@@ -293,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3C6484291FF0C3005E7142 /* User.swift */,
+				BDE095C4291C17AB009CB1C0 /* Onboarding.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -573,7 +574,6 @@
 			isa = PBXGroup;
 			children = (
 				BD3C6483291FF0B6005E7142 /* Model */,
-				BDE095C4291C17AB009CB1C0 /* Onboarding.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
