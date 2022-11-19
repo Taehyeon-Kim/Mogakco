@@ -1,0 +1,29 @@
+//
+//  HTTPHeaderField.swift
+//  Mogakco
+//
+//  Created by taekki on 2022/11/19.
+//
+
+import Foundation
+
+enum HTTPHeaderField: String {
+    case contentType = "Content-Type"
+    case idToken = "idtoken"
+}
+
+enum ContentType: String {
+    case urlEncoded = "application/x-www-form-urlencoded"
+    case json = "application/json"
+    case multipart = "multipart/form-data"
+}
+
+extension HTTPHeaderField {
+    
+    static var `default`: [String: Any] {
+        var dict: [String: Any] = [:]
+        dict[HTTPHeaderField.contentType.rawValue] = ContentType.urlEncoded.rawValue
+        dict[HTTPHeaderField.idToken.rawValue] = UserDefaultsManager.idToken
+        return dict
+    }
+}

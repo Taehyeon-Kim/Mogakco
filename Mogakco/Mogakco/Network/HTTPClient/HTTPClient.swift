@@ -14,29 +14,38 @@ protocol HTTPClient: AnyObject {}
 final class URLSessionHTTPClient: HTTPClient {
 
     private let session: URLSession
+    private let authManager: AuthManager
     private let decoder = JSONDecoder()
     
     init(
-        session: URLSession = .shared
+        session: URLSession = .shared,
+        authManager: any AuthManager = AuthManagerImpl()
     ) {
         self.session = session
+        self.authManager = authManager
     }
 
-    func request<T: Decodable> (
+    func defaultRequest<T: Decodable> (
         _ type: T.Type,
-        with endpoint: any RequestResponsable
+        with endpoint: any URLRequestable
     ) -> Single<T> {
         return Single.create { observer in
             do {
                 let urlRequest = try endpoint.makeURLRequest()
                 let task = self.session.dataTask(with: urlRequest) { data, response, error in
                     let result: Result<T, NetworkError> = Self.handle(data: data, response: response, error: error)
-                    
+
                     switch result {
                     case let .success(data):
                         observer(.success(data))
                     case let .failure(error):
-                        observer(.failure(error))
+                        switch error {
+                        case .server(.invalidToken):
+                            print("토큰 갱신 필요", "✨")
+                            observer(.failure(error))
+                        default:
+                            observer(.failure(error))
+                        }
                     }
                 }
                 task.resume()

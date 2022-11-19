@@ -8,10 +8,9 @@
 import Foundation
 
 struct Env {
-    
     static var baseURL: String {
         #if DEBUG
-        return "http://api.sesac.co.kr:1207"
+        return "http://api.sesac.co.kr:1210"
         #else
         return ""
         #endif

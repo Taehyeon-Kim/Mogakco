@@ -34,6 +34,7 @@ final class AuthManagerImpl: AuthManager {
                 
                 if let token = token {
                     print("♻️ 토큰 갱신: \(token)")
+                    UserDefaultsManager.idToken = token
                     observer(.success(token))
                 }
             }
