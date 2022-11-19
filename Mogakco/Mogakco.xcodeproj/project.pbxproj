@@ -444,7 +444,6 @@
 				BDEA5102292883C900110982 /* NetworkError */,
 				BD523788291E5C8E004EE2B6 /* NetworkModel */,
 				BD3C647C291FE3B0005E7142 /* Reachability */,
-				BDEA50FD2927EF6600110982 /* Request */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -552,6 +551,10 @@
 		BD92581829194731008A3158 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				BDEA51002927FE9300110982 /* HTTPHeaderField.swift */,
+				BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */,
+				BD523772291E5277004EE2B6 /* HTTPMethod.swift */,
+				BDEA50FE2927F22700110982 /* URLRequestable.swift */,
 				BD52377E291E591A004EE2B6 /* Encodable+toDictionary.swift */,
 				BD523776291E537B004EE2B6 /* Environment.swift */,
 			);
@@ -675,17 +678,6 @@
 				BDEA50FB29278D5D00110982 /* AuthManager.swift */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		BDEA50FD2927EF6600110982 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				BDEA51002927FE9300110982 /* HTTPHeaderField.swift */,
-				BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */,
-				BD523772291E5277004EE2B6 /* HTTPMethod.swift */,
-				BDEA50FE2927F22700110982 /* URLRequestable.swift */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		BDEA5102292883C900110982 /* NetworkError */ = {
