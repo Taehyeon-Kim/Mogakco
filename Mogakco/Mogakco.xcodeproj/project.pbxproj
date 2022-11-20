@@ -36,6 +36,7 @@
 		BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */; };
 		BD3C6485291FF0C3005E7142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6484291FF0C3005E7142 /* User.swift */; };
 		BD3C648C291FF5F4005E7142 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */; };
+		BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = BD4B5512292A8A0C00ECFD04 /* RxDataSources */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -178,6 +179,7 @@
 				BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */,
 				BD8E98C62922BDBA00133840 /* RxCocoa in Frameworks */,
 				BD8E98C12922BD7C00133840 /* FirebaseAuth in Frameworks */,
+				BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */,
 				BD8E98CB2922BE0700133840 /* Toast in Frameworks */,
 				BD8E98BE2922BCD500133840 /* Then in Frameworks */,
 			);
@@ -725,6 +727,7 @@
 				BD8E98C72922BDBA00133840 /* RxSwift */,
 				BD8E98CA2922BE0700133840 /* Toast */,
 				BD8E98D12922D2FC00133840 /* Alamofire */,
+				BD4B5512292A8A0C00ECFD04 /* RxDataSources */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -761,6 +764,7 @@
 				BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				BD8E98D02922D2FC00133840 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BD4B5511292A8A0C00ECFD04 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -1192,6 +1196,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BD4B5511292A8A0C00ECFD04 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		BD8E98B92922BCCA00133840 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1243,6 +1255,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BD4B5512292A8A0C00ECFD04 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4B5511292A8A0C00ECFD04 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
 		BD8E98BA2922BCCA00133840 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD8E98B92922BCCA00133840 /* XCRemoteSwiftPackageReference "SnapKit" */;
