@@ -73,6 +73,7 @@
 		BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC029288D34002378C6 /* SignInAPI.swift */; };
 		BDC50EC329289126002378C6 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC229289126002378C6 /* SignUpAPI.swift */; };
 		BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC529289452002378C6 /* WithdrawAPI.swift */; };
+		BDC50EC9292929C1002378C6 /* MyPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC8292929C1002378C6 /* MyPageAPI.swift */; };
 		BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C4291C17AB009CB1C0 /* Onboarding.swift */; };
 		BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095C6291C1911009CB1C0 /* OnboardingView.swift */; };
 		BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */; };
@@ -150,6 +151,7 @@
 		BDC50EC029288D34002378C6 /* SignInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAPI.swift; sourceTree = "<group>"; };
 		BDC50EC229289126002378C6 /* SignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAPI.swift; sourceTree = "<group>"; };
 		BDC50EC529289452002378C6 /* WithdrawAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawAPI.swift; sourceTree = "<group>"; };
+		BDC50EC8292929C1002378C6 /* MyPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageAPI.swift; sourceTree = "<group>"; };
 		BDE095C4291C17AB009CB1C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		BDE095C6291C1911009CB1C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BDE095CD291C1E79009CB1C0 /* PhoneEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewController.swift; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC50EC42928943F002378C6 /* Auth */,
+				BDC50EC7292929B0002378C6 /* User */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -619,6 +622,14 @@
 				BDC50EC529289452002378C6 /* WithdrawAPI.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		BDC50EC7292929B0002378C6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BDC50EC8292929C1002378C6 /* MyPageAPI.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		BDE095C8291C1D8F009CB1C0 /* PhoneVerification */ = {
@@ -863,6 +874,7 @@
 				BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
 				BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */,
+				BDC50EC9292929C1002378C6 /* MyPageAPI.swift in Sources */,
 				BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
