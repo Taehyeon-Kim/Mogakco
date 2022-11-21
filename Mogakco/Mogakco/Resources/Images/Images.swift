@@ -71,4 +71,7 @@ extension UIImage {
     static var imgOnboarding1: UIImage? { return UIImage(named: "onboarding_img1") }
     static var imgOnboarding2: UIImage? { return UIImage(named: "onboarding_img2") }
     static var imgOnboarding3: UIImage? { return UIImage(named: "onboarding_img3") }
+    
+    // MyInfo
+    static var imgProfile: UIImage? { return UIImage(named: "profile_img") }
 }
