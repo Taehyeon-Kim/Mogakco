@@ -8,3 +8,7 @@
 import Foundation
 
 struct EmptyResponse: Decodable {}
+
+extension Data {
+    static let empty = "{}".data(using: .utf8)!
+}

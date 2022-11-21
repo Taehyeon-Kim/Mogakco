@@ -9,9 +9,14 @@ import Foundation
 import RxSwift
 
 protocol NetworkProvider: AnyObject {
-    
+    func execute<Endpoint: URLRequestable>(
+        of endpoint: Endpoint
+    ) -> Single<Endpoint.Response>
 }
 
+/// https://velog.io/@yy0867/Swift-%EC%A0%95%EB%A6%AC-URLSession-Combine
+/// https://stackoverflow.com/questions/46833056/pattern-for-retrying-urlsession-datatask
+/// https://github.com/Moya/Moya/issues/1402
 /// 실제 Request를 수행하는 클래스
 final class NetworkProviderImpl: NetworkProvider {
 
@@ -26,77 +31,77 @@ final class NetworkProviderImpl: NetworkProvider {
         self.session = session
         self.authManager = authManager
     }
-
-    func defaultRequest<T: Decodable> (
-        _ type: T.Type,
-        with endpoint: any URLRequestable
-    ) -> Single<T> {
+    
+    func execute<Endpoint: URLRequestable>(
+        of endpoint: Endpoint
+    ) -> Single<Endpoint.Response> {
         return Single.create { observer in
-            do {
-                let urlRequest = try endpoint.makeURLRequest()
-                let task = self.session.dataTask(with: urlRequest) { data, response, error in
-                    let result: Result<T, NetworkError> = Self.handle(data: data, response: response, error: error)
-
-                    switch result {
-                    case let .success(data):
-                        observer(.success(data))
-                    case let .failure(error):
-                        switch error {
-                        case .server(.invalidToken):
-                            print("토큰 갱신 필요", "✨")
-                            observer(.failure(error))
-                        default:
-                            observer(.failure(error))
-                        }
+            self.loadData(of: endpoint) { result in
+                switch result {
+                case let .success(data):
+                    do {
+                        let decoded = try endpoint.decode(data)
+                        observer(.success(decoded))
+                    } catch {
+                        observer(.failure(HTTPError.decodingError))
                     }
+
+                case let .failure(error):
+                    observer(.failure(error))
                 }
-                task.resume()
-                
-            } catch {
-                observer(.failure(error))
             }
-            
             return Disposables.create()
         }
+        .retry { error in
+            Observable.zip(error, Observable.range(start: 1, count: 3), resultSelector: { ($0, $1) })
+                .flatMap { (error: HTTPError, index: Int) -> Single<String> in
+                    print("🌱", error, index)
+                    switch error {
+                    case .unauthorized:
+                        return FirebaseAuthRepositoryImpl().requestIDToken()
+                    default:
+                        return Single.just("")
+                    }
+                }
+        }
     }
-}
-
-extension NetworkProviderImpl {
     
-    static func handle<T: Decodable>(
-        data: Data?,
-        response: URLResponse?,
-        error: Error?
-    ) -> Result<T, NetworkError> {
-        if let error = error {
-            return .failure(.urlRequest(error))
-        }
-        
-        guard let response = response as? HTTPURLResponse else {
-            return .failure(.unknown)
-        }
+    private func loadData(
+        of urlRequestable: any URLRequestable,
+        completion: @escaping (Result<Data, HTTPError>) -> Void
+    ) {
+        do {
+            let urlRequest = try urlRequestable.makeURLRequest()
 
-        switch response.statusCode {
-        case 200:
-            guard let data = data else {
-                return .failure(.emptyData)
+            let task = session.dataTask(with: urlRequest) { data, response, error in
+                if let error = error {
+                    completion(.failure(.specific(error)))
+                }
+                
+                guard let response = response as? HTTPURLResponse else {
+                    return completion(.failure(.noResponse))
+                }
+                
+                switch response.statusCode {
+                case 200:
+                    return completion(.success(data ?? .empty))
+                case 401:
+                    return completion(.failure(.unauthorized))
+                case 406:
+                    return completion(.failure(.noUser))
+                case 500:
+                    return completion(.failure(.serverError))
+                case 501:
+                    return completion(.failure(.badRequest))
+                default:
+                    return completion(.failure(.unknown))
+                }
             }
             
-            do {
-                let decoded = try JSONDecoder().decode(T.self, from: data)
-                return .success(decoded)
-            } catch {
-                return .failure(.decoding(error))
-            }
+            task.resume()
             
-        case 401:
-            return .failure(.server(.invalidToken))
-        case 500:
-            return .failure(.server(.internalServerError))
-        case 501:
-            return .failure(.server(.clientError))
-        default:
-            return .failure(.unknown)
+        } catch {
+            return completion(.failure(.unknown))
         }
     }
 }
