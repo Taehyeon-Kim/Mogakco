@@ -86,7 +86,7 @@
 		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
-		BDEA50F829278BD300110982 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50F729278BD300110982 /* HTTPClient.swift */; };
+		BDEA50F829278BD300110982 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50F729278BD300110982 /* NetworkProvider.swift */; };
 		BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50FB29278D5D00110982 /* AuthManager.swift */; };
 		BDEA50FF2927F22700110982 /* URLRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50FE2927F22700110982 /* URLRequestable.swift */; };
 		BDEA51012927FE9300110982 /* HTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA51002927FE9300110982 /* HTTPHeaderField.swift */; };
@@ -168,7 +168,7 @@
 		BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewModel.swift; sourceTree = "<group>"; };
 		BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewModel.swift; sourceTree = "<group>"; };
 		BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
-		BDEA50F729278BD300110982 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		BDEA50F729278BD300110982 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		BDEA50FB29278D5D00110982 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BDEA50FE2927F22700110982 /* URLRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestable.swift; sourceTree = "<group>"; };
 		BDEA51002927FE9300110982 /* HTTPHeaderField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderField.swift; sourceTree = "<group>"; };
@@ -488,7 +488,7 @@
 			children = (
 				BDC50EBF29288D28002378C6 /* API */,
 				BD92581829194731008A3158 /* Foundation */,
-				BDEA50F629278BBD00110982 /* HTTPClient */,
+				BDEA50F629278BBD00110982 /* NetworkProvider */,
 				BDEA5102292883C900110982 /* NetworkError */,
 				BD523788291E5C8E004EE2B6 /* NetworkModel */,
 				BD3C647C291FE3B0005E7142 /* Reachability */,
@@ -705,12 +705,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		BDEA50F629278BBD00110982 /* HTTPClient */ = {
+		BDEA50F629278BBD00110982 /* NetworkProvider */ = {
 			isa = PBXGroup;
 			children = (
-				BDEA50F729278BD300110982 /* HTTPClient.swift */,
+				BDEA50F729278BD300110982 /* NetworkProvider.swift */,
 			);
-			path = HTTPClient;
+			path = NetworkProvider;
 			sourceTree = "<group>";
 		};
 		BDEA50F929278D4B00110982 /* Services */ = {
@@ -865,7 +865,7 @@
 				BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */,
 				BD92580E29194691008A3158 /* BaseViewController.swift in Sources */,
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
-				BDEA50F829278BD300110982 /* HTTPClient.swift in Sources */,
+				BDEA50F829278BD300110982 /* NetworkProvider.swift in Sources */,
 				BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
