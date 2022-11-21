@@ -35,7 +35,6 @@
 		BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */; };
 		BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */; };
 		BD3C6485291FF0C3005E7142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6484291FF0C3005E7142 /* User.swift */; };
-		BD3C648C291FF5F4005E7142 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */; };
 		BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = BD4B5512292A8A0C00ECFD04 /* RxDataSources */; };
 		BD4B5517292A8A6D00ECFD04 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */; };
 		BD4B5519292A8B3C00ECFD04 /* MyInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */; };
@@ -124,7 +123,6 @@
 		BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
 		BD3C6484291FF0C3005E7142 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
 		BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoItemCell.swift; sourceTree = "<group>"; };
 		BD4B551B292A91E000ECFD04 /* MyInfoViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewSection.swift; sourceTree = "<group>"; };
@@ -604,7 +602,6 @@
 			isa = PBXGroup;
 			children = (
 				BDEA51002927FE9300110982 /* HTTPHeaderField.swift */,
-				BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */,
 				BD523772291E5277004EE2B6 /* HTTPMethod.swift */,
 				BDEA50FE2927F22700110982 /* URLRequestable.swift */,
 				BD52377E291E591A004EE2B6 /* Encodable+toDictionary.swift */,
@@ -910,7 +907,6 @@
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
 				BD4B551C292A91E000ECFD04 /* MyInfoViewSection.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
-				BD3C648C291FF5F4005E7142 /* HTTPHeaders.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,

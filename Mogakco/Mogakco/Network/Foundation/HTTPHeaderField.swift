@@ -20,8 +20,8 @@ enum ContentType: String {
 
 extension HTTPHeaderField {
     
-    static var `default`: [String: Any] {
-        var dict: [String: Any] = [:]
+    static var `default`: [String: String] {
+        var dict: [String: String] = [:]
         dict[HTTPHeaderField.contentType.rawValue] = ContentType.urlEncoded.rawValue
         dict[HTTPHeaderField.idToken.rawValue] = UserDefaultsManager.idToken
         return dict
