@@ -70,6 +70,7 @@
 		BD925814291946FE008A3158 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD925813291946FE008A3158 /* Colors.swift */; };
 		BD92581629194706008A3158 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92581529194706008A3158 /* Images.swift */; };
 		BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD92583129194BC8008A3158 /* .swiftlint.yml */; };
+		BDA41066292BDFB60053FF3B /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA41065292BDFB60053FF3B /* HTTPError.swift */; };
 		BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B10291E70C7000C4A6A /* ViewModelType.swift */; };
 		BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B12291E763F000C4A6A /* Bindable.swift */; };
 		BDC06B16291EA718000C4A6A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B15291EA718000C4A6A /* String+.swift */; };
@@ -152,6 +153,7 @@
 		BD925813291946FE008A3158 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BD92581529194706008A3158 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		BDA41065292BDFB60053FF3B /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		BDC06B10291E70C7000C4A6A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		BDC06B12291E763F000C4A6A /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		BDC06B15291EA718000C4A6A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -732,6 +734,7 @@
 		BDEA5102292883C900110982 /* NetworkError */ = {
 			isa = PBXGroup;
 			children = (
+				BDA41065292BDFB60053FF3B /* HTTPError.swift */,
 				BD52376C291E5024004EE2B6 /* NetworkError.swift */,
 			);
 			path = NetworkError;
@@ -913,6 +916,7 @@
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
+				BDA41066292BDFB60053FF3B /* HTTPError.swift in Sources */,
 				BD52377F291E591A004EE2B6 /* Encodable+toDictionary.swift in Sources */,
 				BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,

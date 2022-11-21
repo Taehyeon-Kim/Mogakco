@@ -8,7 +8,7 @@
 import Foundation
 
 protocol URLRequestable {
-    associatedtype Response
+    associatedtype Response: Decodable
     
     var url: String { get }
     var method: HTTPMethod { get }
