@@ -78,7 +78,7 @@ extension URLRequestable {
     }
     
     var headers: [String: String]? {
-        return HTTPHeader.headerWithIDToken
+        return HTTPHeaderField.default
     }
     
     var queryItems: Encodable? {
