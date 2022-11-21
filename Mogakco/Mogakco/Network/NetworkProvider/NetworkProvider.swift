@@ -1,5 +1,5 @@
 //
-//  HTTPClient.swift
+//  NetworkProvider.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/18.
@@ -8,10 +8,12 @@
 import Foundation
 import RxSwift
 
-protocol HTTPClient: AnyObject {}
+protocol NetworkProvider: AnyObject {
+    
+}
 
 /// 실제 Request를 수행하는 클래스
-final class URLSessionHTTPClient: HTTPClient {
+final class NetworkProviderImpl: NetworkProvider {
 
     private let session: URLSession
     private let authManager: AuthManager
@@ -59,7 +61,7 @@ final class URLSessionHTTPClient: HTTPClient {
     }
 }
 
-extension URLSessionHTTPClient {
+extension NetworkProviderImpl {
     
     static func handle<T: Decodable>(
         data: Data?,
