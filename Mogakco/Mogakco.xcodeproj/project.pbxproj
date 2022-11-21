@@ -37,6 +37,11 @@
 		BD3C6485291FF0C3005E7142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6484291FF0C3005E7142 /* User.swift */; };
 		BD3C648C291FF5F4005E7142 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */; };
 		BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = BD4B5512292A8A0C00ECFD04 /* RxDataSources */; };
+		BD4B5517292A8A6D00ECFD04 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */; };
+		BD4B5519292A8B3C00ECFD04 /* MyInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */; };
+		BD4B551C292A91E000ECFD04 /* MyInfoViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551B292A91E000ECFD04 /* MyInfoViewSection.swift */; };
+		BD4B551F292B184300ECFD04 /* MyInfoItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551E292B184300ECFD04 /* MyInfoItemCellViewModel.swift */; };
+		BD4B5521292B1D9B00ECFD04 /* MyInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5520292B1D9B00ECFD04 /* MyInfoViewModel.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -120,6 +125,11 @@
 		BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
 		BD3C6484291FF0C3005E7142 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BD3C648B291FF5F4005E7142 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
+		BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoItemCell.swift; sourceTree = "<group>"; };
+		BD4B551B292A91E000ECFD04 /* MyInfoViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewSection.swift; sourceTree = "<group>"; };
+		BD4B551E292B184300ECFD04 /* MyInfoItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoItemCellViewModel.swift; sourceTree = "<group>"; };
+		BD4B5520292B1D9B00ECFD04 /* MyInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewModel.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -302,6 +312,42 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BD4B5514292A8A5500ECFD04 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BD4B551A292A91D400ECFD04 /* Section */,
+				BD4B5515292A8A6400ECFD04 /* View */,
+				BD4B551D292B182C00ECFD04 /* ViewModel */,
+			);
+			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		BD4B5515292A8A6400ECFD04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */,
+				BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD4B551A292A91D400ECFD04 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				BD4B551B292A91E000ECFD04 /* MyInfoViewSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		BD4B551D292B182C00ECFD04 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD4B551E292B184300ECFD04 /* MyInfoItemCellViewModel.swift */,
+				BD4B5520292B1D9B00ECFD04 /* MyInfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BD523788291E5C8E004EE2B6 /* NetworkModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +477,7 @@
 		BD9257F8291944A3008A3158 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BD4B5514292A8A5500ECFD04 /* MyInfo */,
 				BD392CB7291D39AE008D3EAB /* SignUp */,
 				BDE095C8291C1D8F009CB1C0 /* PhoneVerification */,
 				BD9258022919456B008A3158 /* Onboarding */,
@@ -835,6 +882,7 @@
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
 				BDC06B16291EA718000C4A6A /* String+.swift in Sources */,
+				BD4B5521292B1D9B00ECFD04 /* MyInfoViewModel.swift in Sources */,
 				BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */,
 				BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */,
 				BDC50EC329289126002378C6 /* SignUpAPI.swift in Sources */,
@@ -855,10 +903,12 @@
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD38828429237562000F971D /* MGCHTTPError.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
+				BD4B551F292B184300ECFD04 /* MyInfoItemCellViewModel.swift in Sources */,
 				BD38828029237316000F971D /* MGCError.swift in Sources */,
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
+				BD4B551C292A91E000ECFD04 /* MyInfoViewSection.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
 				BD3C648C291FF5F4005E7142 /* HTTPHeaders.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
@@ -871,6 +921,7 @@
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
+				BD4B5517292A8A6D00ECFD04 /* MyInfoViewController.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
@@ -880,6 +931,7 @@
 				BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */,
 				BDC50EC9292929C1002378C6 /* MyPageAPI.swift in Sources */,
 				BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */,
+				BD4B5519292A8B3C00ECFD04 /* MyInfoItemCell.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
 				BD23476E291A9B41009BC722 /* SSButton.swift in Sources */,
