@@ -49,7 +49,8 @@ extension URLRequestable {
     
         // body parameters
         if let parameters {
-            urlRequest.httpBody = try? JSONEncoder().encode(parameters)
+            let data = try? JSONEncoder().encode(parameters)
+            urlRequest.httpBody = data
         }
     
         // header
