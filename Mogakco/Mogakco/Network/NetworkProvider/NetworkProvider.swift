@@ -43,7 +43,8 @@ final class NetworkProviderImpl: NetworkProvider {
                         let decoded = try endpoint.decode(data)
                         observer(.success(decoded))
                     } catch {
-                        let _ = String(data: data, encoding: .utf8)
+                        let decodedString = String(data: data, encoding: .utf8)
+                        print(decodedString)
                     }
 
                 case let .failure(error):
