@@ -71,6 +71,7 @@
 		BD92581629194706008A3158 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92581529194706008A3158 /* Images.swift */; };
 		BD92583229194BC8008A3158 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD92583129194BC8008A3158 /* .swiftlint.yml */; };
 		BDA41066292BDFB60053FF3B /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA41065292BDFB60053FF3B /* HTTPError.swift */; };
+		BDA41069292BF6330053FF3B /* FindQueueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA41068292BF6330053FF3B /* FindQueueAPI.swift */; };
 		BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B10291E70C7000C4A6A /* ViewModelType.swift */; };
 		BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B12291E763F000C4A6A /* Bindable.swift */; };
 		BDC06B16291EA718000C4A6A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B15291EA718000C4A6A /* String+.swift */; };
@@ -154,6 +155,7 @@
 		BD92581529194706008A3158 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		BD92583129194BC8008A3158 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BDA41065292BDFB60053FF3B /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		BDA41068292BF6330053FF3B /* FindQueueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindQueueAPI.swift; sourceTree = "<group>"; };
 		BDC06B10291E70C7000C4A6A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		BDC06B12291E763F000C4A6A /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		BDC06B15291EA718000C4A6A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -620,6 +622,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		BDA41067292BF6000053FF3B /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				BDA41068292BF6330053FF3B /* FindQueueAPI.swift */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
 		BDC06B14291EA70D000C4A6A /* Foundation+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,6 +659,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC50EC42928943F002378C6 /* Auth */,
+				BDA41067292BF6000053FF3B /* Queue */,
 				BDC50EC7292929B0002378C6 /* User */,
 			);
 			path = API;
@@ -907,6 +918,7 @@
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
 				BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */,
 				BDC06B1A291EC66E000C4A6A /* FirebaseAuthRepository.swift in Sources */,
+				BDA41069292BF6330053FF3B /* FindQueueAPI.swift in Sources */,
 				BD8E98B22922776E00133840 /* Device.swift in Sources */,
 				BD388282292374A9000F971D /* MGCNetworkError.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
