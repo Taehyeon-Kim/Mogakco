@@ -20,6 +20,12 @@
 		BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234779291AA451009BC722 /* UICollectionView+Extension.swift */; };
 		BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */; };
 		BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477E291BB48A009BC722 /* UIFont+Extension.swift */; };
+		BD347C44292F61EB009F52BA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C43292F61EB009F52BA /* MapView.swift */; };
+		BD347C46292F61F3009F52BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C45292F61F3009F52BA /* MapViewController.swift */; };
+		BD347C49292F61FF009F52BA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C48292F61FF009F52BA /* MapViewModel.swift */; };
+		BD347C4C292F6D43009F52BA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C4B292F6D43009F52BA /* LocationManager.swift */; };
+		BD347C4E292F7213009F52BA /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C4D292F7213009F52BA /* MapManager.swift */; };
+		BD347C55292FC13B009F52BA /* GenderFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C54292FC13B009F52BA /* GenderFilterView.swift */; };
 		BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38827D292372B5000F971D /* FirbaseTokenError.swift */; };
 		BD38828029237316000F971D /* MGCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38827F29237316000F971D /* MGCError.swift */; };
 		BD388282292374A9000F971D /* MGCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD388281292374A9000F971D /* MGCNetworkError.swift */; };
@@ -110,6 +116,12 @@
 		BD234779291AA451009BC722 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		BD23477B291AA4EF009BC722 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD23477E291BB48A009BC722 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BD347C43292F61EB009F52BA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BD347C45292F61F3009F52BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BD347C48292F61FF009F52BA /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		BD347C4B292F6D43009F52BA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BD347C4D292F7213009F52BA /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		BD347C54292FC13B009F52BA /* GenderFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderFilterView.swift; sourceTree = "<group>"; };
 		BD38827D292372B5000F971D /* FirbaseTokenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirbaseTokenError.swift; sourceTree = "<group>"; };
 		BD38827F29237316000F971D /* MGCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCError.swift; sourceTree = "<group>"; };
 		BD388281292374A9000F971D /* MGCNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCNetworkError.swift; sourceTree = "<group>"; };
@@ -239,6 +251,42 @@
 				BDC06B12291E763F000C4A6A /* Bindable.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BD347C41292F61D2009F52BA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BD347C42292F61DD009F52BA /* View */,
+				BD347C47292F61F5009F52BA /* ViewModel */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		BD347C42292F61DD009F52BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD347C54292FC13B009F52BA /* GenderFilterView.swift */,
+				BD347C43292F61EB009F52BA /* MapView.swift */,
+				BD347C45292F61F3009F52BA /* MapViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD347C47292F61F5009F52BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD347C48292F61FF009F52BA /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD347C4A292F6D37009F52BA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BD347C4B292F6D43009F52BA /* LocationManager.swift */,
+				BD347C4D292F7213009F52BA /* MapManager.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		BD38827B292370FA000F971D /* LocalStorage */ = {
@@ -440,7 +488,7 @@
 				BD9257FC291944FC008A3158 /* Network */,
 				BD9257F8291944A3008A3158 /* Presentation */,
 				BD9257F62919442A008A3158 /* Resources */,
-				BDEA50F929278D4B00110982 /* Services */,
+				BDEA50F929278D4B00110982 /* Manager */,
 				BD9257F729194433008A3158 /* Supports */,
 			);
 			path = Mogakco;
@@ -478,10 +526,11 @@
 		BD9257F8291944A3008A3158 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BD347C41292F61D2009F52BA /* Map */,
 				BD4B5514292A8A5500ECFD04 /* MyInfo */,
-				BD392CB7291D39AE008D3EAB /* SignUp */,
-				BDE095C8291C1D8F009CB1C0 /* PhoneVerification */,
 				BD9258022919456B008A3158 /* Onboarding */,
+				BDE095C8291C1D8F009CB1C0 /* PhoneVerification */,
+				BD392CB7291D39AE008D3EAB /* SignUp */,
 				BD92580129194567008A3158 /* Splash */,
 			);
 			path = Presentation;
@@ -726,12 +775,13 @@
 			path = NetworkProvider;
 			sourceTree = "<group>";
 		};
-		BDEA50F929278D4B00110982 /* Services */ = {
+		BDEA50F929278D4B00110982 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BD347C4A292F6D37009F52BA /* Map */,
 				BDEA50FA29278D5400110982 /* Auth */,
 			);
-			path = Services;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		BDEA50FA29278D5400110982 /* Auth */ = {
@@ -871,6 +921,7 @@
 			files = (
 				BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */,
 				BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */,
+				BD347C4C292F6D43009F52BA /* LocationManager.swift in Sources */,
 				BDEA51012927FE9300110982 /* HTTPHeaderField.swift in Sources */,
 				BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */,
 				BD8E98CF2922C27F00133840 /* SignUpRequestDTO.swift in Sources */,
@@ -880,6 +931,7 @@
 				BD92580E29194691008A3158 /* BaseViewController.swift in Sources */,
 				BD925814291946FE008A3158 /* Colors.swift in Sources */,
 				BDEA50F829278BD300110982 /* NetworkProvider.swift in Sources */,
+				BD347C55292FC13B009F52BA /* GenderFilterView.swift in Sources */,
 				BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
@@ -888,12 +940,15 @@
 				BD4B5521292B1D9B00ECFD04 /* MyInfoViewModel.swift in Sources */,
 				BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */,
 				BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */,
+				BD347C49292F61FF009F52BA /* MapViewModel.swift in Sources */,
 				BDC50EC329289126002378C6 /* SignUpAPI.swift in Sources */,
 				BD392CB2291D3990008D3EAB /* NicknameViewController.swift in Sources */,
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */,
 				BDEA50FF2927F22700110982 /* URLRequestable.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
+				BD347C44292F61EB009F52BA /* MapView.swift in Sources */,
+				BD347C46292F61F3009F52BA /* MapViewController.swift in Sources */,
 				BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */,
 				BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */,
 				BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */,
@@ -905,6 +960,7 @@
 				BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD38828429237562000F971D /* MGCHTTPError.swift in Sources */,
+				BD347C4E292F7213009F52BA /* MapManager.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
 				BD4B551F292B184300ECFD04 /* MyInfoItemCellViewModel.swift in Sources */,
 				BD38828029237316000F971D /* MGCError.swift in Sources */,

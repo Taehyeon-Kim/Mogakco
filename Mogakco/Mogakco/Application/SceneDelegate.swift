@@ -15,10 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let firebaseRepository = FirebaseAuthRepositoryImpl()
-        let viewModel = PhoneEntryViewModel(firebaseRepository: firebaseRepository)
-        let viewController = PhoneEntryViewController(viewModel: viewModel)
-        window?.rootViewController = UINavigationController(rootViewController: viewController)
+        
+        let viewModel = MapViewModel()
+        window?.rootViewController = MapViewController(viewModel: viewModel)
         window?.makeKeyAndVisible()
     }
 }
