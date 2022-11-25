@@ -217,7 +217,6 @@
 			children = (
 				BD15957E291A3FAE00C552CB /* Adjusted+Extension.swift */,
 				BD234779291AA451009BC722 /* UICollectionView+Extension.swift */,
-				BD23477E291BB48A009BC722 /* UIFont+Extension.swift */,
 				BD234762291A771A009BC722 /* UILabel+Extension.swift */,
 				BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */,
 				BD392CC0291D4A61008D3EAB /* UIView+Extension.swift */,
@@ -225,14 +224,6 @@
 				BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */,
 			);
 			path = "UIKit+";
-			sourceTree = "<group>";
-		};
-		BD234764291A86FC009BC722 /* DesignSystem */ = {
-			isa = PBXGroup;
-			children = (
-				BD23476C291A9B2C009BC722 /* SSButton */,
-			);
-			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		BD23476C291A9B2C009BC722 /* SSButton */ = {
@@ -482,14 +473,13 @@
 				BD9257FE2919452E008A3158 /* Common */,
 				BD92581929194747008A3158 /* Data */,
 				BD3C647F291FEFCB005E7142 /* DataMapping */,
-				BD234764291A86FC009BC722 /* DesignSystem */,
 				BD92581A29194749008A3158 /* Domain */,
 				BD38827B292370FA000F971D /* LocalStorage */,
+				BDEA50F929278D4B00110982 /* Manager */,
 				BD9257FC291944FC008A3158 /* Network */,
 				BD9257F8291944A3008A3158 /* Presentation */,
-				BD9257F62919442A008A3158 /* Resources */,
-				BDEA50F929278D4B00110982 /* Manager */,
 				BD9257F729194433008A3158 /* Supports */,
+				BDFE03B72930DA78006F6FAF /* UserInterface */,
 			);
 			path = Mogakco;
 			sourceTree = "<group>";
@@ -501,17 +491,6 @@
 				BD9257E3291943F8008A3158 /* SceneDelegate.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		BD9257F62919442A008A3158 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BD92581729194715008A3158 /* Base */,
-				BD92580629194624008A3158 /* Colors */,
-				BD92580729194628008A3158 /* Fonts */,
-				BD9258082919462A008A3158 /* Images */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		BD9257F729194433008A3158 /* Supports */ = {
@@ -555,7 +534,6 @@
 				BD92580C29194682008A3158 /* Base */,
 				BD38827C29237299000F971D /* Error */,
 				BDC06B14291EA70D000C4A6A /* Foundation+ */,
-				BD8E98AE2922770300133840 /* Preview */,
 				BD234776291AA410009BC722 /* Protocol */,
 				BD15957B291A3F8C00C552CB /* UIKit+ */,
 			);
@@ -600,6 +578,7 @@
 				BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */,
 				BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */,
 				BD234760291A6052009BC722 /* TypoStyle.swift */,
+				BD23477E291BB48A009BC722 /* UIFont+Extension.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -630,15 +609,6 @@
 				BD23476A291A9AEB009BC722 /* BaseView.swift */,
 				BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */,
 				BDC06B10291E70C7000C4A6A /* ViewModelType.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		BD92581729194715008A3158 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				BD9257EA291943F9008A3158 /* Assets.xcassets */,
-				BD9257EC291943F9008A3158 /* LaunchScreen.storyboard */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -799,6 +769,28 @@
 				BD52376C291E5024004EE2B6 /* NetworkError.swift */,
 			);
 			path = NetworkError;
+			sourceTree = "<group>";
+		};
+		BDFE03B72930DA78006F6FAF /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				BD9257EC291943F9008A3158 /* LaunchScreen.storyboard */,
+				BDFE03B82930DAFD006F6FAF /* Assets */,
+				BD92580629194624008A3158 /* Colors */,
+				BD92580729194628008A3158 /* Fonts */,
+				BD9258082919462A008A3158 /* Images */,
+				BD8E98AE2922770300133840 /* Preview */,
+				BD23476C291A9B2C009BC722 /* SSButton */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		BDFE03B82930DAFD006F6FAF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BD9257EA291943F9008A3158 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
