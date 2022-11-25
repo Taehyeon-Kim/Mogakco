@@ -330,8 +330,8 @@
 		BD3C647F291FEFCB005E7142 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
-				BD8E98CD2922C27F00133840 /* SignUp */,
 				BD3C6480291FEFD7005E7142 /* SignIn */,
+				BD8E98CD2922C27F00133840 /* SignUp */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -344,13 +344,13 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
-		BD3C6483291FF0B6005E7142 /* Model */ = {
+		BD3C6483291FF0B6005E7142 /* DomainObject */ = {
 			isa = PBXGroup;
 			children = (
 				BD3C6484291FF0C3005E7142 /* User.swift */,
 				BDE095C4291C17AB009CB1C0 /* Onboarding.swift */,
 			);
-			path = Model;
+			path = DomainObject;
 			sourceTree = "<group>";
 		};
 		BD4B5514292A8A5500ECFD04 /* MyInfo */ = {
@@ -472,7 +472,6 @@
 				BD9257F5291943FE008A3158 /* Application */,
 				BD9257FE2919452E008A3158 /* Common */,
 				BD92581929194747008A3158 /* Data */,
-				BD3C647F291FEFCB005E7142 /* DataMapping */,
 				BD92581A29194749008A3158 /* Domain */,
 				BDEA50F929278D4B00110982 /* Manager */,
 				BD9257FC291944FC008A3158 /* Network */,
@@ -628,7 +627,8 @@
 		BD92581929194747008A3158 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				BDC06B17291EC626000C4A6A /* Repositories */,
+				BDFE03BB2930EF51006F6FAF /* DataSource */,
+				BDC06B17291EC626000C4A6A /* Repositories+Impl */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -636,7 +636,8 @@
 		BD92581A29194749008A3158 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				BD3C6483291FF0B6005E7142 /* Model */,
+				BD3C6483291FF0B6005E7142 /* DomainObject */,
+				BDFE03C22930EFD7006F6FAF /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -657,21 +658,12 @@
 			path = "Foundation+";
 			sourceTree = "<group>";
 		};
-		BDC06B17291EC626000C4A6A /* Repositories */ = {
+		BDC06B17291EC626000C4A6A /* Repositories+Impl */ = {
 			isa = PBXGroup;
 			children = (
-				BDC06B18291EC638000C4A6A /* Firebase */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		BDC06B18291EC638000C4A6A /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */,
 				BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */,
 			);
-			path = Firebase;
+			path = "Repositories+Impl";
 			sourceTree = "<group>";
 		};
 		BDC50EBF29288D28002378C6 /* API */ = {
@@ -791,6 +783,22 @@
 				BD9257EA291943F9008A3158 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		BDFE03BB2930EF51006F6FAF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BD3C647F291FEFCB005E7142 /* DataMapping */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BDFE03C22930EFD7006F6FAF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
