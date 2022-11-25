@@ -17,30 +17,30 @@ enum SSButtonStyle {
     var titleColor: UIColor? {
         switch self {
         case .inactive:
-            return .Gray.black
+            return .MGC.black
         case .fill:
-            return .Gray.white
+            return .MGC.white
         case .outline:
-            return .Brand.green
+            return .MGC.green
         case .cancel:
-            return .Gray.black
+            return .MGC.black
         case .disable:
-            return .Gray.gray3
+            return .MGC.gray3
         }
     }
     
     var backgroundColor: UIColor? {
         switch self {
         case .inactive:
-            return .Gray.white
+            return .MGC.white
         case .fill:
-            return .Brand.green
+            return .MGC.green
         case .outline:
-            return .Gray.white
+            return .MGC.white
         case .cancel:
-            return .Gray.gray2
+            return .MGC.gray2
         case .disable:
-            return .Gray.gray6
+            return .MGC.gray6
         }
     }
 }

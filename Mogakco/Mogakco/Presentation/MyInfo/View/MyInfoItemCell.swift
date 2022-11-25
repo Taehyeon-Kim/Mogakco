@@ -35,7 +35,7 @@ final class MyInfoItemCell: BaseCollectionViewCell {
         }
         
         underLineView.do {
-            $0.backgroundColor = .Gray.gray2
+            $0.backgroundColor = .MGC.gray2
         }
     }
     

@@ -10,7 +10,7 @@ import UIKit
 extension UILabel {
 
     @discardableResult
-    func setTypoStyle(_ typoStyle: TypoStyle, alignment: NSTextAlignment = .left, textColor: UIColor = .Gray.black) -> Self {
+    func setTypoStyle(_ typoStyle: TypoStyle, alignment: NSTextAlignment = .left, textColor: UIColor = .MGC.black) -> Self {
         let font = typoStyle.font
         let lineHeight = font.pointSize * typoStyle.typoDescription.lineHeight
 

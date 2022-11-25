@@ -33,7 +33,7 @@ final class BirthViewController: BaseViewController {
     }
     
     override func setAttributes() {
-        view.backgroundColor = .Gray.white
+        view.backgroundColor = .MGC.white
         
         textLabel.do {
             $0.text = """

@@ -38,7 +38,7 @@ final class NicknameViewController: BaseViewController {
     }
     
     override func setAttributes() {
-        view.backgroundColor = .Gray.white
+        view.backgroundColor = .MGC.white
         
         textLabel.do {
             $0.text = """
@@ -51,7 +51,7 @@ final class NicknameViewController: BaseViewController {
         textField.do {
             $0.placeholder = "10자 이내로 입력"
             $0.font = .init(.regular, 14)
-            $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.setBottomBorder(with: .MGC.gray3, width: 1)
             $0.setLeftPadding(to: 12)
             $0.becomeFirstResponder()
         }

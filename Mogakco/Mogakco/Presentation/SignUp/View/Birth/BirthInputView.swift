@@ -19,7 +19,7 @@ final class BirthInputView: BaseView {
         get { textField.placeholder }
         set {
             textField.placeholder = newValue
-            textField.setPlaceHolderAttributes(placeHolderText: newValue ?? "", color: .Gray.gray7, font: .init(.regular, 14))
+            textField.setPlaceHolderAttributes(placeHolderText: newValue ?? "", color: .MGC.gray7, font: .init(.regular, 14))
         }
     }
     
@@ -40,7 +40,7 @@ final class BirthInputView: BaseView {
     
     override func setAttributes() {
         textField.do {
-            $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.setBottomBorder(with: .MGC.gray3, width: 1)
             $0.setLeftPadding(to: 12)
             // $0.becomeFirstResponder()
         }

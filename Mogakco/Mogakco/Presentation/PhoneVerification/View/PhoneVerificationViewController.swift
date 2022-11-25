@@ -64,7 +64,7 @@ final class PhoneVerificationViewController: BaseViewController {
     // MARK: Override Methods
     
     override func setAttributes() {
-        view.backgroundColor = .Gray.white
+        view.backgroundColor = .MGC.white
         
         titleLabel.do {
             $0.text = Text.titleLabel
@@ -86,7 +86,7 @@ final class PhoneVerificationViewController: BaseViewController {
             $0.font = .init(.regular, 14)
             $0.keyboardType = .numberPad
             $0.textContentType = .oneTimeCode
-            $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.setBottomBorder(with: .MGC.gray3, width: 1)
             $0.setLeftPadding(to: Metric.textFieldLeftPadding)
             $0.becomeFirstResponder()
         }

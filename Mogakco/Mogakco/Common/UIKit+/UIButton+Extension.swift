@@ -20,7 +20,7 @@ extension UIButton.Configuration {
         config.baseForegroundColor = .black
         config.baseBackgroundColor = .white
         config.background.cornerRadius = 8
-        config.background.strokeColor = .Gray.gray3
+        config.background.strokeColor = .MGC.gray3
         config.background.strokeWidth = 1
         return config
     }

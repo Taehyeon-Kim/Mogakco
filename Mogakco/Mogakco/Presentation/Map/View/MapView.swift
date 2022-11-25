@@ -74,13 +74,13 @@ final class MapView: BaseView {
         
         locationButton.do {
             $0.setImage(.icnPlace, for: .normal)
-            $0.backgroundColor = .Gray.white
+            $0.backgroundColor = .MGC.white
             $0.layer.cornerRadius = 8
         }
         
         floatingButton.do {
             $0.setImage(.icnSearch?.resized(side: 40).withTintColor(.white), for: .normal)
-            $0.backgroundColor = .Gray.black
+            $0.backgroundColor = .MGC.black
             $0.layer.cornerRadius = 32
         }
     }
