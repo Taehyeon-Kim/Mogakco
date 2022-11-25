@@ -25,20 +25,14 @@ extension UIColor {
 }
 
 extension UIColor {
-    
-    enum Brand {
+        
+    enum MGC {
         static let green = makeColor(from: "#49DC92")
         static let whiteGreen = makeColor(from: "#CDF4E1")
         static let yellowGreen = makeColor(from: "#B2EB61")
-    }
-    
-    enum System {
         static let success = makeColor(from: "#628FE5")
         static let error = makeColor(from: "#E9666B")
         static let focus = makeColor(from: "#333333")
-    }
-    
-    enum Gray {
         static let black = makeColor(from: "#333333")
         static let white = makeColor(from: "#FFFFFF")
         static let gray7 = makeColor(from: "#888888")

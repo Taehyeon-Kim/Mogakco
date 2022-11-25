@@ -19,7 +19,7 @@ final class EmailViewController: BaseViewController {
     }
     
     override func setAttributes() {
-        view.backgroundColor = .Gray.white
+        view.backgroundColor = .MGC.white
         
         textLabel.do {
             $0.text = "이메일을 입력해 주세요"
@@ -31,13 +31,13 @@ final class EmailViewController: BaseViewController {
             $0.text = "휴대폰 번호 변경 시 인증을 위해 사용해요"
             $0.numberOfLines = 0
             $0.setTypoStyle(.title2, alignment: .center)
-            $0.textColor = .Gray.gray7
+            $0.textColor = .MGC.gray7
         }
         
         textField.do {
             $0.placeholder = "SeSAC@email.com"
             $0.font = .init(.regular, 14)
-            $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.setBottomBorder(with: .MGC.gray3, width: 1)
             $0.setLeftPadding(to: 12)
             $0.becomeFirstResponder()
         }

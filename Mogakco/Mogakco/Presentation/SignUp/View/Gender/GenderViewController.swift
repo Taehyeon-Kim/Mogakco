@@ -19,7 +19,7 @@ final class GenderViewController: BaseViewController {
     }
     
     override func setAttributes() {
-        view.backgroundColor = .Gray.white
+        view.backgroundColor = .MGC.white
         
         textLabel.do {
             $0.text = "성별을 선택해 주세요"
@@ -31,7 +31,7 @@ final class GenderViewController: BaseViewController {
             $0.text = "새싹 찾기 기능을 이용하기 위해서 필요해요!"
             $0.numberOfLines = 0
             $0.setTypoStyle(.title2, alignment: .center)
-            $0.textColor = .Gray.gray7
+            $0.textColor = .MGC.gray7
         }
         
         verificationCodeButton.do {

@@ -61,7 +61,7 @@ final class PhoneEntryViewController: BaseViewController {
     // MARK: Override Methods
    
     override func setAttributes() {
-        view.backgroundColor = .Gray.white
+        view.backgroundColor = .MGC.white
         
         titleLabel.do {
             $0.numberOfLines = 0
@@ -73,7 +73,7 @@ final class PhoneEntryViewController: BaseViewController {
             $0.placeholder = Text.phoneEntryField
             $0.font = .init(.regular, 14)
             $0.keyboardType = .phonePad
-            $0.setBottomBorder(with: .Gray.gray3, width: 1)
+            $0.setBottomBorder(with: .MGC.gray3, width: 1)
             $0.setLeftPadding(to: Metric.textFieldLeftPadding)
             $0.becomeFirstResponder()
         }

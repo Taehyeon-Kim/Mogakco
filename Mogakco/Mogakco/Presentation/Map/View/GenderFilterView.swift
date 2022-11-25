@@ -67,7 +67,7 @@ final class GenderFilterView: BaseView {
         for (state, button) in zip(State.allCases, buttonStack.arrangedSubviews) {
             guard let button = button as? UIButton else { return }
             button.setTitle(state.title, for: .normal)
-            button.setTitleColor(.Gray.black, for: .normal)
+            button.setTitleColor(.MGC.black, for: .normal)
             button.titleLabel?.font = .init(.regular, 14)
             button.backgroundColor = .white
         }
@@ -77,7 +77,7 @@ final class GenderFilterView: BaseView {
         initButtonAppearance()
         
         guard let buttonView = buttonStack.arrangedSubviews[selectedState.rawValue] as? UIButton else { return }
-        buttonView.backgroundColor = .Brand.green
+        buttonView.backgroundColor = .MGC.green
         buttonView.setTitleColor(.white, for: .normal)
     }
     

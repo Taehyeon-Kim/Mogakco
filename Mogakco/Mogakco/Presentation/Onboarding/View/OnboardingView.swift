@@ -22,7 +22,7 @@ final class OnboardingView: BaseView {
     private let confirmButton = SSButton(.fill)
 
     override func setAttributes() {
-        backgroundColor = .Gray.white
+        backgroundColor = .MGC.white
         
         collectionView.do {
             $0.alwaysBounceVertical = false
@@ -32,8 +32,8 @@ final class OnboardingView: BaseView {
         
         pageControl.do {
             $0.numberOfPages = 3
-            $0.currentPageIndicatorTintColor = .Gray.black
-            $0.pageIndicatorTintColor = .Gray.gray5
+            $0.currentPageIndicatorTintColor = .MGC.black
+            $0.pageIndicatorTintColor = .MGC.gray5
         }
         
         confirmButton.do {

@@ -70,7 +70,7 @@ extension OnboardingCollectionViewCell {
     private func highlightOnboardingText() {
         for target in ["위치 기반", "스터디를 원하는 친구"] {
             if let text = textLabel.text, text.contains(target) {
-                textLabel.highlight(target, color: .Brand.green)
+                textLabel.highlight(target, color: .MGC.green)
             }
         }
     }
