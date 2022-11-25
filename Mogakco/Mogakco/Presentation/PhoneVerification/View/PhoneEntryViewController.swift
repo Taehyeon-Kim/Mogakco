@@ -66,7 +66,10 @@ final class PhoneEntryViewController: BaseViewController {
         titleLabel.do {
             $0.numberOfLines = 0
             $0.text = Text.titleLabel
-            $0.setTypoStyle(.display1, alignment: .center)
+            $0.font = .notoSansR(20)
+            $0.setLineHeight(32)
+            $0.textAlignment = .center
+            // $0.setTypoStyle(.display1, alignment: .center)
         }
         
         phoneEntryField.do {
