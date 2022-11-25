@@ -48,8 +48,14 @@ extension URLRequestable {
         urlRequest.httpMethod = method.rawValue
     
         // body parameters
-        if let parameters {
-            let data = try? JSONEncoder().encode(parameters)
+        /// application/x-www-form-urlencoded
+        if let parameters,
+           let dicts = try parameters.toDictionary() {
+            let output = dicts.lazy
+                .map { ($0.key, $0.value) }
+                .map { "\($0)=\($1)"}
+                .joined(separator: "&")
+            let data = output.data(using: .utf8)
             urlRequest.httpBody = data
         }
     
