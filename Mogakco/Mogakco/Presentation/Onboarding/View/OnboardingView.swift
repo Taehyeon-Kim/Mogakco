@@ -19,7 +19,7 @@ final class OnboardingView: BaseView {
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: generateLayout())
     private let pageControl = UIPageControl()
-    private let confirmButton = SSButton(.fill)
+    private let confirmButton = MGCButton(.fill)
 
     override func setAttributes() {
         backgroundColor = .MGC.white

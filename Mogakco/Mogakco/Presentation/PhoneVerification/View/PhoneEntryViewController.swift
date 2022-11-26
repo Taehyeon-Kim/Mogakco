@@ -37,7 +37,7 @@ final class PhoneEntryViewController: BaseViewController {
     
     private let titleLabel = UILabel()
     private let phoneEntryField = UITextField()
-    private let verificationCodeButton = SSButton(.disable)
+    private let verificationCodeButton = MGCButton(.disable)
     
     // MARK: Properties
     

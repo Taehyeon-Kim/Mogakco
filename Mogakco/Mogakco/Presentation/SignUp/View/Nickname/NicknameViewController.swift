@@ -16,7 +16,7 @@ final class NicknameViewController: BaseViewController {
     
     private let textLabel = UILabel()
     private let textField = UITextField()
-    private let nextButton = SSButton(.disable)
+    private let nextButton = MGCButton(.disable)
     
     // MARK: Properties
     

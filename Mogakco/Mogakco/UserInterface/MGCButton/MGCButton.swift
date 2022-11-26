@@ -1,5 +1,5 @@
 //
-//  SSButton.swift
+//  MGCButton.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/08.
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class SSButton: BaseView {
+final class MGCButton: BaseView {
     
     var button = UIButton()
 
@@ -21,7 +21,7 @@ final class SSButton: BaseView {
         set { button.setTitle(newValue, for: .normal) }
     }
     
-    var buttonStyle: SSButtonStyle {
+    var buttonStyle: MGCButtonStyle {
         didSet {
             updateUI(buttonStyle)
         }
@@ -31,12 +31,13 @@ final class SSButton: BaseView {
         return buttonStyle != .disable
     }
     
-    init(_ buttonStyle: SSButtonStyle) {
+    init(_ buttonStyle: MGCButtonStyle) {
         self.buttonStyle = buttonStyle
         super.init(frame: .zero)
         updateUI(buttonStyle)
     }
     
+    /// <#Description#>
     override func setAttributes() {
         self.layer.cornerRadius = 8
         self.layer.masksToBounds = true
@@ -55,7 +56,7 @@ final class SSButton: BaseView {
         }
     }
     
-    private func updateUI(_ buttonStyle: SSButtonStyle) {
+    private func updateUI(_ buttonStyle: MGCButtonStyle) {
         button.backgroundColor = buttonStyle.backgroundColor
         button.setTitleColor(buttonStyle.titleColor, for: .normal)
         button.isEnabled = buttonStyle != .disable

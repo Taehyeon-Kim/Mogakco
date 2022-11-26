@@ -1,5 +1,5 @@
 //
-//  SSButtonStyle.swift
+//  MGCButtonStyle.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/08.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum SSButtonStyle {
+enum MGCButtonStyle {
     case inactive
     case fill
     case outline
