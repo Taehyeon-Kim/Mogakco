@@ -36,8 +36,7 @@ final class MGCButton: BaseView {
         super.init(frame: .zero)
         updateUI(buttonStyle)
     }
-    
-    /// <#Description#>
+
     override func setAttributes() {
         self.layer.cornerRadius = 8
         self.layer.masksToBounds = true

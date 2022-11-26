@@ -1,5 +1,5 @@
 //
-//  MyInfoViewController.swift
+//  MyProfileViewController.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/21.
@@ -11,15 +11,15 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
-final class MyInfoViewController: BaseViewController {
+final class MyProfileViewController: BaseViewController {
     
-    private let viewModel: MyInfoViewModel
-    private let dataSource: RxCollectionViewSectionedReloadDataSource<MyInfoViewSection>
+    private let viewModel: MyProfileViewModel
+    private let dataSource: RxCollectionViewSectionedReloadDataSource<MyProfileViewSection>
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
     init(
-        viewModel: MyInfoViewModel
+        viewModel: MyProfileViewModel
     ) {
         self.viewModel = viewModel
         self.dataSource = Self.dataSourceFactory()
@@ -43,7 +43,7 @@ final class MyInfoViewController: BaseViewController {
         }
         
         collectionView.do {
-            $0.register(MyInfoItemCell.self)
+            $0.register(MyProfileItemCell.self)
             $0.alwaysBounceVertical = false
         }
     }
@@ -59,7 +59,7 @@ final class MyInfoViewController: BaseViewController {
     }
 }
 
-extension MyInfoViewController {
+extension MyProfileViewController {
     
     private func createLayout() -> UICollectionViewLayout {
         
@@ -90,9 +90,9 @@ extension MyInfoViewController {
         return layout
     }
     
-    private static func dataSourceFactory() -> RxCollectionViewSectionedReloadDataSource<MyInfoViewSection> {
+    private static func dataSourceFactory() -> RxCollectionViewSectionedReloadDataSource<MyProfileViewSection> {
         return .init { _, collectionView, indexPath, sectionItem in
-            let cell = collectionView.dequeueReusableCell(cellType: MyInfoItemCell.self, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(cellType: MyProfileItemCell.self, for: indexPath)
             
             switch sectionItem {
             case let .profile(viewModel):
@@ -119,7 +119,7 @@ extension MyInfoViewController {
     }
 }
 
-extension MyInfoViewController: Bindable {
+extension MyProfileViewController: Bindable {
     
     func bind() {
         viewModel.sections

@@ -1,5 +1,5 @@
 //
-//  MyInfoItemCell.swift
+//  MyProfileItemCell.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/21.
@@ -11,7 +11,7 @@ import SnapKit
 import Then
 import RxSwift
 
-final class MyInfoItemCell: BaseCollectionViewCell {
+final class MyProfileItemCell: BaseCollectionViewCell {
     
     private let iconImageView = UIImageView()
     private let titleLabel = UILabel()
@@ -73,9 +73,9 @@ final class MyInfoItemCell: BaseCollectionViewCell {
     }
 }
 
-extension MyInfoItemCell {
+extension MyProfileItemCell {
     
-    func configure(with viewModel: MyInfoItemCellViewModel) {
+    func configure(with viewModel: MyProfileItemCellViewModel) {
         iconImageView.image = viewModel.iconImage
         titleLabel.text = viewModel.title
         accessoryImageView.image = viewModel.accessoryImage

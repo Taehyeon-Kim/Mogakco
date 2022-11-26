@@ -1,5 +1,5 @@
 //
-//  MyInfoItemCellViewModel.swift
+//  MyProfileItemCellViewModel.swift
 //  Mogakco
 //
 //  Created by taekki on 2022/11/21.
@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-struct MyInfoItemCellViewModel {
+struct MyProfileItemCellViewModel {
     
     var iconImage: UIImage?
     var title: String
