@@ -42,11 +42,11 @@
 		BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */; };
 		BD3C6485291FF0C3005E7142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6484291FF0C3005E7142 /* User.swift */; };
 		BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = BD4B5512292A8A0C00ECFD04 /* RxDataSources */; };
-		BD4B5517292A8A6D00ECFD04 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */; };
-		BD4B5519292A8B3C00ECFD04 /* MyInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */; };
-		BD4B551C292A91E000ECFD04 /* MyInfoViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551B292A91E000ECFD04 /* MyInfoViewSection.swift */; };
-		BD4B551F292B184300ECFD04 /* MyInfoItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551E292B184300ECFD04 /* MyInfoItemCellViewModel.swift */; };
-		BD4B5521292B1D9B00ECFD04 /* MyInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5520292B1D9B00ECFD04 /* MyInfoViewModel.swift */; };
+		BD4B5517292A8A6D00ECFD04 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5516292A8A6D00ECFD04 /* MyProfileViewController.swift */; };
+		BD4B5519292A8B3C00ECFD04 /* MyProfileItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5518292A8B3C00ECFD04 /* MyProfileItemCell.swift */; };
+		BD4B551C292A91E000ECFD04 /* MyProfileViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551B292A91E000ECFD04 /* MyProfileViewSection.swift */; };
+		BD4B551F292B184300ECFD04 /* MyProfileItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551E292B184300ECFD04 /* MyProfileItemCellViewModel.swift */; };
+		BD4B5521292B1D9B00ECFD04 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -137,11 +137,11 @@
 		BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
 		BD3C6484291FF0C3005E7142 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
-		BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoItemCell.swift; sourceTree = "<group>"; };
-		BD4B551B292A91E000ECFD04 /* MyInfoViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewSection.swift; sourceTree = "<group>"; };
-		BD4B551E292B184300ECFD04 /* MyInfoItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoItemCellViewModel.swift; sourceTree = "<group>"; };
-		BD4B5520292B1D9B00ECFD04 /* MyInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewModel.swift; sourceTree = "<group>"; };
+		BD4B5516292A8A6D00ECFD04 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		BD4B5518292A8B3C00ECFD04 /* MyProfileItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileItemCell.swift; sourceTree = "<group>"; };
+		BD4B551B292A91E000ECFD04 /* MyProfileViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewSection.swift; sourceTree = "<group>"; };
+		BD4B551E292B184300ECFD04 /* MyProfileItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileItemCellViewModel.swift; sourceTree = "<group>"; };
+		BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -353,21 +353,21 @@
 			path = DomainObject;
 			sourceTree = "<group>";
 		};
-		BD4B5514292A8A5500ECFD04 /* MyInfo */ = {
+		BD4B5514292A8A5500ECFD04 /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
 				BD4B551A292A91D400ECFD04 /* Section */,
 				BD4B5515292A8A6400ECFD04 /* View */,
 				BD4B551D292B182C00ECFD04 /* ViewModel */,
 			);
-			path = MyInfo;
+			path = MyProfile;
 			sourceTree = "<group>";
 		};
 		BD4B5515292A8A6400ECFD04 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD4B5518292A8B3C00ECFD04 /* MyInfoItemCell.swift */,
-				BD4B5516292A8A6D00ECFD04 /* MyInfoViewController.swift */,
+				BD4B5518292A8B3C00ECFD04 /* MyProfileItemCell.swift */,
+				BD4B5516292A8A6D00ECFD04 /* MyProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -375,7 +375,7 @@
 		BD4B551A292A91D400ECFD04 /* Section */ = {
 			isa = PBXGroup;
 			children = (
-				BD4B551B292A91E000ECFD04 /* MyInfoViewSection.swift */,
+				BD4B551B292A91E000ECFD04 /* MyProfileViewSection.swift */,
 			);
 			path = Section;
 			sourceTree = "<group>";
@@ -383,8 +383,8 @@
 		BD4B551D292B182C00ECFD04 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BD4B551E292B184300ECFD04 /* MyInfoItemCellViewModel.swift */,
-				BD4B5520292B1D9B00ECFD04 /* MyInfoViewModel.swift */,
+				BD4B551E292B184300ECFD04 /* MyProfileItemCellViewModel.swift */,
+				BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -504,7 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				BD347C41292F61D2009F52BA /* Map */,
-				BD4B5514292A8A5500ECFD04 /* MyInfo */,
+				BD4B5514292A8A5500ECFD04 /* MyProfile */,
 				BD9258022919456B008A3158 /* Onboarding */,
 				BDE095C8291C1D8F009CB1C0 /* PhoneVerification */,
 				BD392CB7291D39AE008D3EAB /* SignUp */,
@@ -937,7 +937,7 @@
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
 				BDC06B16291EA718000C4A6A /* String+.swift in Sources */,
-				BD4B5521292B1D9B00ECFD04 /* MyInfoViewModel.swift in Sources */,
+				BD4B5521292B1D9B00ECFD04 /* MyProfileViewModel.swift in Sources */,
 				BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */,
 				BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */,
 				BD347C49292F61FF009F52BA /* MapViewModel.swift in Sources */,
@@ -962,12 +962,12 @@
 				BD38828429237562000F971D /* MGCHTTPError.swift in Sources */,
 				BD347C4E292F7213009F52BA /* MapManager.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
-				BD4B551F292B184300ECFD04 /* MyInfoItemCellViewModel.swift in Sources */,
+				BD4B551F292B184300ECFD04 /* MyProfileItemCellViewModel.swift in Sources */,
 				BD38828029237316000F971D /* MGCError.swift in Sources */,
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* MGCButtonStyle.swift in Sources */,
-				BD4B551C292A91E000ECFD04 /* MyInfoViewSection.swift in Sources */,
+				BD4B551C292A91E000ECFD04 /* MyProfileViewSection.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
@@ -980,7 +980,7 @@
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
-				BD4B5517292A8A6D00ECFD04 /* MyInfoViewController.swift in Sources */,
+				BD4B5517292A8A6D00ECFD04 /* MyProfileViewController.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
@@ -991,7 +991,7 @@
 				BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */,
 				BDC50EC9292929C1002378C6 /* MyPageAPI.swift in Sources */,
 				BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */,
-				BD4B5519292A8B3C00ECFD04 /* MyInfoItemCell.swift in Sources */,
+				BD4B5519292A8B3C00ECFD04 /* MyProfileItemCell.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
 				BD23476E291A9B41009BC722 /* MGCButton.swift in Sources */,
