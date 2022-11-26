@@ -520,7 +520,7 @@
 				BD347C41292F61D2009F52BA /* Map */,
 				BD4B5514292A8A5500ECFD04 /* MyProfile */,
 				BD9258022919456B008A3158 /* Onboarding */,
-				BDE095C8291C1D8F009CB1C0 /* PhoneVerification */,
+				BDE095C8291C1D8F009CB1C0 /* Auth */,
 				BDE1AC4E2931DED5009E88AD /* Shop */,
 				BD392CB7291D39AE008D3EAB /* SignUp */,
 				BD92580129194567008A3158 /* Splash */,
@@ -710,13 +710,13 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		BDE095C8291C1D8F009CB1C0 /* PhoneVerification */ = {
+		BDE095C8291C1D8F009CB1C0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				BDE095C9291C1D9F009CB1C0 /* View */,
 				BDE095CA291C1DA1009CB1C0 /* ViewModel */,
 			);
-			path = PhoneVerification;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		BDE095C9291C1D9F009CB1C0 /* View */ = {
