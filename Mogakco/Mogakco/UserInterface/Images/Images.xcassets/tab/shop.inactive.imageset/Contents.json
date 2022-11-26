@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Property 1=shop, Property 2=inact.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

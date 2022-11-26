@@ -74,4 +74,14 @@ extension UIImage {
     
     // MyInfo
     static var imgProfile: UIImage? { return UIImage(named: "profile_img") }
+    
+    // Tab
+    static var icnTabFriendActive: UIImage? { return UIImage(named: "friend.active") }
+    static var icnTabFriendInactive: UIImage? { return UIImage(named: "friend.inactive") }
+    static var icnTabHomeActive: UIImage? { return UIImage(named: "home.active") }
+    static var icnTabHomeInactive: UIImage? { return UIImage(named: "home.inactive") }
+    static var icnTabProfileActive: UIImage? { return UIImage(named: "profile.active") }
+    static var icnTabProfileInactive: UIImage? { return UIImage(named: "profile.inactive") }
+    static var icnTabShopActive: UIImage? { return UIImage(named: "shop.active") }
+    static var icnTabShopInactive: UIImage? { return UIImage(named: "shop.inactive") }
 }
