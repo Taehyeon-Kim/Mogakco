@@ -7,6 +7,10 @@
 
 import UIKit
 
+import RxCocoa
+import RxKeyboard
+import RxSwift
+
 final class KeywordView: BaseView {
     
     lazy var backButton = UIButton()
@@ -14,6 +18,7 @@ final class KeywordView: BaseView {
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
     lazy var findButton = MGCButton(.fill)
 
+    private var disposeBag = DisposeBag()
     private let padding: CGFloat = 16
     private let buttonRadius: CGFloat = 8
     
@@ -27,30 +32,52 @@ final class KeywordView: BaseView {
     
     override func setLayout() {
         backButton.snp.makeConstraints {
-            $0.size.equalTo(24)
-            $0.leading.equalTo(safeAreaLayoutGuide).inset(padding)
             $0.top.equalTo(safeAreaLayoutGuide).offset(16)
+            $0.leading.equalTo(safeAreaLayoutGuide).inset(padding)
         }
         
         searchBar.snp.makeConstraints {
             $0.leading.equalTo(backButton.snp.trailing).offset(8)
-            $0.centerY.equalTo(backButton)
+            $0.centerY.equalTo(backButton.snp.centerY)
             $0.trailing.equalTo(safeAreaLayoutGuide).inset(padding)
+            $0.height.equalTo(36)
         }
         
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(searchBar.snp.bottom).offset(32)
+            $0.top.lessThanOrEqualTo(safeAreaLayoutGuide).inset(68)
             $0.directionalHorizontalEdges.bottom.equalTo(safeAreaLayoutGuide)
         }
         
         findButton.snp.makeConstraints {
-            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(padding)
+            $0.directionalHorizontalEdges.equalToSuperview().inset(padding)
             $0.bottom.equalTo(safeAreaLayoutGuide).inset(padding)
             $0.height.equalTo(48)
         }
+        
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [unowned self] keyboardHeight in
+                let height: CGFloat = keyboardHeight > 0 ? -keyboardHeight + safeAreaInsets.bottom : -16
+                let padding: CGFloat = keyboardHeight > 0 ? 0 : 16
+                let radius: CGFloat = keyboardHeight > 0 ? 0 : 8
+                
+                collectionView.contentInset.bottom = keyboardHeight
+                collectionView.contentOffset.y += keyboardHeight
+                findButton.makeRounded(radius: radius)
+                findButton.snp.updateConstraints {
+                    $0.directionalHorizontalEdges.equalToSuperview().inset(padding)
+                    $0.bottom.equalTo(safeAreaLayoutGuide).offset(height)
+                    $0.height.equalTo(48)
+                }
+                
+                layoutIfNeeded()
+            })
+        .disposed(by: disposeBag)
     }
     
     override func setAttributes() {
+        // 디버깅 영역에서 제약조건 깨지는 이슈 발생
+        /// https://stackoverflow.com/questions/30969353/what-is-uitemporarylayoutwidth-and-why-does-it-break-my-constraints
+        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .MGC.white
         
         backButton.do {
