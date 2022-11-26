@@ -32,19 +32,13 @@ extension KeywordViewController: Bindable {
     func bind() {
         let input = KeywordViewModel.Input(
             searchText: rootView.searchBar.rx.text,
-            textDidBeginEditing: rootView.searchBar.rx.textDidBeginEditing
+            editingDidEndOnExit: rootView.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
         )
         let output = viewModel.transform(input: input)
 
         output.wantedList
             .bind { keywords in
                 print(keywords)
-            }
-            .disposed(by: disposeBag)
-        
-        output.textDidBeginEditing
-            .bind { _ in
-                
             }
             .disposed(by: disposeBag)
         
