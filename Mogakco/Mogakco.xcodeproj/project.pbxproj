@@ -13,8 +13,8 @@
 		BD234761291A6052009BC722 /* TypoStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234760291A6052009BC722 /* TypoStyle.swift */; };
 		BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234762291A771A009BC722 /* UILabel+Extension.swift */; };
 		BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476A291A9AEB009BC722 /* BaseView.swift */; };
-		BD23476E291A9B41009BC722 /* SSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476D291A9B41009BC722 /* SSButton.swift */; };
-		BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */; };
+		BD23476E291A9B41009BC722 /* MGCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476D291A9B41009BC722 /* MGCButton.swift */; };
+		BD234770291A9B8A009BC722 /* MGCButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23476F291A9B8A009BC722 /* MGCButtonStyle.swift */; };
 		BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */; };
 		BD234778291AA418009BC722 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234777291AA418009BC722 /* Reusable.swift */; };
 		BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD234779291AA451009BC722 /* UICollectionView+Extension.swift */; };
@@ -109,8 +109,8 @@
 		BD234760291A6052009BC722 /* TypoStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoStyle.swift; sourceTree = "<group>"; };
 		BD234762291A771A009BC722 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		BD23476A291A9AEB009BC722 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		BD23476D291A9B41009BC722 /* SSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSButton.swift; sourceTree = "<group>"; };
-		BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSButtonStyle.swift; sourceTree = "<group>"; };
+		BD23476D291A9B41009BC722 /* MGCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCButton.swift; sourceTree = "<group>"; };
+		BD23476F291A9B8A009BC722 /* MGCButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCButtonStyle.swift; sourceTree = "<group>"; };
 		BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD234777291AA418009BC722 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		BD234779291AA451009BC722 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
@@ -226,13 +226,13 @@
 			path = "UIKit+";
 			sourceTree = "<group>";
 		};
-		BD23476C291A9B2C009BC722 /* SSButton */ = {
+		BD23476C291A9B2C009BC722 /* MGCButton */ = {
 			isa = PBXGroup;
 			children = (
-				BD23476D291A9B41009BC722 /* SSButton.swift */,
-				BD23476F291A9B8A009BC722 /* SSButtonStyle.swift */,
+				BD23476D291A9B41009BC722 /* MGCButton.swift */,
+				BD23476F291A9B8A009BC722 /* MGCButtonStyle.swift */,
 			);
-			path = SSButton;
+			path = MGCButton;
 			sourceTree = "<group>";
 		};
 		BD234776291AA410009BC722 /* Protocol */ = {
@@ -771,8 +771,8 @@
 				BD92580629194624008A3158 /* Colors */,
 				BD92580729194628008A3158 /* Fonts */,
 				BD9258082919462A008A3158 /* Images */,
+				BD23476C291A9B2C009BC722 /* MGCButton */,
 				BD8E98AE2922770300133840 /* Preview */,
-				BD23476C291A9B2C009BC722 /* SSButton */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -966,7 +966,7 @@
 				BD38828029237316000F971D /* MGCError.swift in Sources */,
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
-				BD234770291A9B8A009BC722 /* SSButtonStyle.swift in Sources */,
+				BD234770291A9B8A009BC722 /* MGCButtonStyle.swift in Sources */,
 				BD4B551C292A91E000ECFD04 /* MyInfoViewSection.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
@@ -994,7 +994,7 @@
 				BD4B5519292A8B3C00ECFD04 /* MyInfoItemCell.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
-				BD23476E291A9B41009BC722 /* SSButton.swift in Sources */,
+				BD23476E291A9B41009BC722 /* MGCButton.swift in Sources */,
 				BD23477C291AA4EF009BC722 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

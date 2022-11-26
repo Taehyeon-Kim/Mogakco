@@ -12,7 +12,7 @@ final class GenderViewController: BaseViewController {
     private let textLabel = UILabel()
     private let subtextLabel = UILabel()
     private let genderInputView = GenderInputView()
-    private let verificationCodeButton = SSButton(.disable)
+    private let verificationCodeButton = MGCButton(.disable)
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -39,8 +39,8 @@ final class PhoneVerificationViewController: BaseViewController {
         arrangedSubviews: [verificationCodeField, resendButton]
     )
     private let verificationCodeField = UITextField()
-    private let resendButton = SSButton(.fill)
-    private let verificationCodeButton = SSButton(.disable)
+    private let resendButton = MGCButton(.fill)
+    private let verificationCodeButton = MGCButton(.disable)
     
     // MARK: Properties
     

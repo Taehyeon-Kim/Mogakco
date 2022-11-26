@@ -12,7 +12,7 @@ final class EmailViewController: BaseViewController {
     private let textLabel = UILabel()
     private let subtextLabel = UILabel()
     private let textField = UITextField()
-    private let verificationCodeButton = SSButton(.disable)
+    private let verificationCodeButton = MGCButton(.disable)
     
     override func viewDidLoad() {
         super.viewDidLoad()

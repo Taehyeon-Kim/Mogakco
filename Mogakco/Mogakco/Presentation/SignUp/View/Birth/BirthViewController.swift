@@ -17,7 +17,7 @@ final class BirthViewController: BaseViewController {
     private let yearInputView = BirthInputView()
     private let monthInputView = BirthInputView()
     private let dayInputView = BirthInputView()
-    private let verificationCodeButton = SSButton(.fill)
+    private let verificationCodeButton = MGCButton(.fill)
     
     private let datePickerButton = MyButton()
     private let datePicker = UIDatePicker()
