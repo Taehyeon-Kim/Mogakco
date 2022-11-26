@@ -18,9 +18,20 @@ class BaseTabBarController: UITabBarController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension BaseTabBarController {
     
     private func setTabBarAppearance() {
         self.tabBar.backgroundColor = .MGC.white
         self.tabBar.tintColor = .MGC.green
+        
+        clearShadow()
+    }
+    
+    private func clearShadow() {
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().backgroundColor = UIColor.white
     }
 }
