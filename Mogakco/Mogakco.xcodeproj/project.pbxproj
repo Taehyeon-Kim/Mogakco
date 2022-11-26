@@ -60,11 +60,8 @@
 		BD8E98BE2922BCD500133840 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98BD2922BCD500133840 /* Then */; };
 		BD8E98C12922BD7C00133840 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C02922BD7C00133840 /* FirebaseAuth */; };
 		BD8E98C32922BD7C00133840 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C22922BD7C00133840 /* FirebaseMessaging */; };
-		BD8E98C62922BDBA00133840 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C52922BDBA00133840 /* RxCocoa */; };
-		BD8E98C82922BDBA00133840 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98C72922BDBA00133840 /* RxSwift */; };
 		BD8E98CB2922BE0700133840 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98CA2922BE0700133840 /* Toast */; };
 		BD8E98CF2922C27F00133840 /* SignUpRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98CE2922C27F00133840 /* SignUpRequestDTO.swift */; };
-		BD8E98D22922D2FC00133840 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98D12922D2FC00133840 /* Alamofire */; };
 		BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E1291943F8008A3158 /* AppDelegate.swift */; };
 		BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9257E3291943F8008A3158 /* SceneDelegate.swift */; };
 		BD9257EB291943F9008A3158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9257EA291943F9008A3158 /* Assets.xcassets */; };
@@ -104,6 +101,12 @@
 		BDE1AC602931EA05009E88AD /* KeywordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC5F2931EA05009E88AD /* KeywordView.swift */; };
 		BDE1AC642931FCEE009E88AD /* KeywordSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC632931FCEE009E88AD /* KeywordSectionHeaderView.swift */; };
 		BDE1AC662931FE51009E88AD /* KeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC652931FE51009E88AD /* KeywordCell.swift */; };
+		BDE1AC6929320E75009E88AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BDE1AC6829320E75009E88AD /* RxCocoa */; };
+		BDE1AC6B29320E75009E88AD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BDE1AC6A29320E75009E88AD /* RxRelay */; };
+		BDE1AC6D29320E75009E88AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDE1AC6C29320E75009E88AD /* RxSwift */; };
+		BDE1AC7029320ED0009E88AD /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = BDE1AC6F29320ED0009E88AD /* RxKeyboard */; };
+		BDE1AC7329321286009E88AD /* KeywordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC7229321286009E88AD /* KeywordViewModel.swift */; };
+		BDE1AC7629321EC5009E88AD /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = BDE1AC7529321EC5009E88AD /* RxGesture */; };
 		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
 		BDEA50F829278BD300110982 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50F729278BD300110982 /* NetworkProvider.swift */; };
 		BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50FB29278D5D00110982 /* AuthManager.swift */; };
@@ -205,6 +208,7 @@
 		BDE1AC5F2931EA05009E88AD /* KeywordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordView.swift; sourceTree = "<group>"; };
 		BDE1AC632931FCEE009E88AD /* KeywordSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSectionHeaderView.swift; sourceTree = "<group>"; };
 		BDE1AC652931FE51009E88AD /* KeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCell.swift; sourceTree = "<group>"; };
+		BDE1AC7229321286009E88AD /* KeywordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordViewModel.swift; sourceTree = "<group>"; };
 		BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
 		BDEA50F729278BD300110982 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		BDEA50FB29278D5D00110982 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -219,14 +223,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD8E98C82922BDBA00133840 /* RxSwift in Frameworks */,
-				BD8E98D22922D2FC00133840 /* Alamofire in Frameworks */,
+				BDE1AC6B29320E75009E88AD /* RxRelay in Frameworks */,
+				BDE1AC7029320ED0009E88AD /* RxKeyboard in Frameworks */,
+				BDE1AC6D29320E75009E88AD /* RxSwift in Frameworks */,
 				BD8E98C32922BD7C00133840 /* FirebaseMessaging in Frameworks */,
 				BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */,
-				BD8E98C62922BDBA00133840 /* RxCocoa in Frameworks */,
 				BD8E98C12922BD7C00133840 /* FirebaseAuth in Frameworks */,
 				BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */,
 				BD8E98CB2922BE0700133840 /* Toast in Frameworks */,
+				BDE1AC6929320E75009E88AD /* RxCocoa in Frameworks */,
+				BDE1AC7629321EC5009E88AD /* RxGesture in Frameworks */,
 				BD8E98BE2922BCD500133840 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +785,7 @@
 			children = (
 				BDE1AC5C2931E99E009E88AD /* Section */,
 				BDE1AC592931E980009E88AD /* View */,
+				BDE1AC7129321273009E88AD /* ViewModel */,
 			);
 			path = StudyKeyword;
 			sourceTree = "<group>";
@@ -800,6 +807,14 @@
 				BDE1AC5D2931E9FE009E88AD /* KeywordViewSection.swift */,
 			);
 			path = Section;
+			sourceTree = "<group>";
+		};
+		BDE1AC7129321273009E88AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDE1AC7229321286009E88AD /* KeywordViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BDE4B6CA292009130084D60F /* ViewModel */ = {
@@ -904,11 +919,13 @@
 				BD8E98BD2922BCD500133840 /* Then */,
 				BD8E98C02922BD7C00133840 /* FirebaseAuth */,
 				BD8E98C22922BD7C00133840 /* FirebaseMessaging */,
-				BD8E98C52922BDBA00133840 /* RxCocoa */,
-				BD8E98C72922BDBA00133840 /* RxSwift */,
 				BD8E98CA2922BE0700133840 /* Toast */,
-				BD8E98D12922D2FC00133840 /* Alamofire */,
 				BD4B5512292A8A0C00ECFD04 /* RxDataSources */,
+				BDE1AC6829320E75009E88AD /* RxCocoa */,
+				BDE1AC6A29320E75009E88AD /* RxRelay */,
+				BDE1AC6C29320E75009E88AD /* RxSwift */,
+				BDE1AC6F29320ED0009E88AD /* RxKeyboard */,
+				BDE1AC7529321EC5009E88AD /* RxGesture */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -942,10 +959,11 @@
 				BD8E98B92922BCCA00133840 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BD8E98BC2922BCD500133840 /* XCRemoteSwiftPackageReference "Then" */,
 				BD8E98BF2922BD7C00133840 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
-				BD8E98D02922D2FC00133840 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BD4B5511292A8A0C00ECFD04 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				BDE1AC6729320E75009E88AD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BDE1AC6E29320ED0009E88AD /* XCRemoteSwiftPackageReference "RxKeyboard" */,
+				BDE1AC7429321EC5009E88AD /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -1029,6 +1047,7 @@
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */,
 				BDEA50FF2927F22700110982 /* URLRequestable.swift in Sources */,
+				BDE1AC7329321286009E88AD /* KeywordViewModel.swift in Sources */,
 				BDE1AC4A2931DE5A009E88AD /* TabBarController.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
 				BD347C44292F61EB009F52BA /* MapView.swift in Sources */,
@@ -1432,14 +1451,6 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
@@ -1448,12 +1459,28 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		BD8E98D02922D2FC00133840 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		BDE1AC6729320E75009E88AD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				minimumVersion = 6.0.0;
+			};
+		};
+		BDE1AC6E29320ED0009E88AD /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		BDE1AC7429321EC5009E88AD /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1484,25 +1511,35 @@
 			package = BD8E98BF2922BD7C00133840 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
 		};
-		BD8E98C52922BDBA00133840 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		BD8E98C72922BDBA00133840 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD8E98C42922BDB900133840 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
 		BD8E98CA2922BE0700133840 /* Toast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
 		};
-		BD8E98D12922D2FC00133840 /* Alamofire */ = {
+		BDE1AC6829320E75009E88AD /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BD8E98D02922D2FC00133840 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = BDE1AC6729320E75009E88AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BDE1AC6A29320E75009E88AD /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE1AC6729320E75009E88AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		BDE1AC6C29320E75009E88AD /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE1AC6729320E75009E88AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BDE1AC6F29320ED0009E88AD /* RxKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE1AC6E29320ED0009E88AD /* XCRemoteSwiftPackageReference "RxKeyboard" */;
+			productName = RxKeyboard;
+		};
+		BDE1AC7529321EC5009E88AD /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE1AC7429321EC5009E88AD /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -13,9 +13,13 @@ final class KeywordView: BaseView {
     lazy var searchBar = UISearchBar()
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
     lazy var findButton = MGCButton(.fill)
-    
+
     private let padding: CGFloat = 16
     private let buttonRadius: CGFloat = 8
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
     override func setHierarchy() {
         addSubviews(backButton, searchBar, collectionView, findButton)
@@ -36,11 +40,12 @@ final class KeywordView: BaseView {
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(searchBar.snp.bottom).offset(32)
-            $0.directionalHorizontalEdges.bottom.equalToSuperview()
+            $0.directionalHorizontalEdges.bottom.equalTo(safeAreaLayoutGuide)
         }
         
         findButton.snp.makeConstraints {
-            $0.directionalHorizontalEdges.bottom.equalTo(safeAreaLayoutGuide).inset(padding)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide).inset(padding)
+            $0.bottom.equalTo(safeAreaLayoutGuide).inset(padding)
             $0.height.equalTo(48)
         }
     }
@@ -109,7 +114,7 @@ extension KeywordView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(cellType: KeywordCell.self, for: indexPath)
         cell.sizeToFit()
-        cell.configure(with: "Swift")
+        cell.configure(with: "Swiftuuu")
         return cell
     }
     
