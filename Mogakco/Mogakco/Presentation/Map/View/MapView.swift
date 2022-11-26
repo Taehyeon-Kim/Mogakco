@@ -56,7 +56,7 @@ final class MapView: BaseView {
         
         floatingButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(16)
-            $0.bottom.equalTo(safeAreaLayoutGuide).inset(72)
+            $0.bottom.equalTo(safeAreaLayoutGuide).inset(16)
             $0.size.equalTo(64)
         }
     }

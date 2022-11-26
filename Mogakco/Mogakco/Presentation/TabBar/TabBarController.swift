@@ -18,6 +18,7 @@ final class TabBarController: BaseTabBarController {
     
     private func setTabBar() {
         setViewControllers(viewControllers(with: tabs), animated: true)
+        tabBar.layer.applyShadow(color: .MGC.black, alpha: 0.04, x: 0, y: -1, blur: 1)
     }
 }
 
