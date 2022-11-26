@@ -113,6 +113,8 @@
 		BDEA50FF2927F22700110982 /* URLRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50FE2927F22700110982 /* URLRequestable.swift */; };
 		BDEA51012927FE9300110982 /* HTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA51002927FE9300110982 /* HTTPHeaderField.swift */; };
 		BDF5818029323533005C8E4E /* KeywordError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF5817F29323533005C8E4E /* KeywordError.swift */; };
+		BDF5818229327C5D005C8E4E /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF5818129327C5D005C8E4E /* SearchAPI.swift */; };
+		BDF5818529327D2D005C8E4E /* SearchResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF5818429327D2D005C8E4E /* SearchResponseDTO.swift */; };
 		BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */; };
 		BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9C186291D6394009B4B1B /* BirthInputView.swift */; };
 /* End PBXBuildFile section */
@@ -216,6 +218,8 @@
 		BDEA50FE2927F22700110982 /* URLRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestable.swift; sourceTree = "<group>"; };
 		BDEA51002927FE9300110982 /* HTTPHeaderField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderField.swift; sourceTree = "<group>"; };
 		BDF5817F29323533005C8E4E /* KeywordError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordError.swift; sourceTree = "<group>"; };
+		BDF5818129327C5D005C8E4E /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
+		BDF5818429327D2D005C8E4E /* SearchResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseDTO.swift; sourceTree = "<group>"; };
 		BDF9C184291D5618009B4B1B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BDF9C186291D6394009B4B1B /* BirthInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -361,6 +365,7 @@
 		BD3C647F291FEFCB005E7142 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				BDF5818329327CAD005C8E4E /* Study */,
 				BD3C6480291FEFD7005E7142 /* SignIn */,
 				BD8E98CD2922C27F00133840 /* SignUp */,
 			);
@@ -681,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				BDA41068292BF6330053FF3B /* FindQueueAPI.swift */,
+				BDF5818129327C5D005C8E4E /* SearchAPI.swift */,
 			);
 			path = Queue;
 			sourceTree = "<group>";
@@ -870,6 +876,14 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		BDF5818329327CAD005C8E4E /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				BDF5818429327D2D005C8E4E /* SearchResponseDTO.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
 		BDFE03B72930DA78006F6FAF /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -1030,6 +1044,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */,
+				BDF5818229327C5D005C8E4E /* SearchAPI.swift in Sources */,
 				BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */,
 				BD347C4C292F6D43009F52BA /* LocationManager.swift in Sources */,
 				BDEA51012927FE9300110982 /* HTTPHeaderField.swift in Sources */,
@@ -1103,6 +1118,7 @@
 				BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
 				BDA41066292BDFB60053FF3B /* HTTPError.swift in Sources */,
+				BDF5818529327D2D005C8E4E /* SearchResponseDTO.swift in Sources */,
 				BD52377F291E591A004EE2B6 /* Encodable+toDictionary.swift in Sources */,
 				BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
