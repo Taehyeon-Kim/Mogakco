@@ -15,46 +15,67 @@ final class KeywordViewModel: ViewModelType {
     
     struct Input {
         let searchText: ControlProperty<String?>
-        let textDidBeginEditing: ControlEvent<Void>
+        let editingDidEndOnExit: Observable<Void>
     }
     
     struct Output {
-        let wantedList = PublishRelay<[String]>()
-        let textDidBeginEditing = PublishRelay<Void>()
+        let wantedList = BehaviorRelay<[String]>(value: [])
+        let resultList = BehaviorRelay<[String]>(value: ["1", "2", "3", "4", "5", "6", "7", "8"])
     }
     
     func transform(input: Input) -> Output {
         let output = Output()
         
         input.searchText.orEmpty
-            .flatMap { self.makeKeywordLists(with: $0) }
+            .map { self.makeKeywordLists(with: $0) }
             .subscribe { list in
                 output.wantedList.accept(list)
             }
             .disposed(by: disposeBag)
         
-        input.textDidBeginEditing
-            .bind(to: output.textDidBeginEditing)
+        input.editingDidEndOnExit
+            .map {
+                try self.handle(
+                    target: output.wantedList.value,
+                    comparedWith: output.resultList.value
+                )
+            }
+            .subscribe {
+                print("성공 \($0)")
+            } onError: { error in
+                print("에러 \(error)")
+            }
             .disposed(by: disposeBag)
-        
+
         return output
     }
 }
 
 extension KeywordViewModel {
     
-    private func makeKeywordLists(with text: String) -> Observable<[String]> {
-        
-        if let char = text.last,
-           char.isWhitespace {
-            // validation
-            valid()
-        }
-        
-        return .just(["hhh", "aaa"])
+    private func makeKeywordLists(with text: String) -> [String] {
+        /// [String] 반환
+        /// cf) split 메서드 : [SubString] 반환
+        return text.components(separatedBy: " ")
     }
     
-    private func valid() {
+    private func handle(target keywords: [String], comparedWith: [String]) throws -> [String] {
+        // 키워드 개수 체크
+        if comparedWith.count + keywords.count > 8 {
+            throw KeywordError.outOfKeywordNumber
+        }
         
+        // 키워드 글자 수 체크
+        for keyword in keywords {
+            if !(1...8).contains(keyword.count) {
+                throw KeywordError.outOfKeywordLength
+            }
+            
+            if comparedWith.contains(keyword) {
+                throw KeywordError.duplicated
+            }
+        }
+        
+        return keywords
     }
 }
