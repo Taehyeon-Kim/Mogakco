@@ -20,7 +20,8 @@ final class KeywordViewModel: ViewModelType {
     
     struct Output {
         let wantedList = BehaviorRelay<[String]>(value: [])
-        let resultList = BehaviorRelay<[String]>(value: ["1", "2", "3", "4", "5", "6", "7", "8"])
+        let resultList = BehaviorRelay<[String]>(value: [])
+        let ocurredError = PublishRelay<String>()
     }
     
     func transform(input: Input) -> Output {
@@ -35,16 +36,20 @@ final class KeywordViewModel: ViewModelType {
         
         input.editingDidEndOnExit
             .map {
-                try self.handle(
+                self.handle(
                     target: output.wantedList.value,
                     comparedWith: output.resultList.value
                 )
             }
-            .subscribe {
-                print("성공 \($0)")
-            } onError: { error in
-                print("에러 \(error)")
-            }
+            .subscribe(onNext: { result in
+                switch result {
+                case .success(let data):
+                    let prev = output.resultList.value
+                    output.resultList.accept(data + prev)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
             .disposed(by: disposeBag)
 
         return output
@@ -59,23 +64,23 @@ extension KeywordViewModel {
         return text.components(separatedBy: " ")
     }
     
-    private func handle(target keywords: [String], comparedWith: [String]) throws -> [String] {
+    private func handle(target keywords: [String], comparedWith: [String]) -> Result<[String], KeywordError> {
         // 키워드 개수 체크
         if comparedWith.count + keywords.count > 8 {
-            throw KeywordError.outOfKeywordNumber
+            return .failure(KeywordError.outOfKeywordNumber)
         }
         
         // 키워드 글자 수 체크
         for keyword in keywords {
             if !(1...8).contains(keyword.count) {
-                throw KeywordError.outOfKeywordLength
+                return .failure(KeywordError.outOfKeywordLength)
             }
             
             if comparedWith.contains(keyword) {
-                throw KeywordError.duplicated
+                return .failure(KeywordError.duplicated)
             }
         }
         
-        return keywords
+        return .success(keywords)
     }
 }
