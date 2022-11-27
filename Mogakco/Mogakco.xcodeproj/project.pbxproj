@@ -52,6 +52,7 @@
 		BD4E1CEC2933CF0800BF40BF /* QueueStateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */; };
 		BD4E1CEE2933CFA500BF40BF /* StudyRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */; };
 		BD4E1CF02933D01F00BF40BF /* StudyAcceptAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CEF2933D01F00BF40BF /* StudyAcceptAPI.swift */; };
+		BD4E1CF22933D05600BF40BF /* StudyDodgeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CF12933D05600BF40BF /* StudyDodgeAPI.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -169,6 +170,7 @@
 		BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueStateDTO.swift; sourceTree = "<group>"; };
 		BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestAPI.swift; sourceTree = "<group>"; };
 		BD4E1CEF2933D01F00BF40BF /* StudyAcceptAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyAcceptAPI.swift; sourceTree = "<group>"; };
+		BD4E1CF12933D05600BF40BF /* StudyDodgeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDodgeAPI.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -710,6 +712,7 @@
 				BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */,
 				BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */,
 				BD4E1CEF2933D01F00BF40BF /* StudyAcceptAPI.swift */,
+				BD4E1CF12933D05600BF40BF /* StudyDodgeAPI.swift */,
 			);
 			path = Queue;
 			sourceTree = "<group>";
@@ -1158,6 +1161,7 @@
 				BDF5818029323533005C8E4E /* KeywordError.swift in Sources */,
 				BDE1AC662931FE51009E88AD /* KeywordCell.swift in Sources */,
 				BD4B5519292A8B3C00ECFD04 /* MyProfileItemCell.swift in Sources */,
+				BD4E1CF22933D05600BF40BF /* StudyDodgeAPI.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
 				BD23476E291A9B41009BC722 /* MGCButton.swift in Sources */,
