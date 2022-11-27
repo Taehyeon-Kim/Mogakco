@@ -47,6 +47,7 @@
 		BD4B551C292A91E000ECFD04 /* MyProfileViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551B292A91E000ECFD04 /* MyProfileViewSection.swift */; };
 		BD4B551F292B184300ECFD04 /* MyProfileItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551E292B184300ECFD04 /* MyProfileItemCellViewModel.swift */; };
 		BD4B5521292B1D9B00ECFD04 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */; };
+		BD4E1CE72933CDFD00BF40BF /* StopQueueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -159,6 +160,7 @@
 		BD4B551B292A91E000ECFD04 /* MyProfileViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewSection.swift; sourceTree = "<group>"; };
 		BD4B551E292B184300ECFD04 /* MyProfileItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileItemCellViewModel.swift; sourceTree = "<group>"; };
 		BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
+		BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopQueueAPI.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 			children = (
 				BDA41068292BF6330053FF3B /* FindQueueAPI.swift */,
 				BDF5818129327C5D005C8E4E /* SearchAPI.swift */,
+				BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */,
 			);
 			path = Queue;
 			sourceTree = "<group>";
@@ -1088,6 +1091,7 @@
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
 				BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
+				BD4E1CE72933CDFD00BF40BF /* StopQueueAPI.swift in Sources */,
 				BD38828429237562000F971D /* MGCHTTPError.swift in Sources */,
 				BD347C4E292F7213009F52BA /* MapManager.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
