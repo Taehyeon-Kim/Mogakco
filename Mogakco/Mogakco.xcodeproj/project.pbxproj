@@ -48,6 +48,8 @@
 		BD4B551F292B184300ECFD04 /* MyProfileItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B551E292B184300ECFD04 /* MyProfileItemCellViewModel.swift */; };
 		BD4B5521292B1D9B00ECFD04 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */; };
 		BD4E1CE72933CDFD00BF40BF /* StopQueueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */; };
+		BD4E1CE92933CEBD00BF40BF /* MyQueueStateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */; };
+		BD4E1CEC2933CF0800BF40BF /* QueueStateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -161,6 +163,8 @@
 		BD4B551E292B184300ECFD04 /* MyProfileItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileItemCellViewModel.swift; sourceTree = "<group>"; };
 		BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopQueueAPI.swift; sourceTree = "<group>"; };
+		BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQueueStateAPI.swift; sourceTree = "<group>"; };
+		BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueStateDTO.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -367,6 +371,7 @@
 		BD3C647F291FEFCB005E7142 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
+				BD4E1CEA2933CEE700BF40BF /* Queue */,
 				BDF5818329327CAD005C8E4E /* Study */,
 				BD3C6480291FEFD7005E7142 /* SignIn */,
 				BD8E98CD2922C27F00133840 /* SignUp */,
@@ -425,6 +430,14 @@
 				BD4B5520292B1D9B00ECFD04 /* MyProfileViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD4E1CEA2933CEE700BF40BF /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */,
+			);
+			path = Queue;
 			sourceTree = "<group>";
 		};
 		BD523788291E5C8E004EE2B6 /* NetworkModel */ = {
@@ -690,6 +703,7 @@
 				BDA41068292BF6330053FF3B /* FindQueueAPI.swift */,
 				BDF5818129327C5D005C8E4E /* SearchAPI.swift */,
 				BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */,
+				BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */,
 			);
 			path = Queue;
 			sourceTree = "<group>";
@@ -1063,6 +1077,7 @@
 				BD347C55292FC13B009F52BA /* GenderFilterView.swift in Sources */,
 				BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
+				BD4E1CEC2933CF0800BF40BF /* QueueStateDTO.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BDE1AC5B2931E98B009E88AD /* KeywordViewController.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
@@ -1108,6 +1123,7 @@
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
 				BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */,
 				BDE1AC602931EA05009E88AD /* KeywordView.swift in Sources */,
+				BD4E1CE92933CEBD00BF40BF /* MyQueueStateAPI.swift in Sources */,
 				BDC06B1A291EC66E000C4A6A /* FirebaseAuthRepository.swift in Sources */,
 				BDE1AC4C2931DE76009E88AD /* Tab.swift in Sources */,
 				BDA41069292BF6330053FF3B /* FindQueueAPI.swift in Sources */,
