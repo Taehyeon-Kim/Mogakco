@@ -50,6 +50,7 @@
 		BD4E1CE72933CDFD00BF40BF /* StopQueueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */; };
 		BD4E1CE92933CEBD00BF40BF /* MyQueueStateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */; };
 		BD4E1CEC2933CF0800BF40BF /* QueueStateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */; };
+		BD4E1CEE2933CFA500BF40BF /* StudyRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -165,6 +166,7 @@
 		BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopQueueAPI.swift; sourceTree = "<group>"; };
 		BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQueueStateAPI.swift; sourceTree = "<group>"; };
 		BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueStateDTO.swift; sourceTree = "<group>"; };
+		BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestAPI.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -704,6 +706,7 @@
 				BDF5818129327C5D005C8E4E /* SearchAPI.swift */,
 				BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */,
 				BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */,
+				BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */,
 			);
 			path = Queue;
 			sourceTree = "<group>";
@@ -1104,6 +1107,7 @@
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
 				BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */,
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
+				BD4E1CEE2933CFA500BF40BF /* StudyRequestAPI.swift in Sources */,
 				BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD4E1CE72933CDFD00BF40BF /* StopQueueAPI.swift in Sources */,
