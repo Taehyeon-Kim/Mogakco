@@ -51,6 +51,7 @@
 		BD4E1CE92933CEBD00BF40BF /* MyQueueStateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */; };
 		BD4E1CEC2933CF0800BF40BF /* QueueStateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */; };
 		BD4E1CEE2933CFA500BF40BF /* StudyRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */; };
+		BD4E1CF02933D01F00BF40BF /* StudyAcceptAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E1CEF2933D01F00BF40BF /* StudyAcceptAPI.swift */; };
 		BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */; };
 		BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52376C291E5024004EE2B6 /* NetworkError.swift */; };
 		BD523773291E5277004EE2B6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523772291E5277004EE2B6 /* HTTPMethod.swift */; };
@@ -167,6 +168,7 @@
 		BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQueueStateAPI.swift; sourceTree = "<group>"; };
 		BD4E1CEB2933CF0800BF40BF /* QueueStateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueStateDTO.swift; sourceTree = "<group>"; };
 		BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestAPI.swift; sourceTree = "<group>"; };
+		BD4E1CEF2933D01F00BF40BF /* StudyAcceptAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyAcceptAPI.swift; sourceTree = "<group>"; };
 		BD523764291DFC0A004EE2B6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BD52376C291E5024004EE2B6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD523772291E5277004EE2B6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 				BD4E1CE62933CDFD00BF40BF /* StopQueueAPI.swift */,
 				BD4E1CE82933CEBD00BF40BF /* MyQueueStateAPI.swift */,
 				BD4E1CED2933CFA500BF40BF /* StudyRequestAPI.swift */,
+				BD4E1CEF2933D01F00BF40BF /* StudyAcceptAPI.swift */,
 			);
 			path = Queue;
 			sourceTree = "<group>";
@@ -1069,6 +1072,7 @@
 				BD347C4C292F6D43009F52BA /* LocationManager.swift in Sources */,
 				BDEA51012927FE9300110982 /* HTTPHeaderField.swift in Sources */,
 				BD234763291A771A009BC722 /* UILabel+Extension.swift in Sources */,
+				BD4E1CF02933D01F00BF40BF /* StudyAcceptAPI.swift in Sources */,
 				BDE1AC5E2931E9FE009E88AD /* KeywordViewSection.swift in Sources */,
 				BD8E98CF2922C27F00133840 /* SignUpRequestDTO.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
