@@ -61,6 +61,7 @@
 		BD52377F291E591A004EE2B6 /* Encodable+toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52377E291E591A004EE2B6 /* Encodable+toDictionary.swift */; };
 		BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523789291E5C97004EE2B6 /* EmptyResponse.swift */; };
 		BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */; };
+		BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA372934BF7800A8FB1C /* Pager.swift */; };
 		BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98AF2922774600133840 /* PreviewProvider.swift */; };
 		BD8E98B22922776E00133840 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98B12922776E00133840 /* Device.swift */; };
 		BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98BA2922BCCA00133840 /* SnapKit */; };
@@ -181,6 +182,7 @@
 		BD523789291E5C97004EE2B6 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mogakco.entitlements; sourceTree = "<group>"; };
+		BD82EA372934BF7800A8FB1C /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		BD8E98AF2922774600133840 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		BD8E98B12922776E00133840 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		BD8E98CE2922C27F00133840 /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
@@ -456,6 +458,22 @@
 			path = NetworkModel;
 			sourceTree = "<group>";
 		};
+		BD82EA352934BF5600A8FB1C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BD82EA362934BF5900A8FB1C /* Pager */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BD82EA362934BF5900A8FB1C /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				BD82EA372934BF7800A8FB1C /* Pager.swift */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
 		BD8E98A9292275A800133840 /* Birth */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +580,7 @@
 		BD9257F8291944A3008A3158 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BD82EA352934BF5600A8FB1C /* Common */,
 				BDE1AC582931E97D009E88AD /* StudyKeyword */,
 				BDE1AC4D2931DED2009E88AD /* Friend */,
 				BD347C41292F61D2009F52BA /* Map */,
@@ -1113,6 +1132,7 @@
 				BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */,
 				BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */,
 				BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */,
+				BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */,
 				BD523777291E537B004EE2B6 /* Environment.swift in Sources */,
 				BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */,
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
