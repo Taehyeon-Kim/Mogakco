@@ -28,7 +28,8 @@ final class Pager: BaseView {
     }
     
     private let titleStackView = UIStackView()
-    private let barBackgroundView = UIView()
+    private lazy var barBackgroundView = UIView()
+    private let lineView = UIView()
     private let barView = UIView()
     
     private let containerView = UIView()
@@ -57,6 +58,9 @@ final class Pager: BaseView {
             button.addTarget(self, action: #selector(selectButton), for: .touchUpInside)
             return Content(button: button, viewController: $0)
         }
+        
+        setPageViewController()
+        updatePagerButton()
     }
     
     @objc private func selectButton(_ sender: UIButton) {
@@ -90,6 +94,7 @@ final class Pager: BaseView {
     private func setUI() {
         addSubview(titleStackView)
         addSubview(barBackgroundView)
+        barBackgroundView.addSubview(lineView)
         barBackgroundView.addSubview(barView)
         addSubview(containerView)
         
@@ -105,6 +110,11 @@ final class Pager: BaseView {
             $0.height.equalTo(style.indicatorHeight)
         }
         
+        lineView.snp.makeConstraints {
+            $0.bottom.directionalHorizontalEdges.equalToSuperview()
+            $0.height.equalTo(1)
+        }
+        
         barView.snp.makeConstraints {
             $0.directionalVerticalEdges.leading.equalToSuperview()
         }
@@ -113,6 +123,19 @@ final class Pager: BaseView {
             $0.top.equalTo(barBackgroundView.snp.bottom)
             $0.directionalHorizontalEdges.equalToSuperview()
             $0.bottom.equalToSuperview()
+        }
+        
+        titleStackView.do {
+            $0.axis = .horizontal
+            $0.distribution = .fillEqually
+        }
+        
+        lineView.do {
+            $0.backgroundColor = style.indicatorBackgroundColor
+        }
+        
+        barView.do {
+            $0.backgroundColor = style.indicatorBarColor
         }
     }
     
@@ -144,8 +167,8 @@ final class Pager: BaseView {
 }
 
 extension Pager: UIPageViewControllerDataSource {
-
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let index = contents.firstIndex(where: { $0.viewController == viewController }) else {
             return nil
         }
@@ -156,8 +179,8 @@ extension Pager: UIPageViewControllerDataSource {
         }
         return nil
     }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = contents.firstIndex(where: { $0.viewController == viewController }) else {
             return nil
         }
@@ -204,6 +227,7 @@ extension Pager {
         
         var indicatorHeight: CGFloat
         var indicatorBarColor: UIColor
+        var indicatorBackgroundColor: UIColor
         
         static var `default` = Style(
             titleDefaultColor: .MGC.gray6,
@@ -212,8 +236,9 @@ extension Pager {
             titleActiveFont: .notoSansM(14),
             buttonBackgroundColor: .clear,
             buttonHeight: 43.0,
-            indicatorHeight: 1.0,
-            indicatorBarColor: .MGC.green
+            indicatorHeight: 2.0,
+            indicatorBarColor: .MGC.green,
+            indicatorBackgroundColor: .MGC.gray6
         )
     }
     
