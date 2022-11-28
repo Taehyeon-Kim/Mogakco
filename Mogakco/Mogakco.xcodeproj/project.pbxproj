@@ -464,14 +464,6 @@
 			path = NetworkModel;
 			sourceTree = "<group>";
 		};
-		BD82EA352934BF5600A8FB1C /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				BD82EA362934BF5900A8FB1C /* Pager */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		BD82EA362934BF5900A8FB1C /* Pager */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,7 +597,6 @@
 			isa = PBXGroup;
 			children = (
 				BDE095C8291C1D8F009CB1C0 /* Auth */,
-				BD82EA352934BF5600A8FB1C /* Common */,
 				BDE1AC4D2931DED2009E88AD /* Friend */,
 				BD347C41292F61D2009F52BA /* Map */,
 				BD4B5514292A8A5500ECFD04 /* MyProfile */,
@@ -961,6 +952,7 @@
 			isa = PBXGroup;
 			children = (
 				BD9257EC291943F9008A3158 /* LaunchScreen.storyboard */,
+				BD82EA362934BF5900A8FB1C /* Pager */,
 				BDFE03B82930DAFD006F6FAF /* Assets */,
 				BD92580629194624008A3158 /* Colors */,
 				BD92580729194628008A3158 /* Fonts */,
