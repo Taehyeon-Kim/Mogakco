@@ -19,44 +19,37 @@ final class MatchViewController: BaseViewController {
         """
     }
     
+    private let navigationBar = MGCNavigationBar()
     private let pager = Pager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    // PopUp을 Window에 추가해주고 있기 때문에
-    // 뷰가 완전히 로드된 이후에 띄워주어야 한다.
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        MGCPopUp.shared
-            .setType(.cancelStudy)
-            .present { type in
-            switch type {
-            case .cancel:
-                print("")
-                // 취소 액션
-                
-            case .confirm:
-                print("")
-                // 확인 액션
-            }
-        }
-    }
-    
     override func setHierarchy() {
-        view.addSubviews(pager)
+        view.addSubviews(navigationBar, pager)
     }
     
     override func setLayout() {
+        navigationBar.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.directionalHorizontalEdges.equalToSuperview()
+        }
+        
         pager.snp.makeConstraints {
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
+            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.directionalHorizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
     override func setAttributes() {
         view.backgroundColor = .systemBackground
+        
+        navigationBar.do {
+            $0.title = "새싹찾기"
+            $0.leftBarItem = .back
+            $0.rightTitle = "찾기중단"
+        }
         
         let viewControllers: [PageComponentProtocol] = [
             StudyRequestViewController(),
