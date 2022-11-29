@@ -38,6 +38,7 @@
 		BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CBE291D49DA008D3EAB /* GenderInputView.swift */; };
 		BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CC0291D4A61008D3EAB /* UIView+Extension.swift */; };
 		BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CC2291D4AAC008D3EAB /* UIStackView+Extension.swift */; };
+		BD39D4B729368050000B73A9 /* ExpandableCardViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39D4B629368050000B73A9 /* ExpandableCardViewSectionHeader.swift */; };
 		BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */; };
 		BD3C6482291FEFF3005E7142 /* UserResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */; };
 		BD3C6485291FF0C3005E7142 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C6484291FF0C3005E7142 /* User.swift */; };
@@ -67,6 +68,9 @@
 		BD82EA402934C6C200A8FB1C /* StudyAcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3F2934C6C200A8FB1C /* StudyAcceptViewController.swift */; };
 		BD82EA432934CE3600A8FB1C /* MGCPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA422934CE3600A8FB1C /* MGCPopUp.swift */; };
 		BD8737D8293507A500F51CD9 /* MGCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8737D7293507A500F51CD9 /* MGCNavigationBar.swift */; };
+		BD8737DB293510AF00F51CD9 /* ExpandableCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8737DA293510AF00F51CD9 /* ExpandableCardViewCell.swift */; };
+		BD8737DD2935117100F51CD9 /* ExpandableCardViewItemSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8737DC2935117100F51CD9 /* ExpandableCardViewItemSectionHeader.swift */; };
+		BD8737DF2935117E00F51CD9 /* ExpandableCardViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8737DE2935117E00F51CD9 /* ExpandableCardViewItemCell.swift */; };
 		BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98AF2922774600133840 /* PreviewProvider.swift */; };
 		BD8E98B22922776E00133840 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E98B12922776E00133840 /* Device.swift */; };
 		BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD8E98BA2922BCCA00133840 /* SnapKit */; };
@@ -164,6 +168,7 @@
 		BD392CBE291D49DA008D3EAB /* GenderInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderInputView.swift; sourceTree = "<group>"; };
 		BD392CC0291D4A61008D3EAB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BD392CC2291D4AAC008D3EAB /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		BD39D4B629368050000B73A9 /* ExpandableCardViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardViewSectionHeader.swift; sourceTree = "<group>"; };
 		BD3C647D291FE3D1005E7142 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		BD3C6481291FEFF3005E7142 /* UserResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDTO.swift; sourceTree = "<group>"; };
 		BD3C6484291FF0C3005E7142 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -193,6 +198,9 @@
 		BD82EA3F2934C6C200A8FB1C /* StudyAcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyAcceptViewController.swift; sourceTree = "<group>"; };
 		BD82EA422934CE3600A8FB1C /* MGCPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCPopUp.swift; sourceTree = "<group>"; };
 		BD8737D7293507A500F51CD9 /* MGCNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCNavigationBar.swift; sourceTree = "<group>"; };
+		BD8737DA293510AF00F51CD9 /* ExpandableCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardViewCell.swift; sourceTree = "<group>"; };
+		BD8737DC2935117100F51CD9 /* ExpandableCardViewItemSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardViewItemSectionHeader.swift; sourceTree = "<group>"; };
+		BD8737DE2935117E00F51CD9 /* ExpandableCardViewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardViewItemCell.swift; sourceTree = "<group>"; };
 		BD8E98AF2922774600133840 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		BD8E98B12922776E00133840 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		BD8E98CE2922C27F00133840 /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
@@ -508,6 +516,17 @@
 				BD8737D7293507A500F51CD9 /* MGCNavigationBar.swift */,
 			);
 			path = MGCNavigationBar;
+			sourceTree = "<group>";
+		};
+		BD8737D929350D6900F51CD9 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				BD8737DA293510AF00F51CD9 /* ExpandableCardViewCell.swift */,
+				BD8737DE2935117E00F51CD9 /* ExpandableCardViewItemCell.swift */,
+				BD8737DC2935117100F51CD9 /* ExpandableCardViewItemSectionHeader.swift */,
+				BD39D4B629368050000B73A9 /* ExpandableCardViewSectionHeader.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		BD8E98A9292275A800133840 /* Birth */ = {
@@ -971,11 +990,12 @@
 		BDFE03B72930DA78006F6FAF /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				BD9257EC291943F9008A3158 /* LaunchScreen.storyboard */,
 				BDFE03B82930DAFD006F6FAF /* Assets */,
+				BD8737D929350D6900F51CD9 /* CardView */,
 				BD92580629194624008A3158 /* Colors */,
 				BD92580729194628008A3158 /* Fonts */,
 				BD9258082919462A008A3158 /* Images */,
+				BD9257EC291943F9008A3158 /* LaunchScreen.storyboard */,
 				BD23476C291A9B2C009BC722 /* MGCButton */,
 				BD8737D62935079200F51CD9 /* MGCNavigationBar */,
 				BD82EA412934CE1500A8FB1C /* MGCPopUp */,
@@ -1139,7 +1159,9 @@
 				BD82EA3E2934C6B800A8FB1C /* StudyRequestViewController.swift in Sources */,
 				BD4E1CF02933D01F00BF40BF /* StudyAcceptAPI.swift in Sources */,
 				BDE1AC5E2931E9FE009E88AD /* KeywordViewSection.swift in Sources */,
+				BD8737DB293510AF00F51CD9 /* ExpandableCardViewCell.swift in Sources */,
 				BD8E98CF2922C27F00133840 /* SignUpRequestDTO.swift in Sources */,
+				BD8737DD2935117100F51CD9 /* ExpandableCardViewItemSectionHeader.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
 				BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */,
 				BDE095C5291C17AB009CB1C0 /* Onboarding.swift in Sources */,
@@ -1210,6 +1232,7 @@
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
+				BD8737DF2935117E00F51CD9 /* ExpandableCardViewItemCell.swift in Sources */,
 				BD4B5517292A8A6D00ECFD04 /* MyProfileViewController.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BDE1AC552931E4BE009E88AD /* BaseTabBarController.swift in Sources */,
@@ -1228,6 +1251,7 @@
 				BDF5818029323533005C8E4E /* KeywordError.swift in Sources */,
 				BDE1AC662931FE51009E88AD /* KeywordCell.swift in Sources */,
 				BD4B5519292A8B3C00ECFD04 /* MyProfileItemCell.swift in Sources */,
+				BD39D4B729368050000B73A9 /* ExpandableCardViewSectionHeader.swift in Sources */,
 				BD4E1CF22933D05600BF40BF /* StudyDodgeAPI.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */,
