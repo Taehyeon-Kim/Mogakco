@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0520F3293745BA0070AEE7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0520F2293745BA0070AEE7 /* ChatViewController.swift */; };
+		BD0520F5293746450070AEE7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0520F4293746450070AEE7 /* ChatView.swift */; };
+		BD05210929376AC50070AEE7 /* ChatViewSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05210829376AC40070AEE7 /* ChatViewSectionHeaderView.swift */; };
+		BD05210B29376AEA0070AEE7 /* OpponentChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05210A29376AEA0070AEE7 /* OpponentChatCell.swift */; };
+		BD05210D29376AF10070AEE7 /* MyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05210C29376AF10070AEE7 /* MyChatCell.swift */; };
+		BD052110293773370070AEE7 /* ChatViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05210F293773370070AEE7 /* ChatViewSection.swift */; };
+		BD052113293777C20070AEE7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD052112293777C20070AEE7 /* ChatViewModel.swift */; };
+		BD052115293778030070AEE7 /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD052114293778030070AEE7 /* ChatInputView.swift */; };
 		BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15957E291A3FAE00C552CB /* Adjusted+Extension.swift */; };
 		BD23475E291A5F1F009BC722 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */; };
 		BD23475F291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */; };
@@ -137,6 +145,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0520F2293745BA0070AEE7 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BD0520F4293746450070AEE7 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		BD05210829376AC40070AEE7 /* ChatViewSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewSectionHeaderView.swift; sourceTree = "<group>"; };
+		BD05210A29376AEA0070AEE7 /* OpponentChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentChatCell.swift; sourceTree = "<group>"; };
+		BD05210C29376AF10070AEE7 /* MyChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatCell.swift; sourceTree = "<group>"; };
+		BD05210F293773370070AEE7 /* ChatViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewSection.swift; sourceTree = "<group>"; };
+		BD052112293777C20070AEE7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		BD052114293778030070AEE7 /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
 		BD15957E291A3FAE00C552CB /* Adjusted+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+Extension.swift"; sourceTree = "<group>"; };
 		BD23475C291A5F1D009BC722 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		BD23475D291A5F1F009BC722 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
@@ -280,6 +296,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD0520F0293745A90070AEE7 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				BD05210E293773270070AEE7 /* Section */,
+				BD0520F1293745AF0070AEE7 /* View */,
+				BD052111293777B50070AEE7 /* ViewModel */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		BD0520F1293745AF0070AEE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD052114293778030070AEE7 /* ChatInputView.swift */,
+				BD0520F4293746450070AEE7 /* ChatView.swift */,
+				BD0520F2293745BA0070AEE7 /* ChatViewController.swift */,
+				BD05210829376AC40070AEE7 /* ChatViewSectionHeaderView.swift */,
+				BD05210C29376AF10070AEE7 /* MyChatCell.swift */,
+				BD05210A29376AEA0070AEE7 /* OpponentChatCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD05210E293773270070AEE7 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				BD05210F293773370070AEE7 /* ChatViewSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		BD052111293777B50070AEE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD052112293777C20070AEE7 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BD15957B291A3F8C00C552CB /* UIKit+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				BDE095C8291C1D8F009CB1C0 /* Auth */,
+				BD0520F0293745A90070AEE7 /* Chat */,
 				BDE1AC4D2931DED2009E88AD /* Friend */,
 				BD347C41292F61D2009F52BA /* Map */,
 				BD4B5514292A8A5500ECFD04 /* MyProfile */,
@@ -1188,6 +1244,7 @@
 				BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */,
 				BDEA50FF2927F22700110982 /* URLRequestable.swift in Sources */,
 				BDE1AC7329321286009E88AD /* KeywordViewModel.swift in Sources */,
+				BD052113293777C20070AEE7 /* ChatViewModel.swift in Sources */,
 				BDE1AC4A2931DE5A009E88AD /* TabBarController.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
 				BD347C44292F61EB009F52BA /* MapView.swift in Sources */,
@@ -1202,6 +1259,7 @@
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
 				BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */,
 				BD82EA402934C6C200A8FB1C /* StudyAcceptViewController.swift in Sources */,
+				BD0520F5293746450070AEE7 /* ChatView.swift in Sources */,
 				BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */,
 				BD4E1CEE2933CFA500BF40BF /* StudyRequestAPI.swift in Sources */,
 				BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */,
@@ -1216,8 +1274,10 @@
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* MGCButtonStyle.swift in Sources */,
+				BD05210B29376AEA0070AEE7 /* OpponentChatCell.swift in Sources */,
 				BD4B551C292A91E000ECFD04 /* MyProfileViewSection.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
+				BD0520F3293745BA0070AEE7 /* ChatViewController.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
@@ -1232,6 +1292,8 @@
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
+				BD052110293773370070AEE7 /* ChatViewSection.swift in Sources */,
+				BD05210D29376AF10070AEE7 /* MyChatCell.swift in Sources */,
 				BD8737DF2935117E00F51CD9 /* ExpandableCardViewItemCell.swift in Sources */,
 				BD4B5517292A8A6D00ECFD04 /* MyProfileViewController.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
@@ -1243,6 +1305,7 @@
 				BD52377F291E591A004EE2B6 /* Encodable+toDictionary.swift in Sources */,
 				BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
+				BD05210929376AC50070AEE7 /* ChatViewSectionHeaderView.swift in Sources */,
 				BD523765291DFC0A004EE2B6 /* UserDefaultsManager.swift in Sources */,
 				BDC50EC9292929C1002378C6 /* MyPageAPI.swift in Sources */,
 				BDE1AC532931DEED009E88AD /* ShopViewController.swift in Sources */,
@@ -1252,6 +1315,7 @@
 				BDE1AC662931FE51009E88AD /* KeywordCell.swift in Sources */,
 				BD4B5519292A8B3C00ECFD04 /* MyProfileItemCell.swift in Sources */,
 				BD39D4B729368050000B73A9 /* ExpandableCardViewSectionHeader.swift in Sources */,
+				BD052115293778030070AEE7 /* ChatInputView.swift in Sources */,
 				BD4E1CF22933D05600BF40BF /* StudyDodgeAPI.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */,
