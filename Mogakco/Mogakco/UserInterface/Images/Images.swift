@@ -84,4 +84,7 @@ extension UIImage {
     static var icnTabProfileInactive: UIImage? { return UIImage(named: "profile.inactive") }
     static var icnTabShopActive: UIImage? { return UIImage(named: "shop.active") }
     static var icnTabShopInactive: UIImage? { return UIImage(named: "shop.inactive") }
+    
+    // Chat
+    static var icnChatSend: UIImage? { return UIImage(named: "icnChatSend") }
 }
