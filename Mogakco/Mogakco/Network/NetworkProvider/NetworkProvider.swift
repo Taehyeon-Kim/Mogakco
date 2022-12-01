@@ -22,7 +22,6 @@ final class NetworkProviderImpl: NetworkProvider {
 
     private let session: URLSession
     private let authManager: AuthManager
-    private let decoder = JSONDecoder()
     
     init(
         session: URLSession = .shared,
@@ -43,8 +42,7 @@ final class NetworkProviderImpl: NetworkProvider {
                         let decoded = try endpoint.decode(data)
                         observer(.success(decoded))
                     } catch {
-                        let decodedString = String(data: data, encoding: .utf8)
-                        print(decodedString)
+                        _ = String(data: data, encoding: .utf8)
                     }
 
                 case let .failure(error):
