@@ -136,10 +136,15 @@ extension BirthViewController: Bindable {
             .disposed(by: disposeBag)
         
         verificationCodeButton.button.rx.tap
-            .bind { [weak self] _ in
-                let viewController = EmailViewController(viewModel: EmailViewModel())
-                self?.transition(to: viewController)
-                self?.saveBirth()
+            .map { ValidatorImpl().isValid(age: self.dateValue.value) }
+            .bind { [weak self] isPossible in
+                if isPossible {
+                    let viewController = EmailViewController(viewModel: EmailViewModel())
+                    self?.transition(to: viewController)
+                    self?.saveBirth()
+                } else {
+                    // show error popup
+                }
             }
             .disposed(by: disposeBag)
     }
