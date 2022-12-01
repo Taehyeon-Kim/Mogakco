@@ -13,7 +13,7 @@ import RxSwift
 final class NicknameViewController: BaseViewController {
     
     // MARK: UI
-    
+    private let navigationBar = MGCNavigationBar()
     private let textLabel = UILabel()
     private let textField = UITextField()
     private let nextButton = MGCButton(.disable)
@@ -27,11 +27,7 @@ final class NicknameViewController: BaseViewController {
     init(viewModel: NicknameViewModel) {
         self.viewModel = viewModel
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
@@ -39,6 +35,10 @@ final class NicknameViewController: BaseViewController {
     
     override func setAttributes() {
         view.backgroundColor = .MGC.white
+        
+        navigationBar.do {
+            $0.leftBarItem = .back
+        }
         
         textLabel.do {
             $0.text = """
@@ -62,14 +62,16 @@ final class NicknameViewController: BaseViewController {
     }
     
     override func setHierarchy() {
-        view.addSubview(textLabel)
-        view.addSubview(textField)
-        view.addSubview(nextButton)
+        view.addSubviews(navigationBar, textLabel, textField, nextButton)
     }
     
     override func setLayout() {
+        navigationBar.snp.makeConstraints {
+            $0.top.directionalHorizontalEdges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
         textLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(125)
+            $0.top.equalTo(navigationBar.snp.bottom).offset(125)
             $0.centerX.equalToSuperview()
         }
         

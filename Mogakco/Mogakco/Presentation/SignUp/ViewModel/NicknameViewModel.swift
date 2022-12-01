@@ -50,8 +50,8 @@ final class NicknameViewModel: ViewModelType {
 
 extension NicknameViewModel {
     
-    private func isValid(text: String) -> Bool {
-        return (1...10).contains(text.count)
+    private func isValid(nickname: String) -> Bool {
+        return (1...10).contains(nickname.count)
     }
     
     func saveNickname() {

@@ -31,6 +31,8 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.isHidden = true
+        
         setAttributes()
         setHierarchy()
         setLayout()
