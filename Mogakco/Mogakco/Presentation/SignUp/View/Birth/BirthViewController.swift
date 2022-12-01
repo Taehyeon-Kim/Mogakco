@@ -137,7 +137,7 @@ extension BirthViewController: Bindable {
         
         verificationCodeButton.button.rx.tap
             .bind { [weak self] _ in
-                let viewController = EmailViewController()
+                let viewController = EmailViewController(viewModel: EmailViewModel())
                 self?.transition(to: viewController)
                 self?.saveBirth()
             }

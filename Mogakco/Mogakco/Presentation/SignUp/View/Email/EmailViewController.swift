@@ -9,17 +9,29 @@ import UIKit
 
 final class EmailViewController: BaseViewController {
     
+    private let navigationBar = MGCNavigationBar()
     private let textLabel = UILabel()
     private let subtextLabel = UILabel()
     private let textField = UITextField()
     private let verificationCodeButton = MGCButton(.disable)
     
+    private let viewModel: EmailViewModel!
+    
+    init(viewModel: EmailViewModel) {
+        self.viewModel = viewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind()
     }
     
     override func setAttributes() {
         view.backgroundColor = .MGC.white
+        
+        navigationBar.do {
+            $0.leftBarItem = .back
+        }
         
         textLabel.do {
             $0.text = "이메일을 입력해 주세요"
@@ -48,15 +60,22 @@ final class EmailViewController: BaseViewController {
     }
     
     override func setHierarchy() {
-        view.addSubview(textLabel)
-        view.addSubview(subtextLabel)
-        view.addSubview(textField)
-        view.addSubview(verificationCodeButton)
+        view.addSubviews(
+            navigationBar,
+            textLabel,
+            subtextLabel,
+            textField,
+            verificationCodeButton
+        )
     }
     
     override func setLayout() {
+        navigationBar.snp.makeConstraints {
+            $0.top.directionalHorizontalEdges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
         textLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(80)
+            $0.top.equalTo(navigationBar.snp.bottom).offset(80)
             $0.centerX.equalToSuperview()
         }
         
@@ -79,6 +98,20 @@ final class EmailViewController: BaseViewController {
     }
 }
 
-extension EmailViewController {
+extension EmailViewController: Bindable {
     
+    func bind() {
+        let input = EmailViewModel.Input(
+            changedText: textField.rx.text.orEmpty,
+            nextButtonTrigger: verificationCodeButton.button.rx.tap
+        )
+        let output = viewModel.transform(input: input)
+        
+        output.isEnabled
+            .withUnretained(self)
+            .emit { `self`, isEnabled in
+                self.verificationCodeButton.buttonStyle = isEnabled ? .fill : .disable
+            }
+            .disposed(by: disposeBag)
+    }
 }
