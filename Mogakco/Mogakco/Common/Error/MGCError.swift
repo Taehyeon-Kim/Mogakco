@@ -8,12 +8,10 @@
 import Foundation
 
 struct MGCError: LocalizedError {
-    
-    let code: String
+    let code: Int
     let message: String
 }
 
 extension MGCError {
-    
     var errorDescription: String? { return message }
 }

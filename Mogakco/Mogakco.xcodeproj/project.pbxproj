@@ -37,10 +37,8 @@
 		BD347C4C292F6D43009F52BA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C4B292F6D43009F52BA /* LocationManager.swift */; };
 		BD347C4E292F7213009F52BA /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C4D292F7213009F52BA /* MapManager.swift */; };
 		BD347C55292FC13B009F52BA /* GenderFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C54292FC13B009F52BA /* GenderFilterView.swift */; };
-		BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38827D292372B5000F971D /* FirbaseTokenError.swift */; };
+		BD38827E292372B5000F971D /* FirebaseTokenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38827D292372B5000F971D /* FirebaseTokenError.swift */; };
 		BD38828029237316000F971D /* MGCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38827F29237316000F971D /* MGCError.swift */; };
-		BD388282292374A9000F971D /* MGCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD388281292374A9000F971D /* MGCNetworkError.swift */; };
-		BD38828429237562000F971D /* MGCHTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38828329237562000F971D /* MGCHTTPError.swift */; };
 		BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */; };
 		BD392CB2291D3990008D3EAB /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CB1291D3990008D3EAB /* NicknameViewController.swift */; };
 		BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD392CB5291D39A5008D3EAB /* BirthViewController.swift */; };
@@ -178,10 +176,8 @@
 		BD347C4B292F6D43009F52BA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BD347C4D292F7213009F52BA /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		BD347C54292FC13B009F52BA /* GenderFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderFilterView.swift; sourceTree = "<group>"; };
-		BD38827D292372B5000F971D /* FirbaseTokenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirbaseTokenError.swift; sourceTree = "<group>"; };
+		BD38827D292372B5000F971D /* FirebaseTokenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTokenError.swift; sourceTree = "<group>"; };
 		BD38827F29237316000F971D /* MGCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCError.swift; sourceTree = "<group>"; };
-		BD388281292374A9000F971D /* MGCNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCNetworkError.swift; sourceTree = "<group>"; };
-		BD38828329237562000F971D /* MGCHTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGCHTTPError.swift; sourceTree = "<group>"; };
 		BD392CAD291D304A008D3EAB /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BD392CB1291D3990008D3EAB /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		BD392CB5291D39A5008D3EAB /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
@@ -421,10 +417,8 @@
 		BD38827C29237299000F971D /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				BD38827D292372B5000F971D /* FirbaseTokenError.swift */,
+				BD38827D292372B5000F971D /* FirebaseTokenError.swift */,
 				BD38827F29237316000F971D /* MGCError.swift */,
-				BD388281292374A9000F971D /* MGCNetworkError.swift */,
-				BD38828329237562000F971D /* MGCHTTPError.swift */,
 				BD05211E293881140070AEE7 /* SignUpError.swift */,
 			);
 			path = Error;
@@ -1277,7 +1271,6 @@
 				BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */,
 				BD234761291A6052009BC722 /* TypoStyle.swift in Sources */,
 				BD4E1CE72933CDFD00BF40BF /* StopQueueAPI.swift in Sources */,
-				BD38828429237562000F971D /* MGCHTTPError.swift in Sources */,
 				BD347C4E292F7213009F52BA /* MapManager.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
 				BDE1AC512931DEE5009E88AD /* FriendViewController.swift in Sources */,
@@ -1300,7 +1293,6 @@
 				BDE1AC4C2931DE76009E88AD /* Tab.swift in Sources */,
 				BDA41069292BF6330053FF3B /* FindQueueAPI.swift in Sources */,
 				BD8E98B22922776E00133840 /* Device.swift in Sources */,
-				BD388282292374A9000F971D /* MGCNetworkError.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,
@@ -1322,7 +1314,7 @@
 				BDC50EC9292929C1002378C6 /* MyPageAPI.swift in Sources */,
 				BDE1AC532931DEED009E88AD /* ShopViewController.swift in Sources */,
 				BDE1AC642931FCEE009E88AD /* KeywordSectionHeaderView.swift in Sources */,
-				BD38827E292372B5000F971D /* FirbaseTokenError.swift in Sources */,
+				BD38827E292372B5000F971D /* FirebaseTokenError.swift in Sources */,
 				BDF5818029323533005C8E4E /* KeywordError.swift in Sources */,
 				BDE1AC662931FE51009E88AD /* KeywordCell.swift in Sources */,
 				BD4B5519292A8B3C00ECFD04 /* MyProfileItemCell.swift in Sources */,
