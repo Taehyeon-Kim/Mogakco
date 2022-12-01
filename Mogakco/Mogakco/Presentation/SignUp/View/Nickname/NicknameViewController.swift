@@ -31,6 +31,20 @@ final class NicknameViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        
+        let endpoint = SignUpAPI(phoneNumber: "+821012341234", fcmToken: UserDefaultsManager.fcmToken, nick: "김태현B", birth: UserDefaultsManager.birth, email: "test@test.com", gender: 1)
+        
+        NetworkProviderImpl().execute(of: endpoint)
+            .subscribe { _ in
+                print("성공")
+            } onFailure: { error in
+                if let error = error as? MGCError {
+                    print("SignUpERR -", SignUpError(mgcError: error)?.localizedDescription)
+                } else {
+                    print("여기로 빠지는 에러가 또 있나? - 음.. MGCError로 캐스팅 안되는 에러?")
+                }
+            }
+            .disposed(by: disposeBag)
     }
     
     override func setAttributes() {

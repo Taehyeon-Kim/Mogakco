@@ -48,20 +48,27 @@ final class NetworkProviderImpl: NetworkProvider {
                     }
 
                 case let .failure(error):
-                    observer(.failure(error))
+                    switch error {
+                    case let .unknown(mgcError):
+                        observer(.failure(mgcError))
+                    default:
+                        observer(.failure(error))
+                    }
                 }
             }
             return Disposables.create()
         }
         .retry { error in
             Observable.zip(error, Observable.range(start: 1, count: 3), resultSelector: { ($0, $1) })
-                .flatMap { (error: HTTPError, index: Int) -> Single<String> in
+                
+            // 여기서 Single이 아니고 Observable로 작성해준 이유는 Error를 전달해주기 위함
+                .flatMap { (error: HTTPError, index: Int) -> Observable<String> in
                     print("🌱", error, index)
                     switch error {
                     case .unauthorized:
-                        return FirebaseAuthRepositoryImpl().requestIDToken()
+                        return FirebaseAuthRepositoryImpl().requestIDToken().asObservable()
                     default:
-                        return Single.just("")
+                        return Observable.error(error)
                     }
                 }
         }
@@ -95,14 +102,14 @@ final class NetworkProviderImpl: NetworkProvider {
                 case 501:
                     return completion(.failure(.badRequest))
                 default:
-                    return completion(.failure(.unknown))
+                    return completion(.failure(.unknown(MGCError(code: response.statusCode, message: "에러 발생"))))
                 }
             }
             
             task.resume()
             
         } catch {
-            return completion(.failure(.unknown))
+            return completion(.failure(.requestFail))
         }
     }
 }
