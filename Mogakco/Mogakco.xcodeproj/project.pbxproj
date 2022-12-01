@@ -364,8 +364,9 @@
 		BD234776291AA410009BC722 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				BD234777291AA418009BC722 /* Reusable.swift */,
 				BDC06B12291E763F000C4A6A /* Bindable.swift */,
+				BD234777291AA418009BC722 /* Reusable.swift */,
+				BDC06B10291E70C7000C4A6A /* ViewModelType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -801,7 +802,6 @@
 				BD92580D29194691008A3158 /* BaseViewController.swift */,
 				BD23476A291A9AEB009BC722 /* BaseView.swift */,
 				BD234774291AA3C7009BC722 /* BaseCollectionViewCell.swift */,
-				BDC06B10291E70C7000C4A6A /* ViewModelType.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
