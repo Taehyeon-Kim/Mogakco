@@ -25,6 +25,16 @@ final class BirthViewController: BaseViewController {
     
     let dateValue = BehaviorRelay(value: Date(timeIntervalSince1970: 0))
     
+    // MARK: Properties
+    
+    var viewModel: BirthViewModel
+    
+    // MARK: Initializing
+    
+    init(viewModel: BirthViewModel) {
+        self.viewModel = viewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -139,9 +149,11 @@ extension BirthViewController: Bindable {
             .map { ValidatorImpl().isValid(age: self.dateValue.value) }
             .bind { [weak self] isPossible in
                 if isPossible {
-                    let viewController = EmailViewController(viewModel: EmailViewModel())
+                    self?.viewModel.storeBirth("221210")
+                    let container = DependencyContainer()
+                    let viewController = container.makeEmailViewController()
                     self?.transition(to: viewController)
-                    self?.saveBirth()
+                    
                 } else {
                     // show error popup
                 }
@@ -165,15 +177,7 @@ extension BirthViewController: Bindable {
 }
 
 extension BirthViewController {
-    
-    private func saveBirth() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS'Z"
-        
-        let birth = formatter.string(from: dateValue.value)
-        UserDefaultsManager.birth = birth
-    }
-    
+
     private func transition(to viewController: UIViewController) {
         navigationController?.pushViewController(viewController, animated: true)
     }

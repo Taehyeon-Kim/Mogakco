@@ -113,5 +113,23 @@ extension EmailViewController: Bindable {
                 self.verificationCodeButton.buttonStyle = isEnabled ? .fill : .disable
             }
             .disposed(by: disposeBag)
+        
+        output.nextButtonTrigger
+            .asObservable()
+            .withUnretained(self)
+            .subscribe { owner, _ in
+                owner.viewModel.storeEmail()
+                let container = DependencyContainer()
+                let viewController = container.makeGenderViewController()
+                owner.transition(to: viewController)
+            }
+            .disposed(by: disposeBag)
+    }
+}
+
+extension EmailViewController {
+    
+    private func transition(to viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

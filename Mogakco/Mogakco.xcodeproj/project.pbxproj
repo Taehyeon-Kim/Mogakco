@@ -106,6 +106,14 @@
 		BDC06B16291EA718000C4A6A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B15291EA718000C4A6A /* String+.swift */; };
 		BDC06B1A291EC66E000C4A6A /* FirebaseAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */; };
 		BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */; };
+		BDC20F602938F36C00B9A2E7 /* SignUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F5F2938F36C00B9A2E7 /* SignUpUseCase.swift */; };
+		BDC20F622938F44A00B9A2E7 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F612938F44A00B9A2E7 /* SignUpRepository.swift */; };
+		BDC20F642938F72800B9A2E7 /* SignUpRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F632938F72800B9A2E7 /* SignUpRepositoryImpl.swift */; };
+		BDC20F672938FF5E00B9A2E7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F662938FF5E00B9A2E7 /* UserManager.swift */; };
+		BDC20F692939032300B9A2E7 /* BirthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F682939032300B9A2E7 /* BirthViewModel.swift */; };
+		BDC20F6B293907BB00B9A2E7 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F6A293907BB00B9A2E7 /* GenderViewModel.swift */; };
+		BDC20F7629390FEC00B9A2E7 /* SignUpViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F7529390FEC00B9A2E7 /* SignUpViewControllerFactory.swift */; };
+		BDC20F792939E58800B9A2E7 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F782939E58800B9A2E7 /* DependencyContainer.swift */; };
 		BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC029288D34002378C6 /* SignInAPI.swift */; };
 		BDC50EC329289126002378C6 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC229289126002378C6 /* SignUpAPI.swift */; };
 		BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC529289452002378C6 /* WithdrawAPI.swift */; };
@@ -242,6 +250,14 @@
 		BDC06B15291EA718000C4A6A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepository.swift; sourceTree = "<group>"; };
 		BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepositoryImpl.swift; sourceTree = "<group>"; };
+		BDC20F5F2938F36C00B9A2E7 /* SignUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUseCase.swift; sourceTree = "<group>"; };
+		BDC20F612938F44A00B9A2E7 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		BDC20F632938F72800B9A2E7 /* SignUpRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepositoryImpl.swift; sourceTree = "<group>"; };
+		BDC20F662938FF5E00B9A2E7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		BDC20F682939032300B9A2E7 /* BirthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewModel.swift; sourceTree = "<group>"; };
+		BDC20F6A293907BB00B9A2E7 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
+		BDC20F7529390FEC00B9A2E7 /* SignUpViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerFactory.swift; sourceTree = "<group>"; };
+		BDC20F782939E58800B9A2E7 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		BDC50EC029288D34002378C6 /* SignInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAPI.swift; sourceTree = "<group>"; };
 		BDC50EC229289126002378C6 /* SignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAPI.swift; sourceTree = "<group>"; };
 		BDC50EC529289452002378C6 /* WithdrawAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawAPI.swift; sourceTree = "<group>"; };
@@ -661,6 +677,7 @@
 				BD9257F5291943FE008A3158 /* Application */,
 				BD9257FE2919452E008A3158 /* Common */,
 				BD92581929194747008A3158 /* Data */,
+				BDC20F772939E57800B9A2E7 /* DI */,
 				BD92581A29194749008A3158 /* Domain */,
 				BDEA50F929278D4B00110982 /* Manager */,
 				BD9257FC291944FC008A3158 /* Network */,
@@ -830,6 +847,7 @@
 		BD92581A29194749008A3158 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BDC20F552938F1E000B9A2E7 /* UseCases */,
 				BD3C6483291FF0B6005E7142 /* DomainObject */,
 				BDFE03C22930EFD7006F6FAF /* Repositories */,
 			);
@@ -863,8 +881,50 @@
 			isa = PBXGroup;
 			children = (
 				BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */,
+				BDC20F632938F72800B9A2E7 /* SignUpRepositoryImpl.swift */,
 			);
 			path = "Repositories+Impl";
+			sourceTree = "<group>";
+		};
+		BDC20F552938F1E000B9A2E7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F562938F20C00B9A2E7 /* SignUp */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		BDC20F562938F20C00B9A2E7 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F5F2938F36C00B9A2E7 /* SignUpUseCase.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BDC20F652938FF5800B9A2E7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F662938FF5E00B9A2E7 /* UserManager.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BDC20F6C29390EEE00B9A2E7 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F7529390FEC00B9A2E7 /* SignUpViewControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		BDC20F772939E57800B9A2E7 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F782939E58800B9A2E7 /* DependencyContainer.swift */,
+				BDC20F6C29390EEE00B9A2E7 /* Factory */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		BDC50EBF29288D28002378C6 /* API */ = {
@@ -989,8 +1049,10 @@
 		BDE4B6CA292009130084D60F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */,
+				BDC20F682939032300B9A2E7 /* BirthViewModel.swift */,
 				BD05211A293852E60070AEE7 /* EmailViewModel.swift */,
+				BDC20F6A293907BB00B9A2E7 /* GenderViewModel.swift */,
+				BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1006,6 +1068,7 @@
 		BDEA50F929278D4B00110982 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BDC20F652938FF5800B9A2E7 /* User */,
 				BD347C4A292F6D37009F52BA /* Map */,
 				BDEA50FA29278D5400110982 /* Auth */,
 			);
@@ -1084,6 +1147,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */,
+				BDC20F612938F44A00B9A2E7 /* SignUpRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1229,6 +1293,7 @@
 				BDEA50F829278BD300110982 /* NetworkProvider.swift in Sources */,
 				BD347C55292FC13B009F52BA /* GenderFilterView.swift in Sources */,
 				BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */,
+				BDC20F7629390FEC00B9A2E7 /* SignUpViewControllerFactory.swift in Sources */,
 				BD05211F293881140070AEE7 /* SignUpError.swift in Sources */,
 				BD925805291945A8008A3158 /* SplashViewController.swift in Sources */,
 				BD4E1CEC2933CF0800BF40BF /* QueueStateDTO.swift in Sources */,
@@ -1238,6 +1303,7 @@
 				BDE1AC5B2931E98B009E88AD /* KeywordViewController.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
 				BDC06B16291EA718000C4A6A /* String+.swift in Sources */,
+				BDC20F6B293907BB00B9A2E7 /* GenderViewModel.swift in Sources */,
 				BD4B5521292B1D9B00ECFD04 /* MyProfileViewModel.swift in Sources */,
 				BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */,
 				BD8E98B02922774600133840 /* PreviewProvider.swift in Sources */,
@@ -1247,6 +1313,7 @@
 				BD234775291AA3C7009BC722 /* BaseCollectionViewCell.swift in Sources */,
 				BD392CBC291D39EC008D3EAB /* GenderViewController.swift in Sources */,
 				BDEA50FF2927F22700110982 /* URLRequestable.swift in Sources */,
+				BDC20F622938F44A00B9A2E7 /* SignUpRepository.swift in Sources */,
 				BD05211B293852E60070AEE7 /* EmailViewModel.swift in Sources */,
 				BDE1AC7329321286009E88AD /* KeywordViewModel.swift in Sources */,
 				BD052113293777C20070AEE7 /* ChatViewModel.swift in Sources */,
@@ -1258,10 +1325,13 @@
 				BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */,
 				BD05211D293853040070AEE7 /* Validator.swift in Sources */,
 				BD392CC3291D4AAC008D3EAB /* UIStackView+Extension.swift in Sources */,
+				BDC20F642938F72800B9A2E7 /* SignUpRepositoryImpl.swift in Sources */,
 				BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */,
 				BD523777291E537B004EE2B6 /* Environment.swift in Sources */,
 				BDF9C185291D5618009B4B1B /* UIButton+Extension.swift in Sources */,
+				BDC20F602938F36C00B9A2E7 /* SignUpUseCase.swift in Sources */,
 				BD8737D8293507A500F51CD9 /* MGCNavigationBar.swift in Sources */,
+				BDC20F672938FF5E00B9A2E7 /* UserManager.swift in Sources */,
 				BDE095D0291C1E92009CB1C0 /* PhoneVerificationViewController.swift in Sources */,
 				BD52376D291E5024004EE2B6 /* NetworkError.swift in Sources */,
 				BD82EA402934C6C200A8FB1C /* StudyAcceptViewController.swift in Sources */,
@@ -1273,6 +1343,7 @@
 				BD4E1CE72933CDFD00BF40BF /* StopQueueAPI.swift in Sources */,
 				BD347C4E292F7213009F52BA /* MapManager.swift in Sources */,
 				BD3C647E291FE3D1005E7142 /* NetworkMonitor.swift in Sources */,
+				BDC20F792939E58800B9A2E7 /* DependencyContainer.swift in Sources */,
 				BDE1AC512931DEE5009E88AD /* FriendViewController.swift in Sources */,
 				BD4B551F292B184300ECFD04 /* MyProfileItemCellViewModel.swift in Sources */,
 				BD38828029237316000F971D /* MGCError.swift in Sources */,
@@ -1283,6 +1354,7 @@
 				BD4B551C292A91E000ECFD04 /* MyProfileViewSection.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
 				BD0520F3293745BA0070AEE7 /* ChatViewController.swift in Sources */,
+				BDC20F692939032300B9A2E7 /* BirthViewModel.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
