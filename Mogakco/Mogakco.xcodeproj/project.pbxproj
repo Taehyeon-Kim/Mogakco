@@ -117,6 +117,12 @@
 		BDC20F7B2939F16C00B9A2E7 /* NicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F7A2939F16C00B9A2E7 /* NicknameView.swift */; };
 		BDC20F7E293A326600B9A2E7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BDC20F7D293A326600B9A2E7 /* Realm */; };
 		BDC20F80293A326600B9A2E7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDC20F7F293A326600B9A2E7 /* RealmSwift */; };
+		BDC20F82293A3E1400B9A2E7 /* RealmChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F81293A3E1400B9A2E7 /* RealmChat.swift */; };
+		BDC20F86293A40E600B9A2E7 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F85293A40E600B9A2E7 /* Chat.swift */; };
+		BDC20F89293A41A000B9A2E7 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F88293A41A000B9A2E7 /* DomainConvertibleType.swift */; };
+		BDC20F8C293A6A2800B9A2E7 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F8B293A6A2800B9A2E7 /* ChatRepository.swift */; };
+		BDC20F8E293A6BB800B9A2E7 /* RealmConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F8D293A6BB800B9A2E7 /* RealmConvertibleType.swift */; };
+		BDC20F90293A702C00B9A2E7 /* Realm+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F8F293A702C00B9A2E7 /* Realm+Extension.swift */; };
 		BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC029288D34002378C6 /* SignInAPI.swift */; };
 		BDC50EC329289126002378C6 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC229289126002378C6 /* SignUpAPI.swift */; };
 		BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC529289452002378C6 /* WithdrawAPI.swift */; };
@@ -262,6 +268,12 @@
 		BDC20F7529390FEC00B9A2E7 /* SignUpViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerFactory.swift; sourceTree = "<group>"; };
 		BDC20F782939E58800B9A2E7 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		BDC20F7A2939F16C00B9A2E7 /* NicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameView.swift; sourceTree = "<group>"; };
+		BDC20F81293A3E1400B9A2E7 /* RealmChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmChat.swift; sourceTree = "<group>"; };
+		BDC20F85293A40E600B9A2E7 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		BDC20F88293A41A000B9A2E7 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		BDC20F8B293A6A2800B9A2E7 /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
+		BDC20F8D293A6BB800B9A2E7 /* RealmConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConvertibleType.swift; sourceTree = "<group>"; };
+		BDC20F8F293A702C00B9A2E7 /* Realm+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Extension.swift"; sourceTree = "<group>"; };
 		BDC50EC029288D34002378C6 /* SignInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAPI.swift; sourceTree = "<group>"; };
 		BDC50EC229289126002378C6 /* SignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAPI.swift; sourceTree = "<group>"; };
 		BDC50EC529289452002378C6 /* WithdrawAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawAPI.swift; sourceTree = "<group>"; };
@@ -497,8 +509,9 @@
 		BD3C6483291FF0B6005E7142 /* DomainObject */ = {
 			isa = PBXGroup;
 			children = (
-				BD3C6484291FF0C3005E7142 /* User.swift */,
+				BDC20F85293A40E600B9A2E7 /* Chat.swift */,
 				BDE095C4291C17AB009CB1C0 /* Onboarding.swift */,
+				BD3C6484291FF0C3005E7142 /* User.swift */,
 			);
 			path = DomainObject;
 			sourceTree = "<group>";
@@ -689,6 +702,7 @@
 				BDEA50F929278D4B00110982 /* Manager */,
 				BD9257FC291944FC008A3158 /* Network */,
 				BD9257F8291944A3008A3158 /* Presentation */,
+				BDC20F83293A3E4900B9A2E7 /* RealmPlatform */,
 				BD9257F729194433008A3158 /* Supports */,
 				BDFE03B72930DA78006F6FAF /* UserInterface */,
 			);
@@ -845,6 +859,7 @@
 		BD92581929194747008A3158 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BDC20F8A293A69DC00B9A2E7 /* ChatDataStorage */,
 				BDFE03BB2930EF51006F6FAF /* DataSource */,
 				BDC06B17291EC626000C4A6A /* Repositories+Impl */,
 			);
@@ -932,6 +947,41 @@
 				BDC20F6C29390EEE00B9A2E7 /* Factory */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		BDC20F83293A3E4900B9A2E7 /* RealmPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F87293A419600B9A2E7 /* Utils */,
+				BDC20F84293A3E5900B9A2E7 /* Entities */,
+			);
+			path = RealmPlatform;
+			sourceTree = "<group>";
+		};
+		BDC20F84293A3E5900B9A2E7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F81293A3E1400B9A2E7 /* RealmChat.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BDC20F87293A419600B9A2E7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F88293A41A000B9A2E7 /* DomainConvertibleType.swift */,
+				BDC20F8D293A6BB800B9A2E7 /* RealmConvertibleType.swift */,
+				BDC20F8F293A702C00B9A2E7 /* Realm+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BDC20F8A293A69DC00B9A2E7 /* ChatDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F8B293A6A2800B9A2E7 /* ChatRepository.swift */,
+			);
+			path = ChatDataStorage;
 			sourceTree = "<group>";
 		};
 		BDC50EBF29288D28002378C6 /* API */ = {
@@ -1311,6 +1361,7 @@
 				BD4E1CF42933D0A100BF40BF /* ReviewAPI.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
 				BDE1AC5B2931E98B009E88AD /* KeywordViewController.swift in Sources */,
+				BDC20F86293A40E600B9A2E7 /* Chat.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
 				BDC06B16291EA718000C4A6A /* String+.swift in Sources */,
 				BDC20F6B293907BB00B9A2E7 /* GenderViewModel.swift in Sources */,
@@ -1331,6 +1382,7 @@
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
 				BD347C44292F61EB009F52BA /* MapView.swift in Sources */,
 				BD347C46292F61F3009F52BA /* MapViewController.swift in Sources */,
+				BDC20F8C293A6A2800B9A2E7 /* ChatRepository.swift in Sources */,
 				BDC06B13291E763F000C4A6A /* Bindable.swift in Sources */,
 				BD392CAE291D304A008D3EAB /* UITextField+Extension.swift in Sources */,
 				BD05211D293853040070AEE7 /* Validator.swift in Sources */,
@@ -1366,6 +1418,7 @@
 				BD0520F3293745BA0070AEE7 /* ChatViewController.swift in Sources */,
 				BDC20F692939032300B9A2E7 /* BirthViewModel.swift in Sources */,
 				BDC06B1C291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift in Sources */,
+				BDC20F8E293A6BB800B9A2E7 /* RealmConvertibleType.swift in Sources */,
 				BD15957F291A3FAE00C552CB /* Adjusted+Extension.swift in Sources */,
 				BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */,
 				BDF9C187291D6394009B4B1B /* BirthInputView.swift in Sources */,
@@ -1384,6 +1437,7 @@
 				BD8737DF2935117E00F51CD9 /* ExpandableCardViewItemCell.swift in Sources */,
 				BD4B5517292A8A6D00ECFD04 /* MyProfileViewController.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
+				BDC20F82293A3E1400B9A2E7 /* RealmChat.swift in Sources */,
 				BDE1AC552931E4BE009E88AD /* BaseTabBarController.swift in Sources */,
 				BDC06B11291E70C7000C4A6A /* ViewModelType.swift in Sources */,
 				BD23476B291A9AEB009BC722 /* BaseView.swift in Sources */,
@@ -1399,11 +1453,13 @@
 				BDE1AC642931FCEE009E88AD /* KeywordSectionHeaderView.swift in Sources */,
 				BD38827E292372B5000F971D /* FirebaseTokenError.swift in Sources */,
 				BDF5818029323533005C8E4E /* KeywordError.swift in Sources */,
+				BDC20F90293A702C00B9A2E7 /* Realm+Extension.swift in Sources */,
 				BDE1AC662931FE51009E88AD /* KeywordCell.swift in Sources */,
 				BD4B5519292A8B3C00ECFD04 /* MyProfileItemCell.swift in Sources */,
 				BD39D4B729368050000B73A9 /* ExpandableCardViewSectionHeader.swift in Sources */,
 				BD052115293778030070AEE7 /* ChatInputView.swift in Sources */,
 				BD4E1CF22933D05600BF40BF /* StudyDodgeAPI.swift in Sources */,
+				BDC20F89293A41A000B9A2E7 /* DomainConvertibleType.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
 				BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,

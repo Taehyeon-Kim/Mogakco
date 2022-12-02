@@ -17,5 +17,9 @@ file_length:
 
 type_name:
   min_length: 2
+  excluded:
+    - T
+    - U
+    - R
 
 force_cast: warning
