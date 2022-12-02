@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol ViewModelType {
     associatedtype Input    // Input 관련(데이터 스트림, 이벤트 트리거)

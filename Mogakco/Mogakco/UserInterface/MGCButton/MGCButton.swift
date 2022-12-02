@@ -58,7 +58,7 @@ final class MGCButton: BaseView {
     private func updateUI(_ buttonStyle: MGCButtonStyle) {
         button.backgroundColor = buttonStyle.backgroundColor
         button.setTitleColor(buttonStyle.titleColor, for: .normal)
-        button.isEnabled = buttonStyle != .disable
+        // button.isEnabled = buttonStyle != .disable
     }
     
     @objc func buttonTapped(_ sender: UIButton) {

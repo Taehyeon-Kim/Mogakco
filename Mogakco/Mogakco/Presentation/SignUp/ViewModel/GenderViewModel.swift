@@ -15,12 +15,15 @@ final class GenderViewModel: ViewModelType {
     private var disposeBag = DisposeBag()
     private var gender = 0
     
-    var validator: Validator = ValidatorImpl()
-    var userManager: UserManager
+    private var validator: Validator
+    private var userManager: UserManager
     
-    init(userManager: UserManager) {
+    init(
+        validator: Validator,
+        userManager: UserManager
+    ) {
+        self.validator = validator
         self.userManager = userManager
-        print("🐙 GenderViewModel 데이터 === \(userManager.userInfo)")
     }
 
     struct Input {
