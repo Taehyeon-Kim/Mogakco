@@ -115,6 +115,8 @@
 		BDC20F7629390FEC00B9A2E7 /* SignUpViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F7529390FEC00B9A2E7 /* SignUpViewControllerFactory.swift */; };
 		BDC20F792939E58800B9A2E7 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F782939E58800B9A2E7 /* DependencyContainer.swift */; };
 		BDC20F7B2939F16C00B9A2E7 /* NicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F7A2939F16C00B9A2E7 /* NicknameView.swift */; };
+		BDC20F7E293A326600B9A2E7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BDC20F7D293A326600B9A2E7 /* Realm */; };
+		BDC20F80293A326600B9A2E7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDC20F7F293A326600B9A2E7 /* RealmSwift */; };
 		BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC029288D34002378C6 /* SignInAPI.swift */; };
 		BDC50EC329289126002378C6 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC229289126002378C6 /* SignUpAPI.swift */; };
 		BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC529289452002378C6 /* WithdrawAPI.swift */; };
@@ -302,9 +304,11 @@
 				BDE1AC6B29320E75009E88AD /* RxRelay in Frameworks */,
 				BDE1AC7029320ED0009E88AD /* RxKeyboard in Frameworks */,
 				BDE1AC6D29320E75009E88AD /* RxSwift in Frameworks */,
+				BDC20F80293A326600B9A2E7 /* RealmSwift in Frameworks */,
 				BD8E98C32922BD7C00133840 /* FirebaseMessaging in Frameworks */,
 				BD8E98BB2922BCCA00133840 /* SnapKit in Frameworks */,
 				BD8E98C12922BD7C00133840 /* FirebaseAuth in Frameworks */,
+				BDC20F7E293A326600B9A2E7 /* Realm in Frameworks */,
 				BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */,
 				BD8E98CB2922BE0700133840 /* Toast in Frameworks */,
 				BDE1AC6929320E75009E88AD /* RxCocoa in Frameworks */,
@@ -1184,6 +1188,8 @@
 				BDE1AC6C29320E75009E88AD /* RxSwift */,
 				BDE1AC6F29320ED0009E88AD /* RxKeyboard */,
 				BDE1AC7529321EC5009E88AD /* RxGesture */,
+				BDC20F7D293A326600B9A2E7 /* Realm */,
+				BDC20F7F293A326600B9A2E7 /* RealmSwift */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -1222,6 +1228,7 @@
 				BDE1AC6729320E75009E88AD /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BDE1AC6E29320ED0009E88AD /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 				BDE1AC7429321EC5009E88AD /* XCRemoteSwiftPackageReference "RxGesture" */,
+				BDC20F7C293A326600B9A2E7 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -1755,6 +1762,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		BDC20F7C293A326600B9A2E7 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.33.0;
+			};
+		};
 		BDE1AC6729320E75009E88AD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -1811,6 +1826,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD8E98C92922BE0700133840 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		BDC20F7D293A326600B9A2E7 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC20F7C293A326600B9A2E7 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BDC20F7F293A326600B9A2E7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC20F7C293A326600B9A2E7 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		BDE1AC6829320E75009E88AD /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
