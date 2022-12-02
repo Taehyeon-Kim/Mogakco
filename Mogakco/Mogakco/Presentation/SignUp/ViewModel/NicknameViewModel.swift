@@ -10,60 +10,89 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class NicknameViewModel: ViewModelType {
-
-    private var disposeBag = DisposeBag()
-    private var nickname = ""
+final class NicknameViewModel {
     
-    var userManager: UserManager
-    
-    init(userManager: UserManager) {
-        self.userManager = userManager
-        print("🐙 NicknameViewModel 데이터 === \(userManager.userInfo)")
+    enum NicknameError: LocalizedError {
+        case invalidLength
+        
+        var errorDescription: String? {
+            switch self {
+            case .invalidLength:
+                return "닉네임은 1자 이상 10자 이내로 부탁드려요."
+            }
+        }
     }
 
+    private var disposeBag = DisposeBag()
+    private var nickname = BehaviorRelay(value: "")
+    
+    private var validator: Validator
+    private var userManager: UserManager
+    
+    init(
+        validator: Validator,
+        userManager: UserManager
+    ) {
+        self.validator = validator
+        self.userManager = userManager
+    }
+    
     struct Input {
-        let changedText: ControlProperty<String>
-        let nextButtonTrigger: ControlEvent<Void>
+        let changedText: Observable<String>     // 닉네임 텍스트 필드 텍스트
+        let nextButtonDidTap: Observable<Void>
     }
     
     struct Output {
-        let nickname: Driver<String>
-        let isEnabled: Signal<Bool>
-        let nextButtonTrigger: Driver<Void>
+        let isNextButtonEnabled: Driver<Bool>
+        let isSucceed: Driver<Void>
+        let errorOccured: Driver<NicknameError>
     }
+}
+
+extension NicknameViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
         
-        let nickname = input.changedText
-            .asDriver()
-            .scan("") { [weak self] prev, next in
-                let nickname = (11...).contains(next.count) ? prev : next
-                self?.nickname = nickname
-                return nickname
-            }
+        let changedText = input.changedText
+            .asDriver(onErrorJustReturn: "")
         
-        let isEnabled = input.changedText
-            .asSignal(onErrorJustReturn: "")
-            .map(isValid)
+        changedText
+            .drive(with: self) { owner, nick in owner.nickname.accept(nick) }
+            .disposed(by: disposeBag)
+        
+        let isNextButtonEnabled = changedText
+            .map(validator.isValid(nickname:))
+        
+        let isNextButtonSelected = input.nextButtonDidTap
+            .asDriver(onErrorJustReturn: ())
+        
+        let isSucceed = isNextButtonSelected
+            .withLatestFrom(isNextButtonEnabled) { $1 }
+            .filter { $0 }
+            .map { _ in () }
+        
+        isSucceed
+            .drive(with: self) { owner, _ in
+                owner.store(owner.nickname.value)
+            }
+            .disposed(by: disposeBag)
+        
+        let errorOccured = isNextButtonSelected
+            .withLatestFrom(isNextButtonEnabled) { $1 }
+            .filter { !$0 }
+            .map { _ in NicknameError.invalidLength }
         
         return Output(
-            nickname: nickname,
-            isEnabled: isEnabled,
-            nextButtonTrigger: input.nextButtonTrigger.asDriver()
+            isNextButtonEnabled: isNextButtonEnabled,
+            isSucceed: isSucceed,
+            errorOccured: errorOccured
         )
     }
 }
 
 extension NicknameViewModel {
     
-    private func isValid(nickname: String) -> Bool {
-        return (1...10).contains(nickname.count)
-    }
-    
-    func saveNickname() {
-        // UserDefaultsManager.nickname = nickname
-        print("어떤 값이 저장되죠? \(nickname)")
+    func store(_ nickname: String) {
         userManager.store(nickname: nickname)
     }
 }

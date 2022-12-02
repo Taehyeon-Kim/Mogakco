@@ -10,27 +10,28 @@ import Foundation
 class DependencyContainer {
     private lazy var networkProvider = NetworkProviderImpl()
     private lazy var userManager = UserManagerImpl.shared
+    private lazy var validator = ValidatorImpl()
 }
 
 extension DependencyContainer: SignUpViewControllerFactory {
     
     func makeNicknameViewController() -> NicknameViewController {
-        let viewModel = NicknameViewModel(userManager: userManager)
+        let viewModel = NicknameViewModel(validator: validator, userManager: userManager)
         return NicknameViewController(viewModel: viewModel)
     }
     
     func makeBirthViewController() -> BirthViewController {
-        let viewModel = BirthViewModel(userManager: userManager)
+        let viewModel = BirthViewModel(validator: validator, userManager: userManager)
         return BirthViewController(viewModel: viewModel)
     }
     
     func makeEmailViewController() -> EmailViewController {
-        let viewModel = EmailViewModel(userManager: userManager)
+        let viewModel = EmailViewModel(validator: validator, userManager: userManager)
         return EmailViewController(viewModel: viewModel)
     }
     
     func makeGenderViewController() -> GenderViewController {
-        let viewModel = GenderViewModel(userManager: userManager)
+        let viewModel = GenderViewModel(validator: validator, userManager: userManager)
         return GenderViewController(viewModel: viewModel)
     }
 }

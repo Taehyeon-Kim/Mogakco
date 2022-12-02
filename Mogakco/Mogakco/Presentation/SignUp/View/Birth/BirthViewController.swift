@@ -12,6 +12,7 @@ import RxSwift
 
 final class BirthViewController: BaseViewController {
     
+    private let navigationBar = MGCNavigationBar()
     private let textLabel = UILabel()
     private lazy var containerHStackView = UIStackView(arrangedSubviews: [yearInputView, monthInputView, dayInputView])
     private let yearInputView = BirthInputView()
@@ -26,11 +27,9 @@ final class BirthViewController: BaseViewController {
     let dateValue = BehaviorRelay(value: Date(timeIntervalSince1970: 0))
     
     // MARK: Properties
-    
     var viewModel: BirthViewModel
     
     // MARK: Initializing
-    
     init(viewModel: BirthViewModel) {
         self.viewModel = viewModel
     }
@@ -44,6 +43,10 @@ final class BirthViewController: BaseViewController {
     
     override func setAttributes() {
         view.backgroundColor = .MGC.white
+        
+        navigationBar.do {
+            $0.leftBarItem = .back
+        }
         
         textLabel.do {
             $0.text = """
@@ -81,6 +84,7 @@ final class BirthViewController: BaseViewController {
     
     override func setHierarchy() {
         view.addSubviews(
+            navigationBar,
             textLabel,
             containerHStackView,
             datePickerButton,
@@ -89,8 +93,12 @@ final class BirthViewController: BaseViewController {
     }
     
     override func setLayout() {
+        navigationBar.snp.makeConstraints {
+            $0.top.directionalHorizontalEdges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
         textLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(97)
+            $0.top.equalTo(navigationBar.snp.bottom).offset(97)
             $0.centerX.equalToSuperview()
         }
         
@@ -115,33 +123,37 @@ final class BirthViewController: BaseViewController {
 extension BirthViewController: Bindable {
     
     func bind() {
+        navigationBar.leftButton.rx.tap
+            .bind(with: self) { owner, _ in
+                owner.navigationController?.popViewController(animated: true)
+            }
+            .disposed(by: disposeBag)
+        
         datePickerButton.rx.tap
-            .bind { [weak self] _ in
-                self?.datePickerButton.becomeFirstResponder()
+            .bind(with: self) { owner, _ in
+                owner.datePickerButton.becomeFirstResponder()
             }
             .disposed(by: disposeBag)
     
         doneButton.rx.tap
-            .bind { [weak self] _ in
-                self?.datePickerButton.resignFirstResponder()
+            .bind(with: self) { owner, _ in
+                owner.datePickerButton.resignFirstResponder()
             }
             .disposed(by: disposeBag)
         
         datePicker.rx.value
-            .withUnretained(self)
-            .bind { `self`, date in
-                self.dateValue.accept(date)
+            .bind(with: self) { owner, date in
+                owner.dateValue.accept(date)
             }
             .disposed(by: disposeBag)
         
         dateValue
-            .withUnretained(self)
-            .bind { `self`, date in
+            .bind(with: self) { owner, date in
                 print(date)
                 let components = Calendar.current.dateComponents([.year, .month, .day], from: date)
-                self.yearInputView.value = String(components.year!)
-                self.monthInputView.value = String(components.month!)
-                self.dayInputView.value = String(components.day!)
+                owner.yearInputView.value = String(components.year!)
+                owner.monthInputView.value = String(components.month!)
+                owner.dayInputView.value = String(components.day!)
             }
             .disposed(by: disposeBag)
         

@@ -114,6 +114,7 @@
 		BDC20F6B293907BB00B9A2E7 /* GenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F6A293907BB00B9A2E7 /* GenderViewModel.swift */; };
 		BDC20F7629390FEC00B9A2E7 /* SignUpViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F7529390FEC00B9A2E7 /* SignUpViewControllerFactory.swift */; };
 		BDC20F792939E58800B9A2E7 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F782939E58800B9A2E7 /* DependencyContainer.swift */; };
+		BDC20F7B2939F16C00B9A2E7 /* NicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F7A2939F16C00B9A2E7 /* NicknameView.swift */; };
 		BDC50EC129288D34002378C6 /* SignInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC029288D34002378C6 /* SignInAPI.swift */; };
 		BDC50EC329289126002378C6 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC229289126002378C6 /* SignUpAPI.swift */; };
 		BDC50EC629289452002378C6 /* WithdrawAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50EC529289452002378C6 /* WithdrawAPI.swift */; };
@@ -258,6 +259,7 @@
 		BDC20F6A293907BB00B9A2E7 /* GenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewModel.swift; sourceTree = "<group>"; };
 		BDC20F7529390FEC00B9A2E7 /* SignUpViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerFactory.swift; sourceTree = "<group>"; };
 		BDC20F782939E58800B9A2E7 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		BDC20F7A2939F16C00B9A2E7 /* NicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameView.swift; sourceTree = "<group>"; };
 		BDC50EC029288D34002378C6 /* SignInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAPI.swift; sourceTree = "<group>"; };
 		BDC50EC229289126002378C6 /* SignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAPI.swift; sourceTree = "<group>"; };
 		BDC50EC529289452002378C6 /* WithdrawAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawAPI.swift; sourceTree = "<group>"; };
@@ -631,6 +633,7 @@
 		BD8E98AC292275B500133840 /* Nickname */ = {
 			isa = PBXGroup;
 			children = (
+				BDC20F7A2939F16C00B9A2E7 /* NicknameView.swift */,
 				BD392CB1291D3990008D3EAB /* NicknameViewController.swift */,
 			);
 			path = Nickname;
@@ -1365,6 +1368,7 @@
 				BDE1AC4C2931DE76009E88AD /* Tab.swift in Sources */,
 				BDA41069292BF6330053FF3B /* FindQueueAPI.swift in Sources */,
 				BD8E98B22922776E00133840 /* Device.swift in Sources */,
+				BDC20F7B2939F16C00B9A2E7 /* NicknameView.swift in Sources */,
 				BD392CBA291D39DD008D3EAB /* EmailViewController.swift in Sources */,
 				BD9257E4291943F8008A3158 /* SceneDelegate.swift in Sources */,
 				BD392CB6291D39A5008D3EAB /* BirthViewController.swift in Sources */,

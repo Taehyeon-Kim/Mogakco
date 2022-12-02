@@ -9,81 +9,28 @@ import UIKit
 
 import RxCocoa
 import RxSwift
+import Toast
 
 final class NicknameViewController: BaseViewController {
     
-    // MARK: UI
-    private let navigationBar = MGCNavigationBar()
-    private let textLabel = UILabel()
-    private let textField = UITextField()
-    private let nextButton = MGCButton(.disable)
-    
     // MARK: Properties
-    var viewModel: NicknameViewModel
+    private let rootView = NicknameView()
+    private var viewModel: NicknameViewModel
     
-    // MARK: Initializing
+    // MARK: Initializer
     init(viewModel: NicknameViewModel) {
         self.viewModel = viewModel
     }
 
+    // MARK: Life Cycle
+    override func loadView() {
+        self.view = rootView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         bind()
-    }
-    
-    override func setAttributes() {
-        view.backgroundColor = .MGC.white
-        
-        navigationBar.do {
-            $0.leftBarItem = .back
-        }
-        
-        textLabel.do {
-            $0.text = """
-            닉네임을 입력해 주세요
-            """
-            $0.numberOfLines = 0
-            $0.setTypoStyle(.display1, alignment: .center)
-        }
-        
-        textField.do {
-            $0.placeholder = "10자 이내로 입력"
-            $0.font = .init(.regular, 14)
-            $0.setBottomBorder(with: .MGC.gray3, width: 1)
-            $0.setLeftPadding(to: 12)
-            $0.becomeFirstResponder()
-        }
-        
-        nextButton.do {
-            $0.title = "다음"
-        }
-    }
-    
-    override func setHierarchy() {
-        view.addSubviews(navigationBar, textLabel, textField, nextButton)
-    }
-    
-    override func setLayout() {
-        navigationBar.snp.makeConstraints {
-            $0.top.directionalHorizontalEdges.equalTo(view.safeAreaLayoutGuide)
-        }
-        
-        textLabel.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom).offset(125)
-            $0.centerX.equalToSuperview()
-        }
-        
-        textField.snp.makeConstraints {
-            $0.top.equalTo(textLabel.snp.bottom).offset(77)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(16)
-            $0.height.equalTo(47)
-        }
-        
-        nextButton.snp.makeConstraints {
-            $0.top.equalTo(textField.snp.bottom).offset(72)
-            $0.directionalHorizontalEdges.equalToSuperview().inset(16)
-            $0.height.equalTo(48)
-        }
     }
 }
 
@@ -91,28 +38,28 @@ extension NicknameViewController: Bindable {
     
     func bind() {
         let input = NicknameViewModel.Input(
-            changedText: textField.rx.text.orEmpty,
-            nextButtonTrigger: nextButton.button.rx.tap
+            changedText: rootView.textField.rx.text.orEmpty.asObservable(),
+            nextButtonDidTap: rootView.nextButton.button.rx.tap.asObservable()
         )
         let output = viewModel.transform(input: input)
         
-        output.nickname
-            .drive(textField.rx.text)
-            .disposed(by: disposeBag)
-        
-        output.isEnabled
-            .withUnretained(self)
-            .emit { `self`, isEnabled in
-                self.nextButton.buttonStyle = isEnabled ? .fill : .disable
+        output.isNextButtonEnabled
+            .drive(with: self) { owner, isEnabled in
+                owner.rootView.nextButton.buttonStyle = isEnabled ? .fill : .disable
             }
             .disposed(by: disposeBag)
         
-        output.nextButtonTrigger
-            .drive { [weak self] _ in
-                self?.viewModel.saveNickname()
+        output.isSucceed
+            .drive(with: self) { owner, _ in
                 let container = DependencyContainer()
                 let viewController = container.makeBirthViewController()
-                self?.transition(to: viewController)
+                owner.transition(to: viewController)
+            }
+            .disposed(by: disposeBag)
+        
+        output.errorOccured
+            .drive(with: self) { owner, error in
+                owner.rootView.makeToast(error.localizedDescription, duration: TimeInterval(0.5), position: .top)
             }
             .disposed(by: disposeBag)
     }

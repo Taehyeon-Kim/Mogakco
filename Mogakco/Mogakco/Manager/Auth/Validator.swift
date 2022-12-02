@@ -8,7 +8,9 @@
 import Foundation
 
 protocol Validator {
+    func isValid(nickname: String) -> Bool
     func isValid(email: String) -> Bool
+    func isValid(age: Date) -> Bool
 }
 
 final class ValidatorImpl: Validator {

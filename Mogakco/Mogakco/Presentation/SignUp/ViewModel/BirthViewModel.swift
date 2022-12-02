@@ -15,14 +15,17 @@ final class BirthViewModel: ViewModelType {
     private var disposeBag = DisposeBag()
     private var birth = ""
     
-    var validator: Validator = ValidatorImpl()
-    var userManager: UserManager
+    private var validator: Validator
+    private var userManager: UserManager
     
-    init(userManager: UserManager) {
+    init(
+        validator: Validator,
+        userManager: UserManager
+    ) {
+        self.validator = validator
         self.userManager = userManager
-        print("🐙 BirthViewModel 데이터 === \(userManager.userInfo)")
     }
-
+    
     struct Input {
         let changedText: ControlProperty<String>
         let nextButtonTrigger: ControlEvent<Void>
@@ -34,7 +37,6 @@ final class BirthViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        
         let isEnabled = input.changedText
             .asSignal(onErrorJustReturn: "")
             .map(validator.isValid(email:))
