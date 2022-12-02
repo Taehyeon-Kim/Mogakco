@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import RxCocoa
 import RxSwift
 
 protocol FirebaseAuthRepository {

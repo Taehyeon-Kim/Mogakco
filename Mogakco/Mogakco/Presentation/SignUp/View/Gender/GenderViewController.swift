@@ -14,6 +14,12 @@ final class GenderViewController: BaseViewController {
     private let genderInputView = GenderInputView()
     private let verificationCodeButton = MGCButton(.disable)
     
+    private let viewModel: GenderViewModel!
+    
+    init(viewModel: GenderViewModel) {
+        self.viewModel = viewModel
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

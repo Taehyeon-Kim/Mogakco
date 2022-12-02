@@ -14,6 +14,13 @@ final class NicknameViewModel: ViewModelType {
 
     private var disposeBag = DisposeBag()
     private var nickname = ""
+    
+    var userManager: UserManager
+    
+    init(userManager: UserManager) {
+        self.userManager = userManager
+        print("🐙 NicknameViewModel 데이터 === \(userManager.userInfo)")
+    }
 
     struct Input {
         let changedText: ControlProperty<String>
@@ -55,6 +62,8 @@ extension NicknameViewModel {
     }
     
     func saveNickname() {
-        UserDefaultsManager.nickname = nickname
+        // UserDefaultsManager.nickname = nickname
+        print("어떤 값이 저장되죠? \(nickname)")
+        userManager.store(nickname: nickname)
     }
 }

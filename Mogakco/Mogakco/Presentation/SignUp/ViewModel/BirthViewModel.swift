@@ -1,8 +1,8 @@
 //
-//  EmailViewModel.swift
+//  BirthViewModel.swift
 //  Mogakco
 //
-//  Created by taekki on 2022/12/01.
+//  Created by taekki on 2022/12/02.
 //
 
 import Foundation
@@ -10,17 +10,17 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class EmailViewModel: ViewModelType {
+final class BirthViewModel: ViewModelType {
 
     private var disposeBag = DisposeBag()
-    private var email = "asdfasdfasd@asdfa.com"
+    private var birth = ""
     
     var validator: Validator = ValidatorImpl()
     var userManager: UserManager
     
     init(userManager: UserManager) {
         self.userManager = userManager
-        print("🐙 EmailViewModel 데이터 === \(userManager.userInfo)")
+        print("🐙 BirthViewModel 데이터 === \(userManager.userInfo)")
     }
 
     struct Input {
@@ -46,9 +46,9 @@ final class EmailViewModel: ViewModelType {
     }
 }
 
-extension EmailViewModel {
+extension BirthViewModel {
     
-    func storeEmail() {
-        userManager.store(email: self.email)
+    func storeBirth(_ birth: String) {
+        userManager.store(birth: birth)
     }
 }

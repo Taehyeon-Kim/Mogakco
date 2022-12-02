@@ -16,7 +16,7 @@ import Foundation
 //   "gender" : 0
 // }
 
-struct SignUpRequestDTO: Encodable {
+struct SignUpRequestDTO: Encodable, Equatable {
     var phoneNumber: String
     var FCMtoken: String
     var nick: String
