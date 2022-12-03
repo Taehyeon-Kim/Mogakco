@@ -20,6 +20,8 @@ final class ChatView: BaseView {
     let chatInputView = ChatInputView()
     
     override func setAttributes() {
+        backgroundColor = .MGC.white
+        
         navigationBar.do {
             $0.leftBarItem = .back
             $0.title = "유저명"

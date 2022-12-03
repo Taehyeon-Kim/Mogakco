@@ -9,7 +9,12 @@ import UIKit
 
 final class ChatViewController: BaseViewController {
     
-    let rootView = ChatView()
+    private let rootView = ChatView()
+    private let viewModel: ChatViewModel
+    
+    init(viewModel: ChatViewModel) {
+        self.viewModel = viewModel
+    }
     
     override func loadView() {
         self.view = rootView
@@ -17,7 +22,6 @@ final class ChatViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .MGC.white
     }
 }
 
