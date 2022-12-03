@@ -54,6 +54,8 @@ final class ChatRepositoryImpl<T: RealmConvertibleType>: ChatRepository where T 
             let predicate = NSPredicate(format: "uid == %@", uid)
             let objects = realm.objects(T.RealmType.self)
                 .filter(predicate)
+                // 기본적으로 날짜순으로 정렬해서 필터해오도록 구성(채팅의 경우 old > new)이기 때문
+                .sorted(byKeyPath: "date")
                 .asArray()
                 .map { $0.asDomain() }
             return Observable.just(objects)
