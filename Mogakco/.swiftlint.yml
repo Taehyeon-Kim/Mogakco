@@ -21,5 +21,12 @@ type_name:
     - T
     - U
     - R
+    
+identifier_name:
+  min_length: 2
+  excluded:
+    - to
+    - from
+    - at
 
 force_cast: warning
