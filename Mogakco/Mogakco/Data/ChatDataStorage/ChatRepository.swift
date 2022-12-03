@@ -16,6 +16,7 @@ protocol ChatRepository {
     
     func fetchAllChat() -> Observable<[T]>
     func save(chat: T) -> Observable<Void>
+    func fetchChat(for uid: String) -> Observable<[T]>
 }
 
 final class ChatRepositoryImpl<T: RealmConvertibleType>: ChatRepository where T == T.RealmType.DomainType, T.RealmType: Object {
@@ -43,6 +44,19 @@ final class ChatRepositoryImpl<T: RealmConvertibleType>: ChatRepository where T 
     func save(chat: T) -> Observable<Void> {
         return Observable.deferred {
             return self.realm.rx.save(entity: chat)
+        }
+    }
+    
+    /// 특정 유저 채팅 필터링
+    func fetchChat(for uid: String) -> Observable<[T]> {
+        return Observable.deferred {
+            let realm = self.realm
+            let predicate = NSPredicate(format: "uid == %@", uid)
+            let objects = realm.objects(T.RealmType.self)
+                .filter(predicate)
+                .asArray()
+                .map { $0.asDomain() }
+            return Observable.just(objects)
         }
     }
 }
