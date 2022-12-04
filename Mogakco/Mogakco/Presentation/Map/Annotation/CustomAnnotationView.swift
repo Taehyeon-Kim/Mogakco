@@ -15,11 +15,6 @@ final class CustomAnnotationView: MKAnnotationView {
 
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        
-        // if let annotation = annotation as? CustomAnnotation {
-        //     self.image = annotation.image
-        // }
-        
         configure()
     }
     
