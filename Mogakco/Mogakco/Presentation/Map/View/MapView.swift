@@ -16,10 +16,10 @@ import Then
 final class MapView: BaseView {
     
     lazy var mapView = MKMapView()
-    private lazy var centerMarker = UIImageView()
-    private let genderFilterView = GenderFilterView()
-    private lazy var locationButton = UIButton()
-    private lazy var floatingButton = UIButton()
+    lazy var centerMarker = UIImageView()
+    let genderFilterView = GenderFilterView()
+    lazy var locationButton = UIButton()
+    lazy var floatingButton = UIButton()
     
     override func setHierarchy() {
         addSubviews(
@@ -63,7 +63,6 @@ final class MapView: BaseView {
     
     override func setAttributes() {
         mapView.do {
-            $0.delegate = self
             $0.showsUserLocation = true
             $0.userTrackingMode = .follow
         }
@@ -84,8 +83,4 @@ final class MapView: BaseView {
             $0.layer.cornerRadius = 32
         }
     }
-}
-
-extension MapView: MKMapViewDelegate {
-    
 }
