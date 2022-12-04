@@ -33,6 +33,7 @@
 		BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD23477E291BB48A009BC722 /* UIFont+Extension.swift */; };
 		BD2AF90F293CA1A80029EF62 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF90E293CA1A80029EF62 /* CustomAnnotationView.swift */; };
 		BD2AF912293CA39B0029EF62 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF911293CA39B0029EF62 /* CustomAnnotation.swift */; };
+		BD2AF915293CFED90029EF62 /* QueueState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF914293CFED90029EF62 /* QueueState.swift */; };
 		BD347C44292F61EB009F52BA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C43292F61EB009F52BA /* MapView.swift */; };
 		BD347C46292F61F3009F52BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C45292F61F3009F52BA /* MapViewController.swift */; };
 		BD347C49292F61FF009F52BA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C48292F61FF009F52BA /* MapViewModel.swift */; };
@@ -193,6 +194,7 @@
 		BD23477E291BB48A009BC722 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		BD2AF90E293CA1A80029EF62 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		BD2AF911293CA39B0029EF62 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		BD2AF914293CFED90029EF62 /* QueueState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueState.swift; sourceTree = "<group>"; };
 		BD347C43292F61EB009F52BA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BD347C45292F61F3009F52BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD347C48292F61FF009F52BA /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -428,6 +430,14 @@
 				BD2AF911293CA39B0029EF62 /* CustomAnnotation.swift */,
 			);
 			path = Annotation;
+			sourceTree = "<group>";
+		};
+		BD2AF913293CFECE0029EF62 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				BD2AF914293CFED90029EF62 /* QueueState.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		BD347C41292F61D2009F52BA /* Map */ = {
@@ -789,6 +799,7 @@
 		BD9257FE2919452E008A3158 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BD2AF913293CFECE0029EF62 /* Enum */,
 				BD92580C29194682008A3158 /* Base */,
 				BD38827C29237299000F971D /* Error */,
 				BDC06B14291EA70D000C4A6A /* Foundation+ */,
@@ -1508,6 +1519,7 @@
 				BD4E1CF22933D05600BF40BF /* StudyDodgeAPI.swift in Sources */,
 				BDC20F89293A41A000B9A2E7 /* DomainConvertibleType.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
+				BD2AF915293CFED90029EF62 /* QueueState.swift in Sources */,
 				BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
 				BD23476E291A9B41009BC722 /* MGCButton.swift in Sources */,
