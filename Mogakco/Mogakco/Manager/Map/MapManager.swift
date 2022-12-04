@@ -62,6 +62,9 @@ final class MapManagerImpl: NSObject {
         }
     }
     
+    // MARK: Rx
+    var disposeBag = DisposeBag()
+    
     lazy var centerLocation = BehaviorRelay<CLLocationCoordinate2D>(value: defaultLocation)
     private let defaultLocation = CLLocationCoordinate2D(
         latitude: 37.517819364682694,
@@ -96,14 +99,31 @@ extension MapManagerImpl: MapManager {
     }
     
     func clearPins() {
-        
+        // guard let mapView = mapView else { return }
+        // UIView.animate(withDuration: 0.15) {
+        //     mapView.removeAnnotations(mapView.annotations)
+        // }
+        // mapView.layoutIfNeeded()
     }
     
     func moveUserLocation() {
         mapView?.setUserTrackingMode(.follow, animated: true)
         
         guard let userLocation = mapView?.userLocation.location else { return }
-        mapView?.centerToLocation(userLocation)
+        mapView?.locateOnCenter(userLocation)
+    }
+    
+    func observeUpdatedCenter() -> Observable<CLLocationCoordinate2D> {
+        return PublishRelay<CLLocationCoordinate2D>.create { emitter in
+            self.rx.methodInvoked(#selector(MKMapViewDelegate.mapView(_:regionDidChangeAnimated:)))
+                .compactMap { $0.first as? MKMapView }
+                .subscribe { mapView in
+                    emitter.onNext(mapView.centerCoordinate)
+                }
+                .disposed(by: self.disposeBag)
+            
+            return Disposables.create()
+        }
     }
 }
 
@@ -129,11 +149,19 @@ extension MapManagerImpl: MKMapViewDelegate {
         customAnnotationView.image = annotation.image?.resized(side: 80)
         return customAnnotationView
     }
+    
+    /// Responding to Map Position Changes
+    /// regionDidChangeAnimated true : zoom in/out
+    /// regionDidChangeAnimated false : move only
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {}
 }
 
 extension MKMapView {
     
-    func centerToLocation(
+    /// 단순히 중앙에 맞추고 싶으면
+    /// centerCoordinate 값 변경 후에 setCenter 메서드 호출해도 될 듯
+    /// 지금은 축척가지 고려해야하기 때문에 Region으로 설정
+    func locateOnCenter(
         _ location: CLLocation,
         regionRadius: CLLocationDistance = 700
     ) {

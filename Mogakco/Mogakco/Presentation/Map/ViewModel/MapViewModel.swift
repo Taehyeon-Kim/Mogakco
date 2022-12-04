@@ -19,7 +19,7 @@ final class MapViewModel: ViewModelType {
     
     private let location = PublishRelay<CLLocation>()
     private let authorization = PublishRelay<CLAuthorizationStatus>()
-    private let queueStatue = BehaviorRelay<QueueState>(value: .general)
+    private let queueStatus = BehaviorRelay<QueueState>(value: .general)
     
     init(
         networkProvider: NetworkProvider,
@@ -34,6 +34,7 @@ final class MapViewModel: ViewModelType {
         let locationButtonDidTap: Observable<Void>
         let centerLocation: BehaviorRelay<CLLocationCoordinate2D>
         let floatingButtonDidTap: Observable<Void>
+        let updatedLocation: Observable<CLLocationCoordinate2D>
     }
     
     struct Output {
@@ -41,6 +42,7 @@ final class MapViewModel: ViewModelType {
         let shouldMoveCenter = BehaviorRelay<Bool>(value: true)
         let isfloatingButtonSelected = PublishRelay<CLAuthorizationStatus>()
         let myQueueStatus = BehaviorRelay<QueueState>(value: .general)
+        let pin = BehaviorRelay<[Pin]>(value: [])
     }
     
     func transform(input: Input) -> Output {
@@ -52,6 +54,12 @@ final class MapViewModel: ViewModelType {
                 owner.requestLocation()
                 owner.checkMyQueueState()
             }
+            .disposed(by: disposeBag)
+        
+        input.viewDidAppear
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .flatMap { self.searchQueue(lat: input.centerLocation.value.latitude, long: input.centerLocation.value.longitude) }
+            .subscribe { output.pin.accept($0) }
             .disposed(by: disposeBag)
         
         input.locationButtonDidTap
@@ -72,8 +80,14 @@ final class MapViewModel: ViewModelType {
             }
             .disposed(by: disposeBag)
         
+        input.updatedLocation
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .flatMap { self.searchQueue(lat: $0.latitude, long: $0.longitude) }
+            .subscribe { output.pin.accept($0) }
+            .disposed(by: disposeBag)
+        
         output.myQueueStatus
-            .bind(to: queueStatue)
+            .bind(to: queueStatus)
             .disposed(by: disposeBag)
         
         return output
@@ -96,14 +110,30 @@ extension MapViewModel {
         networkProvider.execute(of: myQueueStateAPI)
             .subscribe(with: self) { owner, queueStateDTO in
                 if queueStateDTO.matched == 0 {
-                    owner.queueStatue.accept(.waiting)
+                    owner.queueStatus.accept(.waiting)
                 } else if queueStateDTO.matched == 1 {
-                    owner.queueStatue.accept(.matched)
+                    owner.queueStatus.accept(.matched)
                 }
     
-            } onFailure: { owner, error in
-                owner.queueStatue.accept(.general)
+            } onFailure: { owner, _ in
+                owner.queueStatus.accept(.general)
             }
             .disposed(by: disposeBag)
+    }
+    
+    func searchQueue(lat: Double, long: Double) -> Observable<[Pin]> {
+        return PublishRelay<[Pin]>.create { emitter in
+            let searchQueueAPI = SearchAPI(lat: lat, long: long)
+            self.networkProvider.execute(of: searchQueueAPI)
+                .subscribe { searchResponseDTO in
+                    print("찾은 Response", searchResponseDTO)
+                    emitter.onNext(searchResponseDTO.fromQueueDB.map { $0.asPin() })
+                } onFailure: { error in
+                    print("에러", error.localizedDescription)
+                }
+                .disposed(by: self.disposeBag)
+            
+            return Disposables.create()
+        }
     }
 }
