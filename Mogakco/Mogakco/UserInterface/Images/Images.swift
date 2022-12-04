@@ -87,4 +87,11 @@ extension UIImage {
     
     // Chat
     static var icnChatSend: UIImage? { return UIImage(named: "icnChatSend") }
+    
+    // SeSAC
+    static var imgSeSACFace1: UIImage? { return UIImage(named: "sesac_face_1") }
+    static var imgSeSACFace2: UIImage? { return UIImage(named: "sesac_face_2") }
+    static var imgSeSACFace3: UIImage? { return UIImage(named: "sesac_face_3") }
+    static var imgSeSACFace4: UIImage? { return UIImage(named: "sesac_face_4") }
+    static var imgSeSACFace5: UIImage? { return UIImage(named: "sesac_face_5") }
 }

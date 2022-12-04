@@ -30,7 +30,8 @@ extension TabBarController {
             
             switch tab {
             case .map:
-                let viewModel = MapViewModel()
+                let locationManager = LocationManagerImpl()
+                let viewModel = MapViewModel(locationManager: locationManager)
                 let rootViewController = MapViewController(viewModel: viewModel)
                 viewController = UINavigationController(rootViewController: rootViewController)
                 
