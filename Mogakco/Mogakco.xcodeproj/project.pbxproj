@@ -34,6 +34,7 @@
 		BD2AF90F293CA1A80029EF62 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF90E293CA1A80029EF62 /* CustomAnnotationView.swift */; };
 		BD2AF912293CA39B0029EF62 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF911293CA39B0029EF62 /* CustomAnnotation.swift */; };
 		BD2AF915293CFED90029EF62 /* QueueState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF914293CFED90029EF62 /* QueueState.swift */; };
+		BD2AF919293D90E00029EF62 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = BD2AF918293D90E00029EF62 /* SocketIO */; };
 		BD347C44292F61EB009F52BA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C43292F61EB009F52BA /* MapView.swift */; };
 		BD347C46292F61F3009F52BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C45292F61F3009F52BA /* MapViewController.swift */; };
 		BD347C49292F61FF009F52BA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C48292F61FF009F52BA /* MapViewModel.swift */; };
@@ -332,6 +333,7 @@
 				BD8E98C12922BD7C00133840 /* FirebaseAuth in Frameworks */,
 				BDC20F7E293A326600B9A2E7 /* Realm in Frameworks */,
 				BD4B5513292A8A0C00ECFD04 /* RxDataSources in Frameworks */,
+				BD2AF919293D90E00029EF62 /* SocketIO in Frameworks */,
 				BD8E98CB2922BE0700133840 /* Toast in Frameworks */,
 				BDE1AC6929320E75009E88AD /* RxCocoa in Frameworks */,
 				BDE1AC7629321EC5009E88AD /* RxGesture in Frameworks */,
@@ -1295,6 +1297,7 @@
 				BDE1AC7529321EC5009E88AD /* RxGesture */,
 				BDC20F7D293A326600B9A2E7 /* Realm */,
 				BDC20F7F293A326600B9A2E7 /* RealmSwift */,
+				BD2AF918293D90E00029EF62 /* SocketIO */,
 			);
 			productName = Mogakco;
 			productReference = BD9257DE291943F8008A3158 /* Mogakco.app */;
@@ -1334,6 +1337,7 @@
 				BDE1AC6E29320ED0009E88AD /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 				BDE1AC7429321EC5009E88AD /* XCRemoteSwiftPackageReference "RxGesture" */,
 				BDC20F7C293A326600B9A2E7 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				BD2AF917293D90E00029EF62 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
 			);
 			productRefGroup = BD9257DF291943F8008A3158 /* Products */;
 			projectDirPath = "";
@@ -1838,6 +1842,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BD2AF917293D90E00029EF62 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 16.0.1;
+			};
+		};
 		BD4B5511292A8A0C00ECFD04 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
@@ -1913,6 +1925,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BD2AF918293D90E00029EF62 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD2AF917293D90E00029EF62 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
 		BD4B5512292A8A0C00ECFD04 /* RxDataSources */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD4B5511292A8A0C00ECFD04 /* XCRemoteSwiftPackageReference "RxDataSources" */;
