@@ -35,6 +35,7 @@
 		BD2AF912293CA39B0029EF62 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF911293CA39B0029EF62 /* CustomAnnotation.swift */; };
 		BD2AF915293CFED90029EF62 /* QueueState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF914293CFED90029EF62 /* QueueState.swift */; };
 		BD2AF919293D90E00029EF62 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = BD2AF918293D90E00029EF62 /* SocketIO */; };
+		BD2AF91C293D913D0029EF62 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AF91B293D913D0029EF62 /* SocketIOManager.swift */; };
 		BD347C44292F61EB009F52BA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C43292F61EB009F52BA /* MapView.swift */; };
 		BD347C46292F61F3009F52BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C45292F61F3009F52BA /* MapViewController.swift */; };
 		BD347C49292F61FF009F52BA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C48292F61FF009F52BA /* MapViewModel.swift */; };
@@ -196,6 +197,7 @@
 		BD2AF90E293CA1A80029EF62 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		BD2AF911293CA39B0029EF62 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		BD2AF914293CFED90029EF62 /* QueueState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueState.swift; sourceTree = "<group>"; };
+		BD2AF91B293D913D0029EF62 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		BD347C43292F61EB009F52BA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BD347C45292F61F3009F52BA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD347C48292F61FF009F52BA /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -440,6 +442,14 @@
 				BD2AF914293CFED90029EF62 /* QueueState.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		BD2AF91A293D91320029EF62 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				BD2AF91B293D913D0029EF62 /* SocketIOManager.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		BD347C41292F61D2009F52BA /* Map */ = {
@@ -1182,6 +1192,7 @@
 		BDEA50F929278D4B00110982 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BD2AF91A293D91320029EF62 /* Chat */,
 				BDC20F652938FF5800B9A2E7 /* User */,
 				BD347C4A292F6D37009F52BA /* Map */,
 				BDEA50FA29278D5400110982 /* Auth */,
@@ -1437,6 +1448,7 @@
 				BD05211B293852E60070AEE7 /* EmailViewModel.swift in Sources */,
 				BDE1AC7329321286009E88AD /* KeywordViewModel.swift in Sources */,
 				BD052113293777C20070AEE7 /* ChatViewModel.swift in Sources */,
+				BD2AF91C293D913D0029EF62 /* SocketIOManager.swift in Sources */,
 				BD2AF912293CA39B0029EF62 /* CustomAnnotation.swift in Sources */,
 				BDE1AC4A2931DE5A009E88AD /* TabBarController.swift in Sources */,
 				BD9257E2291943F8008A3158 /* AppDelegate.swift in Sources */,
