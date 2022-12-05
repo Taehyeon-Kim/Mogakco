@@ -77,6 +77,7 @@ final class MapViewModel: ViewModelType {
             .flatMap { owner, _ in owner.locationManager.observeAuthorization() }
             .subscribe(with: self) { owner, status in
                 owner.authorization.accept(status)
+                output.isfloatingButtonSelected.accept(status)
             }
             .disposed(by: disposeBag)
         

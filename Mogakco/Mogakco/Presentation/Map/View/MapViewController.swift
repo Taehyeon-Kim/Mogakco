@@ -66,5 +66,20 @@ extension MapViewController: Bindable {
                 owner.mapManager.createPins(pins)
             }
             .disposed(by: disposeBag)
+        
+        output.isfloatingButtonSelected
+            .asDriver(onErrorJustReturn: .notDetermined)
+            .drive { status in
+                switch status {
+                case .notDetermined:
+                    print("권한 없음")
+                default:
+                    print("화면 전환")
+                    
+                    let viewController = KeywordViewController()
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }
