@@ -13,15 +13,20 @@ final class KeywordViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
     
+    var isSucceed = PublishRelay<Bool>()
+    var isErrorOccured = PublishRelay<String>()
+    
     struct Input {
         let searchText: ControlProperty<String?>
         let editingDidEndOnExit: Observable<Void>
+        let searchButtonDidTap: Observable<Void>
     }
     
     struct Output {
         let wantedList = BehaviorRelay<[String]>(value: [])
         let resultList = BehaviorRelay<[String]>(value: [])
         let ocurredError = PublishRelay<String>()
+        let isSucceed = PublishRelay<Bool>()
     }
     
     func transform(input: Input) -> Output {
@@ -50,6 +55,16 @@ final class KeywordViewModel: ViewModelType {
                     print(error.localizedDescription)
                 }
             })
+            .disposed(by: disposeBag)
+        
+        input.searchButtonDidTap
+            .asDriver(onErrorJustReturn: ())
+            .map { self.findQueue() }
+            .drive()
+            .disposed(by: disposeBag)
+        
+        isSucceed
+            .bind(to: output.isSucceed)
             .disposed(by: disposeBag)
 
         return output
@@ -82,5 +97,23 @@ extension KeywordViewModel {
         }
         
         return .success(keywords)
+    }
+    
+    private func findQueue() {
+        let findQueueAPI = FindQueueAPI(
+            long: 126.92983890550006,
+            lat: 37.482733667903865,
+            studylist: ["anything"]
+        )
+        
+        NetworkProviderImpl().execute(of: findQueueAPI)
+            .subscribe { _ in
+                print("성공")
+                self.isSucceed.accept(true)
+            } onFailure: { error in
+                print("실패")
+                self.isErrorOccured.accept(error.localizedDescription)
+            }
+            .disposed(by: disposeBag)
     }
 }

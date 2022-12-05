@@ -77,7 +77,7 @@ final class KeywordView: BaseView {
     override func setAttributes() {
         // 디버깅 영역에서 제약조건 깨지는 이슈 발생
         /// https://stackoverflow.com/questions/30969353/what-is-uitemporarylayoutwidth-and-why-does-it-break-my-constraints
-        translatesAutoresizingMaskIntoConstraints = false
+        // translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .MGC.white
         
         backButton.do {

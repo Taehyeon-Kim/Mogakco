@@ -24,6 +24,11 @@ final class KeywordViewController: BaseViewController {
         super.viewDidLoad()
         bind()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
 }
 
 extension KeywordViewController: Bindable {
@@ -31,7 +36,8 @@ extension KeywordViewController: Bindable {
     func bind() {
         let input = KeywordViewModel.Input(
             searchText: rootView.searchBar.rx.text,
-            editingDidEndOnExit: rootView.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit).asObservable()
+            editingDidEndOnExit: rootView.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit).asObservable(),
+            searchButtonDidTap: rootView.findButton.button.rx.tap.asObservable()
         )
         let output = viewModel.transform(input: input)
 
@@ -43,7 +49,7 @@ extension KeywordViewController: Bindable {
         
         output.resultList
             .bind { results in
-                print("내가 하고 싶은", results)
+                // print("내가 하고 싶은", results)
             }
             .disposed(by: disposeBag)
         
@@ -51,6 +57,17 @@ extension KeywordViewController: Bindable {
             .when(.recognized)
             .subscribe { [weak self] _ in
                 self?.view.endEditing(true)
+            }
+            .disposed(by: disposeBag)
+        
+        output.isSucceed
+            .asDriver(onErrorJustReturn: false)
+            .drive { isSucceed in
+                print(isSucceed)
+                if isSucceed {
+                    let viewController = MatchViewController()
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
             }
             .disposed(by: disposeBag)
     }
