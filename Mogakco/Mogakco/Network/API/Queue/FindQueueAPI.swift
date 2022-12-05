@@ -16,7 +16,7 @@ struct FindQueueAPI: Encodable {
 }
 
 extension FindQueueAPI: URLRequestable {
-    typealias Response = String
+    typealias Response = Data
     
     var url: String { baseURL + "/queue" }
     var method: HTTPMethod { .post }

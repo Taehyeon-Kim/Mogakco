@@ -38,11 +38,15 @@ final class NetworkProviderImpl: NetworkProvider {
             self.loadData(of: endpoint) { result in
                 switch result {
                 case let .success(data):
-                    do {
-                        let decoded = try endpoint.decode(data)
-                        observer(.success(decoded))
-                    } catch {
-                        _ = String(data: data, encoding: .utf8)
+                    if let data = data as? Endpoint.Response {
+                        observer(.success(data))
+                    } else {
+                        do {
+                            let decoded = try endpoint.decode(data)
+                            observer(.success(decoded))
+                        } catch {
+                            _ = String(data: data, encoding: .utf8)
+                        }
                     }
 
                 case let .failure(error):
@@ -110,4 +114,8 @@ final class NetworkProviderImpl: NetworkProvider {
             return completion(.failure(.requestFail))
         }
     }
+}
+
+struct DecodedString: Decodable {
+    let decodedString: String
 }
