@@ -84,15 +84,3 @@ final class ChatViewSectionHeaderView: UICollectionReusableView {
         }
     }
 }
-
-// MARK: - Preview
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-struct ChatViewSectionHeaderViewPreview: PreviewProvider {
-    static var previews: some View {
-        ChatViewSectionHeaderView().showPreview(.iPhone13Mini)
-    }
-}
-#endif

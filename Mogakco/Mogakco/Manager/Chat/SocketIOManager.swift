@@ -34,7 +34,7 @@ final class SocketIOManager {
 
         // 소켓 연결 메서드
         socket.on(clientEvent: .connect) { [weak self] data, ack in
-            print("Socket is connected", data, ack)
+            print("SOCKET IS CONNECTED", data, ack)
             
             // emit된 이후부터 "chat"을 통해 소켓을 들을 수 있음
             self?.socket.emit("changesocketid", "27MExocZoaX2BwYAPOMNZJp1mjY2")

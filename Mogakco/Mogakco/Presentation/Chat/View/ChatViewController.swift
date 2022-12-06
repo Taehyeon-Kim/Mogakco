@@ -27,6 +27,10 @@ final class ChatViewController: BaseViewController {
         super.viewDidLoad()
         bind()
     }
+    
+    deinit {
+        SocketIOManager.shared.closeConnection()
+    }
 }
 
 extension ChatViewController: Bindable {
@@ -42,9 +46,8 @@ extension ChatViewController: Bindable {
         output.chats
             .bind(to: rootView.collectionView.rx.items) { collectionView, row, elem in
                 let indexPath = IndexPath(row: row, section: 0)
-                let myuid = "27MExocZoaX2BwYAPOMNZJp1mjY2"
-                
-                if myuid == elem.uid {
+
+                if UserDefaultsManager.uid == elem.uid {
                     let cell = collectionView.dequeueReusableCell(cellType: MyChatCell.self, for: indexPath)
                     cell.configure(with: elem.chat)
                     return cell
