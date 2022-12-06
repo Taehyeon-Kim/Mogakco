@@ -14,7 +14,11 @@ import RxSwift
 final class KeywordViewController: BaseViewController {
     
     private let rootView = KeywordView()
-    private let viewModel = KeywordViewModel()
+    private let viewModel: KeywordViewModel
+    
+    init(viewModel: KeywordViewModel) {
+        self.viewModel = viewModel
+    }
     
     override func loadView() {
         self.view = rootView
@@ -35,6 +39,7 @@ extension KeywordViewController: Bindable {
     
     func bind() {
         let input = KeywordViewModel.Input(
+            viewDidLoad: self.rx.methodInvoked(#selector(viewDidLoad)).mapToVoid().asObservable(),
             searchText: rootView.searchBar.rx.text,
             editingDidEndOnExit: rootView.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit).asObservable(),
             searchButtonDidTap: rootView.findButton.button.rx.tap.asObservable()

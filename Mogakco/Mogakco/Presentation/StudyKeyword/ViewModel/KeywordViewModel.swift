@@ -12,11 +12,67 @@ import RxSwift
 final class KeywordViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
-    
+
     var isSucceed = PublishRelay<Bool>()
     var isErrorOccured = PublishRelay<String>()
+
+    private let searchStudyUseCase: SearchStudyUseCase    
+    var searchParameter: SearchAPI
     
+    init(
+        searchParameter: SearchAPI,
+        searchStudyUseCase: SearchStudyUseCase
+    ) {
+        self.searchParameter = searchParameter
+        self.searchStudyUseCase = searchStudyUseCase
+    }
+    
+    func transform(input: Input) -> Output {
+        // input.searchText.orEmpty
+        //     .map { self.makeKeywordLists(with: $0) }
+        //     .subscribe { list in
+        //         output.wantedList.accept(list)
+        //     }
+        //     .disposed(by: disposeBag)
+        //
+        // input.editingDidEndOnExit
+        //     .map {
+        //         self.handle(
+        //             target: output.wantedList.value,
+        //             comparedWith: output.resultList.value
+        //         )
+        //     }
+        //     .subscribe(onNext: { result in
+        //         switch result {
+        //         case .success(let data):
+        //             let prev = output.resultList.value
+        //             output.resultList.accept(data + prev)
+        //         case .failure(let error):
+        //             print(error.localizedDescription)
+        //         }
+        //     })
+        //     .disposed(by: disposeBag)
+        
+        let searchResponseDTO = input.viewDidLoad
+            .withUnretained(self)
+            .flatMapLatest { owner, _ in
+                let requestValue = SearchStudyUseCaseRequestValue(
+                    lat: owner.searchParameter.lat,
+                    long: owner.searchParameter.long)
+                return owner.searchStudyUseCase.execute(requestValue: requestValue)
+                    .map { owner.makeAroundedKeywords(with: $0) }
+            }
+            .asDriverOnErrorJustComplete()
+
+        return Output(
+            aroundedKeywords: searchResponseDTO
+        )
+    }
+}
+
+extension KeywordViewModel {
     struct Input {
+        let viewDidLoad: Observable<Void>
         let searchText: ControlProperty<String?>
         let editingDidEndOnExit: Observable<Void>
         let searchButtonDidTap: Observable<Void>
@@ -27,47 +83,7 @@ final class KeywordViewModel: ViewModelType {
         let resultList = BehaviorRelay<[String]>(value: [])
         let ocurredError = PublishRelay<String>()
         let isSucceed = PublishRelay<Bool>()
-    }
-    
-    func transform(input: Input) -> Output {
-        let output = Output()
-        
-        input.searchText.orEmpty
-            .map { self.makeKeywordLists(with: $0) }
-            .subscribe { list in
-                output.wantedList.accept(list)
-            }
-            .disposed(by: disposeBag)
-        
-        input.editingDidEndOnExit
-            .map {
-                self.handle(
-                    target: output.wantedList.value,
-                    comparedWith: output.resultList.value
-                )
-            }
-            .subscribe(onNext: { result in
-                switch result {
-                case .success(let data):
-                    let prev = output.resultList.value
-                    output.resultList.accept(data + prev)
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            })
-            .disposed(by: disposeBag)
-        
-        input.searchButtonDidTap
-            .asDriver(onErrorJustReturn: ())
-            .map { self.findQueue() }
-            .drive()
-            .disposed(by: disposeBag)
-        
-        isSucceed
-            .bind(to: output.isSucceed)
-            .disposed(by: disposeBag)
-
-        return output
+        let aroundedKeywords: Driver<[KeywordItemViewModel]>
     }
 }
 
@@ -98,22 +114,43 @@ extension KeywordViewModel {
         
         return .success(keywords)
     }
-    
-    private func findQueue() {
-        let findQueueAPI = FindQueueAPI(
-            long: 126.92983890550006,
-            lat: 37.482733667903865,
-            studylist: ["anything"]
-        )
+
+    private func makeAroundedKeywords(with dto: SearchResponseDTO) -> [KeywordItemViewModel] {
+        let fromRecommend = dto.fromRecommend.map { KeywordItemViewModel(contents: $0, keywordType: .recommended) }
+        let fromQueueDB = dto.fromQueueDB.flatMap { $0.studylist.map { KeywordItemViewModel(contents: $0, keywordType: .arounded) } }
+        let fromQueueDBRequested = dto.fromQueueDBRequested.flatMap { $0.studylist.map { KeywordItemViewModel(contents: $0, keywordType: .arounded) } }
         
-        NetworkProviderImpl().execute(of: findQueueAPI)
-            .subscribe { _ in
-                print("성공")
-                self.isSucceed.accept(true)
-            } onFailure: { error in
-                print("실패")
-                self.isErrorOccured.accept(error.localizedDescription)
-            }
-            .disposed(by: disposeBag)
+        return fromRecommend + fromQueueDB + fromQueueDBRequested
+    }
+}
+
+struct KeywordItemViewModel: Equatable {
+    
+    enum KeywordType {
+        case recommended
+        case arounded
+        case wanted
+    }
+    
+    let contents: String
+    let keywordType: KeywordType
+}
+
+extension ObservableType {
+    
+    func catchErrorJustComplete() -> Observable<Element> {
+        return `catch` { _ in
+            return Observable.empty()
+        }
+    }
+    
+    func asDriverOnErrorJustComplete() -> Driver<Element> {
+        return asDriver { error in
+            return Driver.empty()
+        }
+    }
+    
+    func mapToVoid() -> Observable<Void> {
+        return map { _ in }
     }
 }
