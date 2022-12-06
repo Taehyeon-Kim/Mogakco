@@ -60,3 +60,10 @@ final class MyChatCell: BaseCollectionViewCell {
         }
     }
 }
+
+extension MyChatCell {
+    
+    func configure(with chat: String) {
+        chatLabel.text = chat
+    }
+}
