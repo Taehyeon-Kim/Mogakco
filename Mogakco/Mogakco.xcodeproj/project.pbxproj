@@ -77,6 +77,7 @@
 		BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD523789291E5C97004EE2B6 /* EmptyResponse.swift */; };
 		BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */; };
 		BD52A91A293F138D00C443C3 /* SendChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52A919293F138D00C443C3 /* SendChatAPI.swift */; };
+		BD6AD63C293F94970053E51A /* SearchStudyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */; };
 		BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA372934BF7800A8FB1C /* Pager.swift */; };
 		BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */; };
 		BD82EA3E2934C6B800A8FB1C /* StudyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */; };
@@ -240,6 +241,7 @@
 		BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mogakco.entitlements; sourceTree = "<group>"; };
 		BD52A919293F138D00C443C3 /* SendChatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendChatAPI.swift; sourceTree = "<group>"; };
+		BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyUseCase.swift; sourceTree = "<group>"; };
 		BD82EA372934BF7800A8FB1C /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestViewController.swift; sourceTree = "<group>"; };
@@ -619,6 +621,14 @@
 			path = NetworkModel;
 			sourceTree = "<group>";
 		};
+		BD6AD63A293F94800053E51A /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
 		BD82EA362934BF5900A8FB1C /* Pager */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,6 +973,7 @@
 		BDC20F552938F1E000B9A2E7 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				BD6AD63A293F94800053E51A /* Study */,
 				BDC20F562938F20C00B9A2E7 /* SignUp */,
 			);
 			path = UseCases;
@@ -1513,6 +1524,7 @@
 				BD05210D29376AF10070AEE7 /* MyChatCell.swift in Sources */,
 				BD8737DF2935117E00F51CD9 /* ExpandableCardViewItemCell.swift in Sources */,
 				BD4B5517292A8A6D00ECFD04 /* MyProfileViewController.swift in Sources */,
+				BD6AD63C293F94970053E51A /* SearchStudyUseCase.swift in Sources */,
 				BD234778291AA418009BC722 /* Reusable.swift in Sources */,
 				BDC20F82293A3E1400B9A2E7 /* RealmChat.swift in Sources */,
 				BDE1AC552931E4BE009E88AD /* BaseTabBarController.swift in Sources */,
