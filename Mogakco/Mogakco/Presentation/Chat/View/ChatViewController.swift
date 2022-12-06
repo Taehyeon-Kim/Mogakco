@@ -33,7 +33,9 @@ extension ChatViewController: Bindable {
     func bind() {
         let input = ChatViewModel.Input(
             viewWillAppear: self.rx.methodInvoked(#selector(viewWillAppear)).map { _ in }.asObservable(),
-            sendButtonDidTap: rootView.chatInputView.sendButton.rx.tap.asObservable()
+            sendButtonDidTap: rootView.chatInputView.sendButton.rx.tap.asObservable(),
+            chatText: rootView.chatInputView.chatTextView.rx.text.orEmpty.asObservable(),
+            textViewBeginEditing: rootView.chatInputView.chatTextView.rx.didBeginEditing.asObservable()
         )
         let output = viewModel.transform(input: input)
         
@@ -52,6 +54,19 @@ extension ChatViewController: Bindable {
                     return cell
                 }
             }
+            .disposed(by: disposeBag)
+        
+        output.chats
+            .bind { chats in
+                self.rootView.collectionView.scrollToItem(at: IndexPath(row: chats.count - 1, section: 0), at: .bottom, animated: false)
+            }
+            .disposed(by: disposeBag)
+        
+        output.textViewContents
+            .asDriver(onErrorJustReturn: "")
+            .drive(onNext: { text in
+                self.rootView.chatInputView.chatTextView.text = text
+            })
             .disposed(by: disposeBag)
     }
 }
