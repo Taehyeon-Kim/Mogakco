@@ -90,25 +90,3 @@ extension ChatView {
         return UICollectionViewCompositionalLayout(section: section)
     }
 }
-
-// extension ChatView: UICollectionViewDataSource {
-//
-//     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//         10
-//     }
-//
-//     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//         if indexPath.row.isMultiple(of: 2) {
-//             let cell = collectionView.dequeueReusableCell(cellType: MyChatCell.self, for: indexPath)
-//             return cell
-//         } else {
-//             let cell = collectionView.dequeueReusableCell(cellType: OpponentChatCell.self, for: indexPath)
-//             return cell
-//         }
-//     }
-//
-//     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//         let view = collectionView.dequeueReusableSupplementaryView(ChatViewSectionHeaderView.self, ofKind: kind, for: indexPath)
-//         return view
-//     }
-// }

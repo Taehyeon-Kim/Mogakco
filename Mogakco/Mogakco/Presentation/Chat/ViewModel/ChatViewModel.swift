@@ -18,7 +18,7 @@ struct ChatViewModel: ViewModelType {
     private let socketManager = SocketIOManager.shared
     
     private let myuid = "27MExocZoaX2BwYAPOMNZJp1mjY2"
-    private let uid = "I8926rjKaTTzkqCE8PSXZ34YKjP2"
+    private let uid = "DPnJdNThv4Qi5OD5ymvVDgi3gkZ2"
     private let chats = BehaviorRelay<[Chat]>(value: [])
     private let lastDate = PublishRelay<String>()
     
@@ -42,11 +42,29 @@ struct ChatViewModel: ViewModelType {
             .drive()
             .disposed(by: disposeBag)
         
+        // didTap이랑 textField Chat이랑 combineLatest, withLatestFrom
         input.sendButtonDidTap
-            .subscribe { _ in
-                print("did Tap")
+            .withLatestFrom(input.chatText)
+            .map { self.sendChat($0, to: self.uid) }
+            .subscribe({ chatText in
+                print("♻️ 전송버튼누르면 들어가는 값: ", chatText)
+                output.textViewContents.accept("")
+            })
+            .disposed(by: disposeBag)
+        
+        input.textViewBeginEditing
+            .asDriver(onErrorJustReturn: ())
+            .drive { _ in
+                output.textViewContents.accept("")
             }
             .disposed(by: disposeBag)
+        
+        socketManager.listener = { data in
+            print("4️⃣ 소켓 listen 시작", data)
+            var newChat = self.chats.value
+            newChat.append(data)
+            self.chats.accept(newChat)
+        }
         
         return output
     }
@@ -56,10 +74,13 @@ extension ChatViewModel {
     struct Input {
         let viewWillAppear: Observable<Void>
         let sendButtonDidTap: Observable<Void>
+        let chatText: Observable<String>
+        let textViewBeginEditing: Observable<Void>
     }
     
     struct Output {
         let chats = BehaviorRelay<[Chat]>(value: [])
+        let textViewContents = PublishRelay<String>()
     }
 }
 
@@ -104,8 +125,22 @@ extension ChatViewModel {
                     dto.asDomain()
                 })
                 print("2️⃣ 네트워크 마지막 날짜 기준 조회", chats)
-                self.chats.accept(chats)
+                self.chats.accept(self.chats.value + chats)
                 
+            } onFailure: { error in
+                print(error.localizedDescription, "🔥")
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    func sendChat(_ chat: String, to uid: String) {
+        let sendAPI = SendChatAPI(to: uid, chat: chat)
+        networkProvider.execute(of: sendAPI)
+            .subscribe { chat in
+                print("3️⃣ 전송 CHAT", chat)
+                var newChat = self.chats.value
+                newChat.append(chat.asDomain())
+                self.chats.accept(newChat)
             } onFailure: { error in
                 print(error.localizedDescription, "🔥")
             }
