@@ -13,14 +13,25 @@ import RxSwift
 struct ChatViewModel: ViewModelType {
     
     private let disposeBag = DisposeBag()
-    private let networkProvider = NetworkProviderImpl()
-    private let chatRepository = ChatRepositoryImpl<Chat>()
+    private let networkProvider: NetworkProvider
+    private let chatRepository: ChatRepositoryImpl<Chat>
     private let socketManager = SocketIOManager.shared
-    
-    private let myuid = "27MExocZoaX2BwYAPOMNZJp1mjY2"
-    private let uid = "DPnJdNThv4Qi5OD5ymvVDgi3gkZ2"
+
+    private let uid: String
     private let chats = BehaviorRelay<[Chat]>(value: [])
     private let lastDate = PublishRelay<String>()
+    
+    init(
+        uid: String,
+        networkProvider: NetworkProvider = NetworkProviderImpl(),
+        chatRepository: ChatRepositoryImpl<Chat> = ChatRepositoryImpl<Chat>()
+    ) {
+        self.uid = uid
+        self.networkProvider = networkProvider
+        self.chatRepository = chatRepository
+        
+        listenSocket()
+    }
     
     func transform(input: Input) -> Output {
         let output = Output()
@@ -29,6 +40,21 @@ struct ChatViewModel: ViewModelType {
             .asDriver(onErrorJustReturn: ())
             .map { self.fetchLocalDBChat() }
             .drive()
+            .disposed(by: disposeBag)
+        
+        input.sendButtonDidTap
+            .withLatestFrom(input.chatText)
+            .map { self.sendChat($0, to: self.uid) }
+            .subscribe({ chatText in
+                output.textViewContents.accept("")
+            })
+            .disposed(by: disposeBag)
+        
+        input.textViewBeginEditing
+            .asDriver(onErrorJustReturn: ())
+            .drive { _ in
+                output.textViewContents.accept("")
+            }
             .disposed(by: disposeBag)
         
         chats.asDriver()
@@ -41,30 +67,6 @@ struct ChatViewModel: ViewModelType {
             .asDriver(onErrorJustReturn: ())
             .drive()
             .disposed(by: disposeBag)
-        
-        // didTap이랑 textField Chat이랑 combineLatest, withLatestFrom
-        input.sendButtonDidTap
-            .withLatestFrom(input.chatText)
-            .map { self.sendChat($0, to: self.uid) }
-            .subscribe({ chatText in
-                print("♻️ 전송버튼누르면 들어가는 값: ", chatText)
-                output.textViewContents.accept("")
-            })
-            .disposed(by: disposeBag)
-        
-        input.textViewBeginEditing
-            .asDriver(onErrorJustReturn: ())
-            .drive { _ in
-                output.textViewContents.accept("")
-            }
-            .disposed(by: disposeBag)
-        
-        socketManager.listener = { data in
-            print("4️⃣ 소켓 listen 시작", data)
-            var newChat = self.chats.value
-            newChat.append(data)
-            self.chats.accept(newChat)
-        }
         
         return output
     }
@@ -120,11 +122,9 @@ extension ChatViewModel {
         let chatAPI = FetchChatAPI(from: uid, lastchatDate: date)
         networkProvider.execute(of: chatAPI)
             .subscribe { chatResponseDTO in
-                print(chatResponseDTO)
                 let chats = chatResponseDTO.payload.map({ dto in
                     dto.asDomain()
                 })
-                print("2️⃣ 네트워크 마지막 날짜 기준 조회", chats)
                 self.chats.accept(self.chats.value + chats)
                 
             } onFailure: { error in
@@ -145,5 +145,14 @@ extension ChatViewModel {
                 print(error.localizedDescription, "🔥")
             }
             .disposed(by: disposeBag)
+    }
+    
+    func listenSocket() {
+        socketManager.listener = { [self] data in
+            print("4️⃣ 소켓 listen 시작", data)
+            var newChat = chats.value
+            newChat.append(data)
+            self.chats.accept(newChat)
+        }
     }
 }
