@@ -78,6 +78,7 @@
 		BD52378C291E5E66004EE2B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD52378B291E5E66004EE2B6 /* GoogleService-Info.plist */; };
 		BD52A91A293F138D00C443C3 /* SendChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52A919293F138D00C443C3 /* SendChatAPI.swift */; };
 		BD6AD63C293F94970053E51A /* SearchStudyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */; };
+		BD6AD63E293F95DC0053E51A /* QueueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63D293F95DC0053E51A /* QueueRepository.swift */; };
 		BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA372934BF7800A8FB1C /* Pager.swift */; };
 		BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */; };
 		BD82EA3E2934C6B800A8FB1C /* StudyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */; };
@@ -242,6 +243,7 @@
 		BD52378D291E5F42004EE2B6 /* Mogakco.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mogakco.entitlements; sourceTree = "<group>"; };
 		BD52A919293F138D00C443C3 /* SendChatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendChatAPI.swift; sourceTree = "<group>"; };
 		BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyUseCase.swift; sourceTree = "<group>"; };
+		BD6AD63D293F95DC0053E51A /* QueueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRepository.swift; sourceTree = "<group>"; };
 		BD82EA372934BF7800A8FB1C /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestViewController.swift; sourceTree = "<group>"; };
@@ -1287,6 +1289,7 @@
 			children = (
 				BDC06B19291EC66E000C4A6A /* FirebaseAuthRepository.swift */,
 				BDC20F612938F44A00B9A2E7 /* SignUpRepository.swift */,
+				BD6AD63D293F95DC0053E51A /* QueueRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1444,6 +1447,7 @@
 				BD82EA432934CE3600A8FB1C /* MGCPopUp.swift in Sources */,
 				BD4E1CF42933D0A100BF40BF /* ReviewAPI.swift in Sources */,
 				BDE095C7291C1911009CB1C0 /* OnboardingView.swift in Sources */,
+				BD6AD63E293F95DC0053E51A /* QueueRepository.swift in Sources */,
 				BDE1AC5B2931E98B009E88AD /* KeywordViewController.swift in Sources */,
 				BDC20F86293A40E600B9A2E7 /* Chat.swift in Sources */,
 				BDE095CE291C1E79009CB1C0 /* PhoneEntryViewController.swift in Sources */,
