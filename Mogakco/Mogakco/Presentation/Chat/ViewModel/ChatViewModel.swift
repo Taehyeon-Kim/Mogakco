@@ -45,9 +45,8 @@ struct ChatViewModel: ViewModelType {
         input.sendButtonDidTap
             .withLatestFrom(input.chatText)
             .map { self.sendChat($0, to: self.uid) }
-            .subscribe({ chatText in
-                output.textViewContents.accept("")
-            })
+            .asDriver(onErrorJustReturn: ())
+            .drive { _ in output.textViewContents.accept("") }
             .disposed(by: disposeBag)
         
         input.textViewBeginEditing
