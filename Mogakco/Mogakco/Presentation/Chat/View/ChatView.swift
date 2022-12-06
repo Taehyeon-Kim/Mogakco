@@ -29,7 +29,7 @@ final class ChatView: BaseView {
         }
         
         collectionView.do {
-            $0.dataSource = self
+            // $0.dataSource = self
             $0.register(MyChatCell.self)
             $0.register(OpponentChatCell.self)
             $0.register(ChatViewSectionHeaderView.self, ofKind: UICollectionView.elementKindSectionHeader)
@@ -66,7 +66,8 @@ final class ChatView: BaseView {
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
-            $0.directionalHorizontalEdges.bottom.equalTo(safeAreaLayoutGuide)
+            $0.directionalHorizontalEdges.equalTo(safeAreaLayoutGuide)
+            $0.bottom.equalTo(chatInputContainerView.snp.top)
         }
     }
 }
@@ -90,24 +91,24 @@ extension ChatView {
     }
 }
 
-extension ChatView: UICollectionViewDataSource {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row.isMultiple(of: 2) {
-            let cell = collectionView.dequeueReusableCell(cellType: MyChatCell.self, for: indexPath)
-            return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(cellType: OpponentChatCell.self, for: indexPath)
-            return cell
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let view = collectionView.dequeueReusableSupplementaryView(ChatViewSectionHeaderView.self, ofKind: kind, for: indexPath)
-        return view
-    }
-}
+// extension ChatView: UICollectionViewDataSource {
+//
+//     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//         10
+//     }
+//
+//     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//         if indexPath.row.isMultiple(of: 2) {
+//             let cell = collectionView.dequeueReusableCell(cellType: MyChatCell.self, for: indexPath)
+//             return cell
+//         } else {
+//             let cell = collectionView.dequeueReusableCell(cellType: OpponentChatCell.self, for: indexPath)
+//             return cell
+//         }
+//     }
+//
+//     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//         let view = collectionView.dequeueReusableSupplementaryView(ChatViewSectionHeaderView.self, ofKind: kind, for: indexPath)
+//         return view
+//     }
+// }

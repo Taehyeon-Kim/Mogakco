@@ -24,6 +24,8 @@ final class SocketIOManager {
             ])
         }
         
+        socket = manager.defaultSocket
+        
         // 소켓 연결 메서드
         socket.on(clientEvent: .connect) { [weak self] data, ack in
             print("Socket is connected", data, ack)

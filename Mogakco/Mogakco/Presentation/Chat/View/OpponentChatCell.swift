@@ -59,3 +59,10 @@ final class OpponentChatCell: BaseCollectionViewCell {
         }
     }
 }
+
+extension OpponentChatCell {
+    
+    func configure(with chat: String) {
+        chatLabel.text = chat
+    }
+}
