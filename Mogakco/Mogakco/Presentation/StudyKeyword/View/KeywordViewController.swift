@@ -39,25 +39,13 @@ extension KeywordViewController: Bindable {
     
     func bind() {
         let input = KeywordViewModel.Input(
-            viewDidLoad: self.rx.methodInvoked(#selector(viewDidLoad)).mapToVoid().asObservable(),
+            viewDidLoad: self.rx.methodInvoked(#selector(viewDidAppear)).map { _ in }.asObservable(),
             searchText: rootView.searchBar.rx.text,
             editingDidEndOnExit: rootView.searchBar.searchTextField.rx.controlEvent(.editingDidEndOnExit).asObservable(),
             searchButtonDidTap: rootView.findButton.button.rx.tap.asObservable()
         )
         let output = viewModel.transform(input: input)
 
-        output.wantedList
-            .bind { keywords in
-                print(keywords)
-            }
-            .disposed(by: disposeBag)
-        
-        output.resultList
-            .bind { results in
-                // print("내가 하고 싶은", results)
-            }
-            .disposed(by: disposeBag)
-        
         view.rx.tapGesture()
             .when(.recognized)
             .subscribe { [weak self] _ in
@@ -73,6 +61,12 @@ extension KeywordViewController: Bindable {
                     let viewController = MatchViewController()
                     self.navigationController?.pushViewController(viewController, animated: true)
                 }
+            }
+            .disposed(by: disposeBag)
+        
+        output.aroundedKeywords
+            .drive(with: self) { owner, keywordViewModel in
+                print("keyword", keywordViewModel)
             }
             .disposed(by: disposeBag)
     }

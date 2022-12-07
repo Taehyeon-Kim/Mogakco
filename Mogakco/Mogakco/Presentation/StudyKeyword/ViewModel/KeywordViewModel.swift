@@ -28,30 +28,6 @@ final class KeywordViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        // input.searchText.orEmpty
-        //     .map { self.makeKeywordLists(with: $0) }
-        //     .subscribe { list in
-        //         output.wantedList.accept(list)
-        //     }
-        //     .disposed(by: disposeBag)
-        //
-        // input.editingDidEndOnExit
-        //     .map {
-        //         self.handle(
-        //             target: output.wantedList.value,
-        //             comparedWith: output.resultList.value
-        //         )
-        //     }
-        //     .subscribe(onNext: { result in
-        //         switch result {
-        //         case .success(let data):
-        //             let prev = output.resultList.value
-        //             output.resultList.accept(data + prev)
-        //         case .failure(let error):
-        //             print(error.localizedDescription)
-        //         }
-        //     })
-        //     .disposed(by: disposeBag)
         
         let searchResponseDTO = input.viewDidLoad
             .withUnretained(self)
