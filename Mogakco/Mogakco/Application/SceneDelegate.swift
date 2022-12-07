@@ -17,9 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let uid = ""
-        let viewModel = ChatViewModel(uid: uid)
-        let viewController = ChatViewController(viewModel: viewModel)
+        let repository = QueueRepositoryImpl()
+        let useCase = SearchStudyUseCaseImpl(queueRepository: repository)
+        let parameter = SearchAPI(lat: 37.517819364682694, long: 126.88647317074734)
+        let viewModel = KeywordViewModel(searchParameter: parameter, searchStudyUseCase: useCase)
+        let viewController = KeywordViewController(viewModel: viewModel)
+        
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }

@@ -76,7 +76,11 @@ extension MapViewController: Bindable {
                 default:
                     print("화면 전환")
                     
-                    let viewController = KeywordViewController()
+                    let repository = QueueRepositoryImpl()
+                    let useCase = SearchStudyUseCaseImpl(queueRepository: repository)
+                    let parameter = SearchAPI(lat: 37.517819364682694, long: 126.88647317074734)
+                    let viewModel = KeywordViewModel(searchParameter: parameter, searchStudyUseCase: useCase)
+                    let viewController = KeywordViewController(viewModel: viewModel)
                     self.navigationController?.pushViewController(viewController, animated: true)
                 }
             }

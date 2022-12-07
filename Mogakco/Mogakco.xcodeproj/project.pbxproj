@@ -79,6 +79,7 @@
 		BD52A91A293F138D00C443C3 /* SendChatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52A919293F138D00C443C3 /* SendChatAPI.swift */; };
 		BD6AD63C293F94970053E51A /* SearchStudyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */; };
 		BD6AD63E293F95DC0053E51A /* QueueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63D293F95DC0053E51A /* QueueRepository.swift */; };
+		BD6AD640294086260053E51A /* QueueRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63F294086260053E51A /* QueueRepositoryImpl.swift */; };
 		BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA372934BF7800A8FB1C /* Pager.swift */; };
 		BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */; };
 		BD82EA3E2934C6B800A8FB1C /* StudyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */; };
@@ -244,6 +245,7 @@
 		BD52A919293F138D00C443C3 /* SendChatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendChatAPI.swift; sourceTree = "<group>"; };
 		BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyUseCase.swift; sourceTree = "<group>"; };
 		BD6AD63D293F95DC0053E51A /* QueueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRepository.swift; sourceTree = "<group>"; };
+		BD6AD63F294086260053E51A /* QueueRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRepositoryImpl.swift; sourceTree = "<group>"; };
 		BD82EA372934BF7800A8FB1C /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestViewController.swift; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 			children = (
 				BDC06B1B291EC750000C4A6A /* FirebaseAuthRepositoryImpl.swift */,
 				BDC20F632938F72800B9A2E7 /* SignUpRepositoryImpl.swift */,
+				BD6AD63F294086260053E51A /* QueueRepositoryImpl.swift */,
 			);
 			path = "Repositories+Impl";
 			sourceTree = "<group>";
@@ -1555,6 +1558,7 @@
 				BD4E1CF22933D05600BF40BF /* StudyDodgeAPI.swift in Sources */,
 				BDC20F89293A41A000B9A2E7 /* DomainConvertibleType.swift in Sources */,
 				BD23477F291BB48A009BC722 /* UIFont+Extension.swift in Sources */,
+				BD6AD640294086260053E51A /* QueueRepositoryImpl.swift in Sources */,
 				BD2AF915293CFED90029EF62 /* QueueState.swift in Sources */,
 				BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */,
 				BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */,
