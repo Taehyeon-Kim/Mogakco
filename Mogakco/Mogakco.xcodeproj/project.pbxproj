@@ -81,6 +81,7 @@
 		BD6AD63E293F95DC0053E51A /* QueueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63D293F95DC0053E51A /* QueueRepository.swift */; };
 		BD6AD640294086260053E51A /* QueueRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63F294086260053E51A /* QueueRepositoryImpl.swift */; };
 		BD6AD6862941F3420053E51A /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD6852941F3420053E51A /* Sequence+.swift */; };
+		BD6AD6892941F3740053E51A /* Observable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD6882941F3740053E51A /* Observable+.swift */; };
 		BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA372934BF7800A8FB1C /* Pager.swift */; };
 		BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */; };
 		BD82EA3E2934C6B800A8FB1C /* StudyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */; };
@@ -248,6 +249,7 @@
 		BD6AD63D293F95DC0053E51A /* QueueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRepository.swift; sourceTree = "<group>"; };
 		BD6AD63F294086260053E51A /* QueueRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRepositoryImpl.swift; sourceTree = "<group>"; };
 		BD6AD6852941F3420053E51A /* Sequence+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+.swift"; sourceTree = "<group>"; };
+		BD6AD6882941F3740053E51A /* Observable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+.swift"; sourceTree = "<group>"; };
 		BD82EA372934BF7800A8FB1C /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestViewController.swift; sourceTree = "<group>"; };
@@ -635,6 +637,14 @@
 			path = Study;
 			sourceTree = "<group>";
 		};
+		BD6AD6872941F36A0053E51A /* Rx+ */ = {
+			isa = PBXGroup;
+			children = (
+				BD6AD6882941F3740053E51A /* Observable+.swift */,
+			);
+			path = "Rx+";
+			sourceTree = "<group>";
+		};
 		BD82EA362934BF5900A8FB1C /* Pager */ = {
 			isa = PBXGroup;
 			children = (
@@ -829,6 +839,7 @@
 		BD9257FE2919452E008A3158 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BD6AD6872941F36A0053E51A /* Rx+ */,
 				BD2AF913293CFECE0029EF62 /* Enum */,
 				BD92580C29194682008A3158 /* Base */,
 				BD38827C29237299000F971D /* Error */,
@@ -1544,6 +1555,7 @@
 				BDA41066292BDFB60053FF3B /* HTTPError.swift in Sources */,
 				BDF5818529327D2D005C8E4E /* SearchResponseDTO.swift in Sources */,
 				BD52377F291E591A004EE2B6 /* Encodable+toDictionary.swift in Sources */,
+				BD6AD6892941F3740053E51A /* Observable+.swift in Sources */,
 				BD392CC1291D4A61008D3EAB /* UIView+Extension.swift in Sources */,
 				BD92580B29194670008A3158 /* OnboardingViewController.swift in Sources */,
 				BD05210929376AC50070AEE7 /* ChatViewSectionHeaderView.swift in Sources */,
