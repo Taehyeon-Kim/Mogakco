@@ -56,7 +56,6 @@ extension KeywordViewController: Bindable {
         output.isSucceed
             .asDriver(onErrorJustReturn: false)
             .drive { isSucceed in
-                print(isSucceed)
                 if isSucceed {
                     let viewController = MatchViewController()
                     self.navigationController?.pushViewController(viewController, animated: true)
@@ -69,9 +68,7 @@ extension KeywordViewController: Bindable {
             .disposed(by: disposeBag)
         
         output.aroundedKeywords
-            .drive { keywordViewModel in
-                print(keywordViewModel)
-            }
+            .drive()
             .disposed(by: disposeBag)
     }
 }

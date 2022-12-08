@@ -13,7 +13,7 @@ final class KeywordViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
 
-    var items = BehaviorRelay<[KeywordViewSection]>(value: [])
+    var items = BehaviorRelay<[KeywordViewSection]>(value: [.arounded([]), .wanted([])])
     
     let dataSource = KeywordDataSource.dataSource()
     var isSucceed = PublishRelay<Bool>()
@@ -101,7 +101,8 @@ extension KeywordViewModel {
         
         var results = fromRecommend + fromQueueDB + fromQueueDBRequested
         results = removeDuplicatedKeywords(items: results)
-        self.items.accept([.arounded(results.map {.keyword($0)})])
+
+        items.accept([.arounded(results.map {.keyword($0)}), .wanted([])])
         return results
     }
     
