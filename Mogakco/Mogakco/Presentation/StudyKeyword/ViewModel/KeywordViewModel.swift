@@ -131,22 +131,3 @@ struct KeywordItemViewModel: Equatable, Hashable {
     let contents: String
     let keywordType: KeywordType
 }
-
-extension ObservableType {
-    
-    func catchErrorJustComplete() -> Observable<Element> {
-        return `catch` { _ in
-            return Observable.empty()
-        }
-    }
-    
-    func asDriverOnErrorJustComplete() -> Driver<Element> {
-        return asDriver { _ in
-            return Driver.empty()
-        }
-    }
-    
-    func mapToVoid() -> Observable<Void> {
-        return map { _ in }
-    }
-}
