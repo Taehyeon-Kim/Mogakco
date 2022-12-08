@@ -51,8 +51,7 @@ struct KeywordDataSource {
     typealias DataSource = RxCollectionViewSectionedReloadDataSource
     
     static func dataSource() -> DataSource<KeywordViewSection> {
-        return .init { dataSource, collectionView, indexPath, item -> UICollectionViewCell in
-            
+        let dataSource = DataSource<KeywordViewSection> { dataSource, collectionView, indexPath, _ -> UICollectionViewCell in
             switch dataSource[indexPath] {
             case let .keyword(viewModel):
                 let cell = collectionView.dequeueReusableCell(cellType: KeywordCell.self, for: indexPath)
@@ -60,5 +59,15 @@ struct KeywordDataSource {
                 return cell
             }
         }
+        
+        dataSource.configureSupplementaryView = { dataSource, collectionView, kind, indexPath -> UICollectionReusableView in
+            let header = collectionView.dequeueReusableSupplementaryView(
+                KeywordSectionHeaderView.self,
+                ofKind: kind, for: indexPath)
+            header.configure(with: dataSource[indexPath.section].title)
+            return header
+        }
+        
+        return dataSource
     }
 }
