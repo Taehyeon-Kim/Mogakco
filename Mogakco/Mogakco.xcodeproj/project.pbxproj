@@ -80,6 +80,7 @@
 		BD6AD63C293F94970053E51A /* SearchStudyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */; };
 		BD6AD63E293F95DC0053E51A /* QueueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63D293F95DC0053E51A /* QueueRepository.swift */; };
 		BD6AD640294086260053E51A /* QueueRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD63F294086260053E51A /* QueueRepositoryImpl.swift */; };
+		BD6AD6862941F3420053E51A /* Sequence+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AD6852941F3420053E51A /* Sequence+.swift */; };
 		BD82EA382934BF7800A8FB1C /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA372934BF7800A8FB1C /* Pager.swift */; };
 		BD82EA3C2934C66900A8FB1C /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */; };
 		BD82EA3E2934C6B800A8FB1C /* StudyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */; };
@@ -246,6 +247,7 @@
 		BD6AD63B293F94970053E51A /* SearchStudyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStudyUseCase.swift; sourceTree = "<group>"; };
 		BD6AD63D293F95DC0053E51A /* QueueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRepository.swift; sourceTree = "<group>"; };
 		BD6AD63F294086260053E51A /* QueueRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueRepositoryImpl.swift; sourceTree = "<group>"; };
+		BD6AD6852941F3420053E51A /* Sequence+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+.swift"; sourceTree = "<group>"; };
 		BD82EA372934BF7800A8FB1C /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		BD82EA3B2934C66900A8FB1C /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		BD82EA3D2934C6B800A8FB1C /* StudyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRequestViewController.swift; sourceTree = "<group>"; };
@@ -961,6 +963,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC06B15291EA718000C4A6A /* String+.swift */,
+				BD6AD6852941F3420053E51A /* Sequence+.swift */,
 			);
 			path = "Foundation+";
 			sourceTree = "<group>";
@@ -1501,6 +1504,7 @@
 				BDC20F792939E58800B9A2E7 /* DependencyContainer.swift in Sources */,
 				BDE1AC512931DEE5009E88AD /* FriendViewController.swift in Sources */,
 				BD4B551F292B184300ECFD04 /* MyProfileItemCellViewModel.swift in Sources */,
+				BD6AD6862941F3420053E51A /* Sequence+.swift in Sources */,
 				BD38828029237316000F971D /* MGCError.swift in Sources */,
 				BD392CBF291D49DA008D3EAB /* GenderInputView.swift in Sources */,
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
