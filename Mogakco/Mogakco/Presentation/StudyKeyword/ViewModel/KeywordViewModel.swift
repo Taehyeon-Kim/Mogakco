@@ -13,6 +13,9 @@ final class KeywordViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
 
+    var items = BehaviorRelay<[KeywordViewSection]>(value: [])
+    
+    let dataSource = KeywordDataSource.dataSource()
     var isSucceed = PublishRelay<Bool>()
     var isErrorOccured = PublishRelay<String>()
 
@@ -96,11 +99,34 @@ extension KeywordViewModel {
         let fromQueueDB = dto.fromQueueDB.flatMap { $0.studylist.map { KeywordItemViewModel(contents: $0, keywordType: .arounded) } }
         let fromQueueDBRequested = dto.fromQueueDBRequested.flatMap { $0.studylist.map { KeywordItemViewModel(contents: $0, keywordType: .arounded) } }
         
-        return fromRecommend + fromQueueDB + fromQueueDBRequested
+        var results = fromRecommend + fromQueueDB + fromQueueDBRequested
+        results = removeDuplicatedKeywords(items: results)
+        self.items.accept([.arounded(results.map {.keyword($0)})])
+        return results
+    }
+    
+    private func removeDuplicatedKeywords(items: [KeywordItemViewModel]) -> [KeywordItemViewModel] {
+        var items = items
+        items.removeAll { viewModel in
+            viewModel.contents == "anything" ||
+            viewModel.contents.isEmpty
+        }
+        
+        let result = Array(Set(items))
+        return result.sorted { first, _ in
+            return first.keywordType == .recommended
+        }
     }
 }
 
-struct KeywordItemViewModel: Equatable {
+extension Sequence where Element: Hashable {
+    func uniqued() -> [Element] {
+        var set = Set<Element>()
+        return filter { set.insert($0).inserted }
+    }
+}
+
+struct KeywordItemViewModel: Equatable, Hashable {
     
     enum KeywordType {
         case recommended
@@ -121,7 +147,7 @@ extension ObservableType {
     }
     
     func asDriverOnErrorJustComplete() -> Driver<Element> {
-        return asDriver { error in
+        return asDriver { _ in
             return Driver.empty()
         }
     }

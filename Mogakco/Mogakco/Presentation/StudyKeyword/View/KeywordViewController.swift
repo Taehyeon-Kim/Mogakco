@@ -64,9 +64,13 @@ extension KeywordViewController: Bindable {
             }
             .disposed(by: disposeBag)
         
+        viewModel.items
+            .bind(to: rootView.collectionView.rx.items(dataSource: viewModel.dataSource))
+            .disposed(by: disposeBag)
+        
         output.aroundedKeywords
-            .drive(with: self) { owner, keywordViewModel in
-                print("keyword", keywordViewModel)
+            .drive { keywordViewModel in
+                print(keywordViewModel)
             }
             .disposed(by: disposeBag)
     }

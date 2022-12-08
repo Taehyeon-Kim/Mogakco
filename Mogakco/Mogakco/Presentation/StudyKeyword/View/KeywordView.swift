@@ -8,6 +8,7 @@
 import UIKit
 
 import RxCocoa
+import RxDataSources
 import RxKeyboard
 import RxSwift
 
@@ -97,7 +98,7 @@ final class KeywordView: BaseView {
         collectionView.do {
             $0.register(KeywordCell.self)
             $0.register(KeywordSectionHeaderView.self, ofKind: UICollectionView.elementKindSectionHeader)
-            $0.dataSource = self
+            // $0.dataSource = self
             $0.collectionViewLayout = createLayout()
         }
     }
@@ -128,26 +129,26 @@ extension KeywordView {
     }
 }
 
-extension KeywordView: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return KeywordViewSection.allCases.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(cellType: KeywordCell.self, for: indexPath)
-        cell.sizeToFit()
-        cell.configure(with: "Swiftuuu")
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let view = collectionView.dequeueReusableSupplementaryView(KeywordSectionHeaderView.self, ofKind: kind, for: indexPath)
-        view.configure(with: KeywordViewSection.allCases[indexPath.section].title)
-        return view
-    }
-}
+// extension KeywordView: UICollectionViewDataSource {
+//
+//     func numberOfSections(in collectionView: UICollectionView) -> Int {
+//         return KeywordViewSection.allCases.count
+//     }
+//
+//     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//         return 10
+//     }
+//
+//     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//         let cell = collectionView.dequeueReusableCell(cellType: KeywordCell.self, for: indexPath)
+//         cell.sizeToFit()
+//         cell.configure(with: "Swiftuuu")
+//         return cell
+//     }
+//
+//     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//         let view = collectionView.dequeueReusableSupplementaryView(KeywordSectionHeaderView.self, ofKind: kind, for: indexPath)
+//         view.configure(with: KeywordViewSection.allCases[indexPath.section].title)
+//         return view
+//     }
+// }
