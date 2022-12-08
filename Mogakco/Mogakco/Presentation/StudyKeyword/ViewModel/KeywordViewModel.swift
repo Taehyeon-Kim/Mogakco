@@ -119,15 +119,3 @@ extension KeywordViewModel {
         }
     }
 }
-
-struct KeywordItemViewModel: Equatable, Hashable {
-    
-    enum KeywordType {
-        case recommended
-        case arounded
-        case wanted
-    }
-    
-    let contents: String
-    let keywordType: KeywordType
-}
