@@ -165,6 +165,8 @@
 		BDE1AC7329321286009E88AD /* KeywordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC7229321286009E88AD /* KeywordViewModel.swift */; };
 		BDE1AC7629321EC5009E88AD /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = BDE1AC7529321EC5009E88AD /* RxGesture */; };
 		BDE4B6CC2920091E0084D60F /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */; };
+		BDE971A82943359C00F867F3 /* BirthRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE971A72943359C00F867F3 /* BirthRootView.swift */; };
+		BDE971AA2943386200F867F3 /* CustomInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE971A92943386200F867F3 /* CustomInputButton.swift */; };
 		BDEA50F829278BD300110982 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50F729278BD300110982 /* NetworkProvider.swift */; };
 		BDEA50FC29278D5D00110982 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50FB29278D5D00110982 /* AuthManager.swift */; };
 		BDEA50FF2927F22700110982 /* URLRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA50FE2927F22700110982 /* URLRequestable.swift */; };
@@ -324,6 +326,8 @@
 		BDE1AC652931FE51009E88AD /* KeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCell.swift; sourceTree = "<group>"; };
 		BDE1AC7229321286009E88AD /* KeywordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordViewModel.swift; sourceTree = "<group>"; };
 		BDE4B6CB2920091E0084D60F /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
+		BDE971A72943359C00F867F3 /* BirthRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthRootView.swift; sourceTree = "<group>"; };
+		BDE971A92943386200F867F3 /* CustomInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputButton.swift; sourceTree = "<group>"; };
 		BDEA50F729278BD300110982 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		BDEA50FB29278D5D00110982 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BDEA50FE2927F22700110982 /* URLRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestable.swift; sourceTree = "<group>"; };
@@ -704,7 +708,9 @@
 			isa = PBXGroup;
 			children = (
 				BDF9C186291D6394009B4B1B /* BirthInputView.swift */,
+				BDE971A72943359C00F867F3 /* BirthRootView.swift */,
 				BD392CB5291D39A5008D3EAB /* BirthViewController.swift */,
+				BDE971A92943386200F867F3 /* CustomInputButton.swift */,
 			);
 			path = Birth;
 			sourceTree = "<group>";
@@ -1451,6 +1457,7 @@
 				BDE1AC5E2931E9FE009E88AD /* KeywordViewSection.swift in Sources */,
 				BD8737DB293510AF00F51CD9 /* ExpandableCardViewCell.swift in Sources */,
 				BD8E98CF2922C27F00133840 /* SignUpRequestDTO.swift in Sources */,
+				BDE971A82943359C00F867F3 /* BirthRootView.swift in Sources */,
 				BD8737DD2935117100F51CD9 /* ExpandableCardViewItemSectionHeader.swift in Sources */,
 				BD92581629194706008A3158 /* Images.swift in Sources */,
 				BD52378A291E5C97004EE2B6 /* EmptyResponse.swift in Sources */,
@@ -1524,6 +1531,7 @@
 				BD23477A291AA451009BC722 /* UICollectionView+Extension.swift in Sources */,
 				BD234770291A9B8A009BC722 /* MGCButtonStyle.swift in Sources */,
 				BD05210B29376AEA0070AEE7 /* OpponentChatCell.swift in Sources */,
+				BDE971AA2943386200F867F3 /* CustomInputButton.swift in Sources */,
 				BD4B551C292A91E000ECFD04 /* MyProfileViewSection.swift in Sources */,
 				BD3C6485291FF0C3005E7142 /* User.swift in Sources */,
 				BD0520F3293745BA0070AEE7 /* ChatViewController.swift in Sources */,

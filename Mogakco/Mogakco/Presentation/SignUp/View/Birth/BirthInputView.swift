@@ -11,15 +11,40 @@ import SnapKit
 
 final class BirthInputView: BaseView {
     
+    enum BirthType {
+        case year, month, day
+        
+        var title: String {
+            switch self {
+            case .year: return "년"
+            case .month: return "월"
+            case .day: return "일"
+            }
+        }
+        
+        var placeholder: String {
+            switch self {
+            case .year: return "1990"
+            case .month: return "1"
+            case .day: return "1"
+            }
+        }
+    }
+    
+    // MARK: UI
     private let textField = UITextField()
     private let titleLabel = UILabel()
     private let datePicker = UIDatePicker()
-    
+
+    // MARK: Property
     var placeholder: String? {
         get { textField.placeholder }
         set {
             textField.placeholder = newValue
-            textField.setPlaceHolderAttributes(placeHolderText: newValue ?? "", color: .MGC.gray7, font: .init(.regular, 14))
+            textField.setPlaceHolderAttributes(
+                placeHolderText: newValue ?? "",
+                color: .MGC.gray7,
+                font: .init(.regular, 14))
         }
     }
     
@@ -35,14 +60,17 @@ final class BirthInputView: BaseView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // createDatePicker()
+    }
+    
+    convenience init(frame: CGRect = .zero, type: BirthType) {
+        self.init(frame: frame)
+        configure(type)
     }
     
     override func setAttributes() {
         textField.do {
             $0.setBottomBorder(with: .MGC.gray3, width: 1)
             $0.setLeftPadding(to: 12)
-            // $0.becomeFirstResponder()
         }
         
         titleLabel.do {
@@ -74,31 +102,10 @@ final class BirthInputView: BaseView {
     }
 }
 
-class MyButton: UIButton {
+extension BirthInputView {
     
-    var customInputView: UIView? = UIView()
-    var customToolbarView: UIView? = UIView()
-    
-    override var inputView: UIView? {
-        get {
-            customInputView
-        }
-        set {
-            customInputView = newValue
-            becomeFirstResponder()
-        }
-    }
-    
-    override var inputAccessoryView: UIView? {
-        get {
-            customToolbarView
-        }
-        set {
-            customToolbarView = newValue
-        }
-    }
-    
-    override var canBecomeFirstResponder: Bool {
-       true
+    func configure(_ type: BirthType) {
+        title = type.title
+        placeholder = type.placeholder
     }
 }
