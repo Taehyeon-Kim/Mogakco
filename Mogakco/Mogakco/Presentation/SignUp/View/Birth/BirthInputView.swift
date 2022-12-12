@@ -34,8 +34,7 @@ final class BirthInputView: BaseView {
     // MARK: UI
     private let textField = UITextField()
     private let titleLabel = UILabel()
-    private let datePicker = UIDatePicker()
-
+    
     // MARK: Property
     var placeholder: String? {
         get { textField.placeholder }
@@ -75,10 +74,6 @@ final class BirthInputView: BaseView {
         
         titleLabel.do {
             $0.setTypoStyle(.title2)
-        }
-        
-        datePicker.do {
-            $0.preferredDatePickerStyle = .wheels
         }
     }
     

@@ -25,15 +25,14 @@ final class BirthRootView: BaseView {
     let monthInputView = BirthInputView(type: .month)
     let dayInputView = BirthInputView(type: .day)
     
+    let datePicker = UIDatePicker()
     let datePickerTrigger = CustomInputButton()
-    let datePicker = UIDatePicker(frame: .zero)
     let doneButton = UIBarButtonItem(systemItem: .done)
     
     let nextButton = MGCButton(.fill)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         createDatePicker()
     }
     
@@ -102,9 +101,7 @@ extension BirthRootView {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         toolbar.setItems([doneButton], animated: true)
-        
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko-KR")
+
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
         
