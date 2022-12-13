@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 /// BirthViewController의 RootView UI를 담당
 final class BirthRootView: BaseView {
     
@@ -26,10 +29,10 @@ final class BirthRootView: BaseView {
     let dayInputView = BirthInputView(type: .day)
     
     let datePicker = UIDatePicker()
-    let datePickerTrigger = CustomInputButton()
+    let datePickerButton = CustomInputButton()
     let doneButton = UIBarButtonItem(systemItem: .done)
     
-    let nextButton = MGCButton(.fill)
+    let nextButton = MGCButton(.disable)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -63,7 +66,7 @@ final class BirthRootView: BaseView {
     
     override func setHierarchy() {
         birthInputStack.addArrangedSubviews(yearInputView, monthInputView, dayInputView)
-        addSubviews(navigationBar, messageLabel, birthInputStack, datePickerTrigger, nextButton)
+        addSubviews(navigationBar, messageLabel, birthInputStack, datePickerButton, nextButton)
     }
     
     override func setLayout() {
@@ -82,7 +85,7 @@ final class BirthRootView: BaseView {
             $0.height.equalTo(48)
         }
         
-        datePickerTrigger.snp.makeConstraints {
+        datePickerButton.snp.makeConstraints {
             $0.edges.equalTo(birthInputStack)
         }
         
@@ -105,7 +108,7 @@ extension BirthRootView {
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
         
-        datePickerTrigger.inputAccessoryView = toolbar
-        datePickerTrigger.inputView = datePicker
+        datePickerButton.inputAccessoryView = toolbar
+        datePickerButton.inputView = datePicker
     }
 }
