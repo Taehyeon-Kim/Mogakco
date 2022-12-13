@@ -148,6 +148,7 @@
 		BDE095D2291C1EC7009CB1C0 /* PhoneEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */; };
 		BDE095D4291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */; };
 		BDE0FDD829488A6100953904 /* EmailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0FDD729488A6100953904 /* EmailRootView.swift */; };
+		BDE0FDDA29488E5A00953904 /* GenderRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE0FDD929488E5A00953904 /* GenderRootView.swift */; };
 		BDE1AC4A2931DE5A009E88AD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC492931DE5A009E88AD /* TabBarController.swift */; };
 		BDE1AC4C2931DE76009E88AD /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC4B2931DE76009E88AD /* Tab.swift */; };
 		BDE1AC512931DEE5009E88AD /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1AC502931DEE5009E88AD /* FriendViewController.swift */; };
@@ -315,6 +316,7 @@
 		BDE095D1291C1EC7009CB1C0 /* PhoneEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewModel.swift; sourceTree = "<group>"; };
 		BDE095D3291C1ED0009CB1C0 /* PhoneVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewModel.swift; sourceTree = "<group>"; };
 		BDE0FDD729488A6100953904 /* EmailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRootView.swift; sourceTree = "<group>"; };
+		BDE0FDD929488E5A00953904 /* GenderRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderRootView.swift; sourceTree = "<group>"; };
 		BDE1AC492931DE5A009E88AD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BDE1AC4B2931DE76009E88AD /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		BDE1AC502931DEE5009E88AD /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
@@ -731,6 +733,7 @@
 			children = (
 				BD392CBE291D49DA008D3EAB /* GenderInputView.swift */,
 				BD392CBB291D39EC008D3EAB /* GenderViewController.swift */,
+				BDE0FDD929488E5A00953904 /* GenderRootView.swift */,
 			);
 			path = Gender;
 			sourceTree = "<group>";
@@ -1580,6 +1583,7 @@
 				BDE1AC532931DEED009E88AD /* ShopViewController.swift in Sources */,
 				BDE1AC642931FCEE009E88AD /* KeywordSectionHeaderView.swift in Sources */,
 				BD38827E292372B5000F971D /* FirebaseTokenError.swift in Sources */,
+				BDE0FDDA29488E5A00953904 /* GenderRootView.swift in Sources */,
 				BDF5818029323533005C8E4E /* KeywordError.swift in Sources */,
 				BD6AD68B2941F3C70053E51A /* KeywordItemViewModel.swift in Sources */,
 				BDC20F90293A702C00B9A2E7 /* Realm+Extension.swift in Sources */,

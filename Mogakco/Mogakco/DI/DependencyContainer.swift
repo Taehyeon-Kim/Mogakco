@@ -31,7 +31,7 @@ extension DependencyContainer: SignUpViewControllerFactory {
     }
     
     func makeGenderViewController() -> GenderViewController {
-        let viewModel = GenderViewModel(validator: validator, userManager: userManager)
+        let viewModel = GenderViewModel(validator: validator, userManager: userManager, networkProvider: networkProvider)
         return GenderViewController(viewModel: viewModel)
     }
 }
