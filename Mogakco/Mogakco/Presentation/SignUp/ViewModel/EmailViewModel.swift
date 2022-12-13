@@ -41,9 +41,18 @@ final class EmailViewModel: ViewModelType {
     func transform(input: Input) -> Output {
         
         let isEnabled = input.emailValue
-            .asDriver(onErrorJustReturn: "")
-            .map(validator.isValid(email:))
-        
+            .withUnretained(self)
+            .map { owner, email -> Bool in
+                let isEnabled = owner.validator.isValid(email: email)
+                
+                if isEnabled {
+                    owner.email.accept(email)
+                }
+                
+                return isEnabled
+            }
+            .asDriver(onErrorJustReturn: false)
+
         let success = PublishRelay<Void>()
         let error = PublishRelay<String>()
         
