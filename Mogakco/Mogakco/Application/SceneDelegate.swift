@@ -16,17 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        //
-        // let repository = QueueRepositoryImpl()
-        // let useCase = SearchStudyUseCaseImpl(queueRepository: repository)
-        // let parameter = SearchAPI(lat: 37.517819364682694, long: 126.88647317074734)
-        // let viewModel = KeywordViewModel(searchParameter: parameter, searchStudyUseCase: useCase)
-        // let viewController = KeywordViewController(viewModel: viewModel)
-        
+
         let validator = ValidatorImpl()
         let userManager = UserManagerImpl.shared
         let viewModel = BirthViewModel(validator: validator, userManager: userManager)
-        window?.rootViewController = BirthViewController(viewModel: viewModel)
+        let viewController = BirthViewController(viewModel: viewModel)
+        window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.makeKeyAndVisible()
     }
 }
