@@ -31,9 +31,16 @@ extension EmailViewController: Bindable {
     func bind() {
         let input = EmailViewModel.Input(
             emailValue: rootView.textField.rx.text.orEmpty.asObservable(),
-            nextButtonTrigger: rootView.nextButton.button.rx.tap.asObservable()
+            nextButtonTrigger: rootView.nextButton.button.rx.tap.asObservable(),
+            backButtonDidTap: rootView.navigationBar.leftButton.rx.tap.asObservable()
         )
         let output = viewModel.transform(input: input)
+        
+        output.isBackButtonTapped
+            .drive(with: self) { owner, _ in
+                owner.navigationController?.popViewController(animated: true)
+            }
+            .disposed(by: disposeBag)
         
         output.isEnabled
             .map { $0 ? MGCButtonStyle.fill : MGCButtonStyle.disable }

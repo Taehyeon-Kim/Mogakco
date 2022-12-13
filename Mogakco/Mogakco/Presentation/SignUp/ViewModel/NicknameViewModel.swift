@@ -40,12 +40,14 @@ final class NicknameViewModel {
     struct Input {
         let changedText: Observable<String>     // 닉네임 텍스트 필드 텍스트
         let nextButtonDidTap: Observable<Void>
+        let backButtonDidTap: Observable<Void>
     }
     
     struct Output {
         let isNextButtonEnabled: Driver<Bool>
         let isSucceed: Driver<Void>
         let errorOccured: Driver<NicknameError>
+        let isBackButtonTapped: Driver<Void>
     }
 }
 
@@ -85,7 +87,8 @@ extension NicknameViewModel: ViewModelType {
         return Output(
             isNextButtonEnabled: isNextButtonEnabled,
             isSucceed: isSucceed,
-            errorOccured: errorOccured
+            errorOccured: errorOccured,
+            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ())
         )
     }
 }

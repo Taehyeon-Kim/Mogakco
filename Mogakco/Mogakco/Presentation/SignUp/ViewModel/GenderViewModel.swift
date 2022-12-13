@@ -31,12 +31,14 @@ final class GenderViewModel: ViewModelType {
     struct Input {
         let selectedGender: Observable<Int>
         let nextButtonDidTap: Observable<Void>
+        let backButtonDidTap: Observable<Void>
     }
     
     struct Output {
         let isEnabled: Driver<Bool>
         let success: Driver<Void>
         let error: Driver<String>
+        let isBackButtonTapped: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
@@ -68,7 +70,8 @@ final class GenderViewModel: ViewModelType {
         return Output(
             isEnabled: isEnabled,
             success: success.asDriver(onErrorJustReturn: ()),
-            error: error.asDriver(onErrorJustReturn: "")
+            error: error.asDriver(onErrorJustReturn: ""),
+            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ())
         )
     }
 }

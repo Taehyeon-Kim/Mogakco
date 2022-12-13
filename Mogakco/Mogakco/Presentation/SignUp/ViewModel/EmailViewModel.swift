@@ -29,6 +29,7 @@ final class EmailViewModel: ViewModelType {
     struct Input {
         let emailValue: Observable<String>
         let nextButtonTrigger: Observable<Void>
+        let backButtonDidTap: Observable<Void>
     }
     
     struct Output {
@@ -36,6 +37,7 @@ final class EmailViewModel: ViewModelType {
         let nextButtonTrigger: Driver<Void>
         let success: Driver<Void>
         let error: Driver<String>
+        let isBackButtonTapped: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
@@ -73,7 +75,8 @@ final class EmailViewModel: ViewModelType {
             isEnabled: isEnabled,
             nextButtonTrigger: input.nextButtonTrigger.asDriver(onErrorJustReturn: ()),
             success: success.asDriver(onErrorJustReturn: ()),
-            error: error.asDriver(onErrorJustReturn: "")
+            error: error.asDriver(onErrorJustReturn: ""),
+            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ())
         )
     }
 }

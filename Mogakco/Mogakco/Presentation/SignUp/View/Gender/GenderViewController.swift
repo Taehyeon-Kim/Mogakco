@@ -31,9 +31,16 @@ extension GenderViewController: Bindable {
     func bind() {
         let input = GenderViewModel.Input(
             selectedGender: rootView.genderView.selectedGender.map { $0.rawValue }.asObservable(),
-            nextButtonDidTap: rootView.nextButton.button.rx.tap.asObservable()
+            nextButtonDidTap: rootView.nextButton.button.rx.tap.asObservable(),
+            backButtonDidTap: rootView.navigationBar.leftButton.rx.tap.asObservable()
         )
         let output = viewModel.transform(input: input)
+        
+        output.isBackButtonTapped
+            .drive(with: self) { owner, _ in
+                owner.navigationController?.popViewController(animated: true)
+            }
+            .disposed(by: disposeBag)
         
         output.isEnabled
             .map { $0 ? MGCButtonStyle.fill : MGCButtonStyle.disable }

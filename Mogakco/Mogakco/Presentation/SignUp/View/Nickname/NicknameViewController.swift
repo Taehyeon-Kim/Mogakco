@@ -39,9 +39,16 @@ extension NicknameViewController: Bindable {
     func bind() {
         let input = NicknameViewModel.Input(
             changedText: rootView.textField.rx.text.orEmpty.asObservable(),
-            nextButtonDidTap: rootView.nextButton.button.rx.tap.asObservable()
+            nextButtonDidTap: rootView.nextButton.button.rx.tap.asObservable(),
+            backButtonDidTap: rootView.navigationBar.leftButton.rx.tap.asObservable()
         )
         let output = viewModel.transform(input: input)
+        
+        output.isBackButtonTapped
+            .drive(with: self) { owner, _ in
+                owner.navigationController?.popViewController(animated: true)
+            }
+            .disposed(by: disposeBag)
         
         output.isNextButtonEnabled
             .drive(with: self) { owner, isEnabled in
