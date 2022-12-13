@@ -9,6 +9,8 @@ import UIKit
 
 import SnapKit
 import Then
+import RxCocoa
+import RxSwift
 
 final class GenderInputView: BaseView {
     
@@ -20,6 +22,14 @@ final class GenderInputView: BaseView {
     private lazy var containerHStackView = UIStackView(arrangedSubviews: [manButton, womanButton])
     private let manButton = UIButton()
     private let womanButton = UIButton()
+    
+    private var disposeBag = DisposeBag()
+    var selectedGender = PublishRelay<Gender>()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        bind()
+    }
     
     override func setAttributes() {
         containerHStackView.do {
@@ -46,5 +56,38 @@ final class GenderInputView: BaseView {
         containerHStackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+}
+
+extension GenderInputView {
+
+    private func bind() {
+        selectedGender
+            .bind(with: self) { owner, gender in
+                switch gender {
+                case .man:
+                    owner.manButton.configuration?.baseBackgroundColor = .MGC.whiteGreen
+                    owner.womanButton.configuration?.baseBackgroundColor = .MGC.white
+                    
+                case .woman:
+                    owner.manButton.configuration?.baseBackgroundColor = .MGC.white
+                    owner.womanButton.configuration?.baseBackgroundColor = .MGC.whiteGreen
+                }
+            }
+            .disposed(by: disposeBag)
+        
+        manButton.rx.tap.asDriver()
+            .map { Gender.man }
+            .drive(with: self) { owner, type in
+                owner.selectedGender.accept(type)
+            }
+            .disposed(by: disposeBag)
+        
+        womanButton.rx.tap.asDriver()
+            .map { Gender.woman }
+            .drive(with: self) { owner, type in
+                owner.selectedGender.accept(type)
+            }
+            .disposed(by: disposeBag)
     }
 }
