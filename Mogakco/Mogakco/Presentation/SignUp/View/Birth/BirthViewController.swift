@@ -86,10 +86,8 @@ extension BirthViewController: Bindable {
         
         output.success
             .drive(with: self) { owner, _ in
-                let validator = ValidatorImpl()
-                let userManager = UserManagerImpl.shared
-                let viewModel = EmailViewModel(validator: validator, userManager: userManager)
-                let viewController = EmailViewController(viewModel: viewModel)
+                let container = DependencyContainer()
+                let viewController = container.makeEmailViewController()
                 owner.transition(to: viewController)
             }
             .disposed(by: disposeBag)
