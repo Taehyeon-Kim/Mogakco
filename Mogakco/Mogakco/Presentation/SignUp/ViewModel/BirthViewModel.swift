@@ -33,6 +33,7 @@ final class BirthViewModel: ViewModelType {
         let doneButtonTrigger: Observable<Void>
         let datePickerButtonTrigger: Observable<Void>
         let nextButtonTrigger: Observable<Void>
+        let backButtonDidTap: Observable<Void>
     }
     
     struct Output {
@@ -45,6 +46,7 @@ final class BirthViewModel: ViewModelType {
         let nextButtonTrigger: Driver<Void>
         let success: Driver<Void>
         let error: Driver<String>
+        let isBackButtonTapped: Driver<Void>
     }
     
     func transform(input: Input) -> Output {
@@ -114,7 +116,8 @@ final class BirthViewModel: ViewModelType {
             datePickerButtonTrigger: input.datePickerButtonTrigger.asDriver(onErrorJustReturn: ()),
             nextButtonTrigger: input.nextButtonTrigger.asDriver(onErrorJustReturn: ()),
             success: success.asDriver(onErrorJustReturn: ()),
-            error: error.asDriver(onErrorJustReturn: "")
+            error: error.asDriver(onErrorJustReturn: ""),
+            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ())
         )
     }
 }

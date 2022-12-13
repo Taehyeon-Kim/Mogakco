@@ -43,9 +43,16 @@ extension BirthViewController: Bindable {
             changedValue: rootView.datePicker.rx.date.asObservable(),
             doneButtonTrigger: rootView.doneButton.rx.tap.asObservable(),
             datePickerButtonTrigger: rootView.datePickerButton.rx.tap.asObservable(),
-            nextButtonTrigger: rootView.nextButton.button.rx.tap.asObservable()
+            nextButtonTrigger: rootView.nextButton.button.rx.tap.asObservable(),
+            backButtonDidTap: rootView.navigationBar.leftButton.rx.tap.asObservable()
         )
         let output = viewModel.transform(input: input)
+        
+        output.isBackButtonTapped
+            .drive(with: self) { owner, _ in
+                owner.navigationController?.popViewController(animated: true)
+            }
+            .disposed(by: disposeBag)
         
         output.year
             .emit(with: self) { owner, year in
