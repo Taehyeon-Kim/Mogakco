@@ -17,10 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let validator = ValidatorImpl()
-        let userManager = UserManagerImpl.shared
-        let viewModel = BirthViewModel(validator: validator, userManager: userManager)
-        let viewController = BirthViewController(viewModel: viewModel)
+        let container = DependencyContainer()
+        let viewController = container.makeNicknameViewController()
         window?.rootViewController = UINavigationController(rootViewController: viewController)
         window?.makeKeyAndVisible()
     }

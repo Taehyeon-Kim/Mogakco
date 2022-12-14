@@ -24,7 +24,7 @@ final class NicknameViewModel {
     }
 
     private var disposeBag = DisposeBag()
-    private var nickname = BehaviorRelay(value: "")
+    private lazy var nickname = BehaviorRelay(value: userManager.userInfo.nickname)
     
     private var validator: Validator
     private var userManager: UserManager
@@ -48,6 +48,7 @@ final class NicknameViewModel {
         let isSucceed: Driver<Void>
         let errorOccured: Driver<NicknameError>
         let isBackButtonTapped: Driver<Void>
+        let nickname: Driver<String>
     }
 }
 
@@ -88,7 +89,8 @@ extension NicknameViewModel: ViewModelType {
             isNextButtonEnabled: isNextButtonEnabled,
             isSucceed: isSucceed,
             errorOccured: errorOccured,
-            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ())
+            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ()),
+            nickname: nickname.asDriver()
         )
     }
 }

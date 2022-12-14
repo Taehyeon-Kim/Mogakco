@@ -40,7 +40,7 @@ extension BirthViewController: Bindable {
     
     func bind() {
         let input = BirthViewModel.Input(
-            changedValue: rootView.datePicker.rx.date.asObservable(),
+            changedValue: rootView.datePicker.rx.value.asObservable(),
             doneButtonTrigger: rootView.doneButton.rx.tap.asObservable(),
             datePickerButtonTrigger: rootView.datePickerButton.rx.tap.asObservable(),
             nextButtonTrigger: rootView.nextButton.button.rx.tap.asObservable(),
@@ -103,6 +103,10 @@ extension BirthViewController: Bindable {
             .drive(with: self) { owner, message in
                 owner.view.makeToast(message, position: .top)
             }
+            .disposed(by: disposeBag)
+        
+        output.birth
+            .drive(rootView.datePicker.rx.value)
             .disposed(by: disposeBag)
     }
 }

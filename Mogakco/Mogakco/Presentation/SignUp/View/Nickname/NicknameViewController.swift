@@ -69,6 +69,10 @@ extension NicknameViewController: Bindable {
                 owner.rootView.makeToast(error.localizedDescription, duration: TimeInterval(0.5), position: .top)
             }
             .disposed(by: disposeBag)
+        
+        output.nickname
+            .drive(rootView.textField.rx.text)
+            .disposed(by: disposeBag)
     }
 }
 

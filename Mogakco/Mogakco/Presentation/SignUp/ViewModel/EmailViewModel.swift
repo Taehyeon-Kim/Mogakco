@@ -16,7 +16,7 @@ final class EmailViewModel: ViewModelType {
     private var validator: Validator
     private var userManager: UserManager
     
-    private var email = BehaviorRelay(value: "")
+    private lazy var email = BehaviorRelay(value: userManager.userInfo.email)
     
     init(
         validator: Validator,
@@ -38,6 +38,7 @@ final class EmailViewModel: ViewModelType {
         let success: Driver<Void>
         let error: Driver<String>
         let isBackButtonTapped: Driver<Void>
+        let email: Driver<String>
     }
     
     func transform(input: Input) -> Output {
@@ -76,7 +77,8 @@ final class EmailViewModel: ViewModelType {
             nextButtonTrigger: input.nextButtonTrigger.asDriver(onErrorJustReturn: ()),
             success: success.asDriver(onErrorJustReturn: ()),
             error: error.asDriver(onErrorJustReturn: ""),
-            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ())
+            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ()),
+            email: email.asDriver()
         )
     }
 }
