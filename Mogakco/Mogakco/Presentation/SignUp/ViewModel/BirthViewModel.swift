@@ -18,7 +18,7 @@ final class BirthViewModel: ViewModelType {
     private var validator: Validator
     private var userManager: UserManager
     
-    private var birth = BehaviorRelay(value: "")
+    private lazy var birth = BehaviorRelay(value: userManager.userInfo.birth)
     
     init(
         validator: Validator,
@@ -47,46 +47,43 @@ final class BirthViewModel: ViewModelType {
         let success: Driver<Void>
         let error: Driver<String>
         let isBackButtonTapped: Driver<Void>
+        let birth: Driver<Date>
     }
     
     func transform(input: Input) -> Output {
-        let year = input.changedValue
-            .skip(1)
-            .withUnretained(self)
-            .map { owner, date in
-                let date = owner.calendar.dateComponents([.year], from: date)
-                return String(date.year ?? 0)
-            }
-            .asSignal(onErrorJustReturn: "")
+        let year = PublishRelay<String>()
+        let month = PublishRelay<String>()
+        let day = PublishRelay<String>()
         
-        let month = input.changedValue
-            .skip(1)
+        let birth = birth
             .withUnretained(self)
-            .map { owner, date in
-                let date = owner.calendar.dateComponents([.month], from: date)
-                return String(date.month ?? 0)
+            .map { owner, dateString -> Date in
+                let date = owner.convertToDate(from: dateString) ?? Date()
+                let dateComponents = owner.calendar.dateComponents([.year, .month, .day], from: date)
+                year.accept(String(dateComponents.year ?? 0))
+                month.accept(String(dateComponents.month ?? 0))
+                day.accept(String(dateComponents.day ?? 0))
+                return date
             }
-            .asSignal(onErrorJustReturn: "")
+            .asDriver(onErrorJustReturn: Date())
         
-        let day = input.changedValue
+        input.changedValue
             .skip(1)
-            .withUnretained(self)
-            .map { owner, date in
-                let date = owner.calendar.dateComponents([.day], from: date)
-                return String(date.day ?? 0)
+            .bind(with: self) { owner, date in
+                let dateString = owner.convertToString(from: date)
+                owner.birth.accept(dateString)
             }
-            .asSignal(onErrorJustReturn: "")
-        
+            .disposed(by: disposeBag)
+
         let isEnabled = input.changedValue
             .withUnretained(self)
             .map { owner, date -> Bool in
+                let birth = owner.birth.value
+                let date = birth.isEmpty ? date : owner.convertToDate(from: birth) ?? Date()
                 let isEnabled = owner.validator.isValid(age: date)
-                
-                if isEnabled {
-                    let dateString = owner.convertToString(from: date)
-                    owner.birth.accept(dateString)
-                }
-                
+                let dateString = owner.convertToString(from: date)
+                owner.birth.accept(dateString)
+                owner.storeBirth(owner.birth.value)
                 return isEnabled
             }
             .asDriver(onErrorJustReturn: false)
@@ -108,16 +105,17 @@ final class BirthViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         return Output(
-            year: year,
-            month: month,
-            day: day,
+            year: year.asSignal(),
+            month: month.asSignal(),
+            day: day.asSignal(),
             isEnabled: isEnabled,
             doneButtonTrigger: input.doneButtonTrigger.asDriver(onErrorJustReturn: ()),
             datePickerButtonTrigger: input.datePickerButtonTrigger.asDriver(onErrorJustReturn: ()),
             nextButtonTrigger: input.nextButtonTrigger.asDriver(onErrorJustReturn: ()),
             success: success.asDriver(onErrorJustReturn: ()),
             error: error.asDriver(onErrorJustReturn: ""),
-            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ())
+            isBackButtonTapped: input.backButtonDidTap.asDriver(onErrorJustReturn: ()),
+            birth: birth
         )
     }
 }
@@ -132,5 +130,11 @@ extension BirthViewModel {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS'Z"
         return dateFormatter.string(from: date)
+    }
+    
+    private func convertToDate(from dateString: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS'Z"
+        return dateFormatter.date(from: dateString)
     }
 }

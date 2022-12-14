@@ -62,6 +62,10 @@ extension EmailViewController: Bindable {
                 owner.view.makeToast(message, position: .top)
             }
             .disposed(by: disposeBag)
+        
+        output.email
+            .drive(rootView.textField.rx.text)
+            .disposed(by: disposeBag)
     }
 }
 
