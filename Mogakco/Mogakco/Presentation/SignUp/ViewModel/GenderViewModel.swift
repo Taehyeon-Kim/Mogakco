@@ -58,7 +58,7 @@ final class GenderViewModel: ViewModelType {
         
         input.nextButtonDidTap
             .withLatestFrom(isEnabled)
-            .subscribe(with: self) { owner, isEnabled in
+            .subscribe(with: self) { _, isEnabled in
                 if isEnabled {
                     success.accept(())
                 } else {

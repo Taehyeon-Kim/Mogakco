@@ -145,7 +145,7 @@ extension PhoneVerificationViewController: Bindable {
             .disposed(by: disposeBag)
         
         output.isSucceedVerification
-            .drive { [weak self] idToken in
+            .drive { idToken in
                 // 토스트 성공 메시지 넣기
                 print("성공: \(UserDefaultsManager.idToken)")
             }
