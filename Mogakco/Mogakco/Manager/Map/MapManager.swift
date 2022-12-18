@@ -91,6 +91,8 @@ extension MapManagerImpl: MapManager {
     }
     
     func createPins(_ pins: [Pin]) {
+        clearPins()
+        
         for pin in pins {
             let coordinate = CLLocationCoordinate2D(latitude: pin.lat, longitude: pin.long)
             let annotation = CustomAnnotation(image: pin.image, coordinate: coordinate)
@@ -99,11 +101,13 @@ extension MapManagerImpl: MapManager {
     }
     
     func clearPins() {
-        // guard let mapView = mapView else { return }
-        // UIView.animate(withDuration: 0.15) {
-        //     mapView.removeAnnotations(mapView.annotations)
-        // }
-        // mapView.layoutIfNeeded()
+        DispatchQueue.main.async { [weak self] in
+            guard let mapView = self?.mapView else { return }
+            UIView.animate(withDuration: 0.15) {
+                mapView.removeAnnotations(mapView.annotations)
+            }
+            mapView.layoutIfNeeded()
+        }
     }
     
     func moveUserLocation() {
