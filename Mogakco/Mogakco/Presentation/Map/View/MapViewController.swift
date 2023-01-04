@@ -56,13 +56,16 @@ extension MapViewController: Bindable {
             .disposed(by: disposeBag)
         
         output.myQueueStatus
-            .bind(with: self) { owner, state in
+            .asDriver()
+            .drive(with: self) { owner, state in
+                print("🐙", state)
                 owner.rootView.floatingButton.setImage(state.image, for: .normal)
             }
             .disposed(by: disposeBag)
         
         output.pin
             .bind(with: self) { owner, pins in
+                print(pins)
                 owner.mapManager.createPins(pins)
             }
             .disposed(by: disposeBag)
