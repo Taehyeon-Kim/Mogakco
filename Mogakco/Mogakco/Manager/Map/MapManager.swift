@@ -103,7 +103,7 @@ extension MapManagerImpl: MapManager {
     func clearPins() {
         DispatchQueue.main.async { [weak self] in
             guard let mapView = self?.mapView else { return }
-            UIView.animate(withDuration: 0.15) {
+            UIView.animate(withDuration: 0.3) {
                 mapView.removeAnnotations(mapView.annotations)
             }
             mapView.layoutIfNeeded()

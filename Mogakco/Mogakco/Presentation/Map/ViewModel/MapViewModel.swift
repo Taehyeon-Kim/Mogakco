@@ -87,8 +87,8 @@ final class MapViewModel: ViewModelType {
             .subscribe { output.pin.accept($0) }
             .disposed(by: disposeBag)
         
-        output.myQueueStatus
-            .bind(to: queueStatus)
+        queueStatus
+            .bind(to: output.myQueueStatus)
             .disposed(by: disposeBag)
         
         return output
